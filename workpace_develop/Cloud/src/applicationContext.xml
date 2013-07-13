@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <!-- 使用spring管理action -->
+   <bean id="loginAction"
+   		 class="com.heidsoft.base.action.LoginAction">
+   		 <property name="username">
+   		 	<value>liubin</value>
+   		 </property>
+   		 <property name="password">
+   		 	<value>123456</value>
+   		 </property>
+   </bean>
+   
+   <bean id="me" class="com.heidsoft.base.vo.User">
+   		<property name="name">
+   			<value>liubin</value>
+   		</property>
+   		<property name="pass">
+   			<value>liubin</value>
+   		</property>
+   </bean>
+   
+ 
+   
+   <bean id="ognlAction"
+   		class="com.heidsoft.base.action.TestOgnlAction">
+   		<property name="user" ref="me"></property>
+   		<property name="tip">
+   			<value>test</value>
+   		</property>
+   </bean>
+   
+   <bean id="ajaxAction"
+   		class="com.heidsoft.base.action.TestAjaxLoginAction">
+   		<property name="user" value="liubin"></property>
+   		<property name="pass" value="liubin"></property>
+   </bean>
+
+
+   <bean id="ognlMapAction"
+   		class="com.heidsoft.base.action.TestMapOgnlAction">
+   		<property name="users" >
+   			<map>
+		        <entry key="one">
+		             <bean id="he" class="com.heidsoft.base.vo.User">
+				   		<property name="name">
+				   			<value>liubin</value>
+				   		</property>
+				   		<property name="pass">
+				   			<value>liubin</value>
+				   		</property>
+				     </bean>
+		        </entry>
+		        <entry key="two">
+		            <bean id="she" class="com.heidsoft.base.vo.User">
+				   		<property name="name">
+				   			<value>liubin</value>
+				   		</property>
+				   		<property name="pass">
+				   			<value>liubin</value>
+				   		</property>
+				     </bean>
+		        </entry>
+     		</map>
+   		</property>
+   		<property name="tip">
+   			<value>test</value>
+   		</property>
+   </bean>
+   
+</beans>  
