@@ -1,13 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>testPrototypeAjax</title>
+<title>JSON测试</title>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/prototype/prototype.js"></script>
 <script type="text/javascript">
-//使用javascript语法创建对象
+/* //使用javascript语法创建对象
 function Person(name,sex){
 	this.name=name;
 	this.sex=sex;
@@ -39,15 +40,40 @@ var a=new Array();
 a[0]='liubin';
 a[1]='jim';
 //创建数组对象时直接复制
-va b=new Array('yellow','green');
+var b=new Array('yellow','green');
 //使用JSON语法创建数组
-var c=['one','two'];
+var c=['one','two']; */
 
 function goClick(){
 	//请求URL的地址
-	var url="";
+	var url="JSONExample.action";
+	//favorite 表单域的值转换为请求参数
+	var params=Form.serialize('form1');
+	alert(params);
+	//创建Ajax.Requst对象，对应于发送请求
+	var myAjax=new Ajax.Request(
+	url,
+	{
+		//请求方向，POST
+		method:'POST',
+		//请求参数
+		parameters:params,
+		//指定回调函数
+		onComplete:processResponse,
+		//是否异步发送请求
+		asynchronous:true
+	});
 }
 
+function processResponse(request){
+	//使用JSON对象将服务器响应解析为JSON对象
+	var res=request.responseText.evalJSON();
+	alert(res);
+	//遍历JSON对象的每个属性
+	for(var propName in res){
+		$("show").innerHTML +=propName+"----->" + res[propName] + "</br>";
+	}
+}
 </script>
 </head>
 <body>
