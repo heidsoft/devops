@@ -51,16 +51,14 @@ public class TestAjaxLoginAction implements Action
 
 
 
-    @Override
     public String execute() throws Exception
     {
 	System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-	inputStream=user.equals("liubin")&&pass.equals("liubin")
-		?new ByteArrayInputStream("恭喜你，登录成功".getBytes("UTF-8"))
-		:new ByteArrayInputStream("对不起，用户名、密码不匹配".getBytes("UTF-8"));
-		
-	System.out.println("inputStream="+inputStream);
-	return SUCCESS;
+//	inputStream=user.equals("liubin")&&pass.equals("liubin")
+//		?new ByteArrayInputStream("恭喜你，登录成功".getBytes("UTF-8"))
+//		:new ByteArrayInputStream("对不起，用户名、密码不匹配".getBytes("UTF-8"));
+//		 System.out.println("inputStream="+inputStream);
+		return SUCCESS;
     }
 
 }

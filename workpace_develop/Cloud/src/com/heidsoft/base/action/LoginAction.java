@@ -3,21 +3,11 @@ package com.heidsoft.base.action;
 import java.util.Calendar;
 import java.util.Date;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-import org.apache.struts2.ServletActionContext;
-
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class LoginAction extends ActionSupport
-{
-    
-    /**
-     * 
-     */
-     
+{  
     private static final long serialVersionUID = 1L;
     private String username;
     private String password;
@@ -63,17 +53,17 @@ public class LoginAction extends ActionSupport
   
         //方法三:在Action中取得HttpServletRequest对象，使用request.getParameter获取参数  
         //HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);  
-        HttpServletRequest request = ServletActionContext.getRequest();   
-        HttpSession httpSession=request.getSession();
+//        HttpServletRequest request = ServletActionContext.getRequest();   
+//        HttpSession httpSession=request.getSession();
         
         Calendar myCalendar = Calendar().getInstance();
         
         Date date = new Date();
         
-        System.out.println("httpSessionId="+httpSession.getId());
-        System.out.println("httpSessionId LastAccessedTime="+httpSession.getLastAccessedTime());
+//        System.out.println("httpSessionId="+httpSession.getId());
+//        System.out.println("httpSessionId LastAccessedTime="+httpSession.getLastAccessedTime());
 
-	return "success";
+        return "success";
     }
 
 

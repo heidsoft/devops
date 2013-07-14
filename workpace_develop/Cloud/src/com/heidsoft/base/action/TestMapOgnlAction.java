@@ -35,7 +35,6 @@ public class TestMapOgnlAction implements Action
     }
 
 
-    @Override
     public String execute() throws Exception
     {
 	//输出前端传入的map users

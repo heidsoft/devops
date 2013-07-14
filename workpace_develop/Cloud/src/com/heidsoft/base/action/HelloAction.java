@@ -2,6 +2,7 @@ package com.heidsoft.base.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+
 public class HelloAction extends ActionSupport
 {
     private static final long serialVersionUID = -2258258951538980751L;
