@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 指定Hibernate3映射文件的DTD信息 -->
-<!DOCTYPE hibernate-mapping PUBLIC
-	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <!-- hibernate-configuration 是连接配置文件的根元素 -->
 <hibernate-configuration>
 	<session-factory>
@@ -28,5 +28,17 @@
 		<property name="hibernate.c3p0.acquire_increment">2</property>
 		<!-- 每次都验证连接是否可用 -->
 		<property name="hibernate.c3p0.validate">true</property>
+		<!-- 指定数据库方言 -->
+		<property name="dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+		<!-- 
+			根据需要自动创建表 
+			validate      加载hibernate时，验证创建数据库表结构
+			create        每次加载hibernate，重新创建数据库表结构。
+ 			create-drop   加载hibernate时创建，退出是删除表结构
+ 			update        加载hibernate自动更新数据库结构 
+		-->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- 罗列所有的映射文件 -->
+		<mapping resource="com/heidsoft/base/entity/hbm/News.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>
