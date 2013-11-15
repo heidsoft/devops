@@ -1,4 +1,4 @@
 cloud
 =====
 
-heidsoft 公用云研究
+heidsoft 云平台设计与实战
