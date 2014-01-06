@@ -1,0 +1,1 @@
+xe pif-reconfigure-ip uuid=cb2ee678-4b09-26d1-9e21-a82d16f8fe2e mode=static ip=192.168.151.20 netmask=255.255.255.0 gateway=192.168.151.1 dns=210.22.70.3
