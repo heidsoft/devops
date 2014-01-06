@@ -1,0 +1,6 @@
+xenserver 配置
+
+wget http://download.cloud.com/releases/3.0.1/XS-6.0.2/xenserver-cloud-supp.tgz
+tar xf xenserver-cloud-supp.tgz
+xe-install-supplemental-pack xenserver-cloud-supp.iso
+xe-switch-network-backend  bridge
