@@ -1,0 +1,14 @@
+检查 CPU 对于KVM的支持
+grep vmx /proc/cpuinfo
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 
+clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe lm constant_tsc arch_perfmon pebs bts pni 
+monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr dca lahf_lm
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 
+clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe lm constant_tsc arch_perfmon pebs bts pni 
+monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr dca lahf_lm
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 
+clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe lm constant_tsc arch_perfmon pebs bts pni 
+monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr dca lahf_lm
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 
+clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe lm constant_tsc arch_perfmon pebs bts pni 
+monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr dca lahf_lm
