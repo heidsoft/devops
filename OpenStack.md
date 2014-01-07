@@ -1,1 +1,5 @@
-#OpenStack学习与研究#
+#OpenStack研究#
+
+##资源链接##
+* http://www.mirantis.com/
+* http://www.openstack.org/
