@@ -11,3 +11,6 @@
 
 #第二章 CloudStack#
  [CloudStack](./cloudstack.md)
+
+#第三章 虚拟化#
+ [虚拟化](./虚拟化.md)
