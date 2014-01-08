@@ -17,6 +17,7 @@
  
 #第四章 Web架构#
 ##[高可用](./高可用.md)##
+##[报表](./报表.md)##
 
 #第五章 OpenStack#
 ##[openstack](./OpenStack.md)##
