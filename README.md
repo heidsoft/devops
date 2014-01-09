@@ -1,8 +1,9 @@
-黑洞学习实战
+云计算深入实践
 =====
 
 #第一章 操作系统
 * 内核编译
+
     make config 该工具会遍历所有配置项，要求用户选择yes/no或是module  
     make menuconfig 使用基于X11的图形化工具编译  
     make gconfig 
