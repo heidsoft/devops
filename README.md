@@ -29,6 +29,8 @@
 * [高可用](./高可用.md)
 * [报表](./报表.md)
 * [zookeeper](http://www.ibm.com/developerworks/cn/opensource/os-cn-zookeeper/)
+* [ESB](./esb.md)
+* [SOA](./soa.md)
 
 #第七章 App架构#
 * [Android](./android.md)
