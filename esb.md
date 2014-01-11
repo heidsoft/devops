@@ -10,4 +10,4 @@
 * [karaf](http://.apache.org/)
 * ![如图](./images/karaf-box.png?raw=true)
 * [camel](http://camel.apache.org/)
-* ![如图](./images/camel-box-small?raw=true)
+* ![如图](./images/camel-box-small.png?raw=true)
