@@ -26,6 +26,8 @@
 * [CloudStack](./cloudstack.md)
 * [openstack](./OpenStack.md)
 * [虚拟化](./虚拟化.md)
+* [citrix](http://citrix-book.org/)
+* [martinliu](http://martinliu.cn/)
  
 #第六章 Web架构#
 * [高可用](./高可用.md)
