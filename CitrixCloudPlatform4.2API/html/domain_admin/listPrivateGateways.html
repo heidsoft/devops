@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../includes/main.css" type="text/css">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<title>Citrix CloudPlatform (powered by Apache CloudStack)</title>
+</head>
+<body>
+<div id="insidetopbg">
+<div id="inside_wrapper">
+<div class="uppermenu_panel">
+<div class="uppermenu_box"></div>
+</div>
+<div id="main_master">
+<div id="inside_header">
+<div class="header_top">
+<a class="cloud_logo" href="http://www.citrix.com/products/cloudplatform/overview.html"></a>
+<div class="mainemenu_panel"></div>
+</div>
+</div>
+<div id="main_content">
+<div class="inside_apileftpanel">
+<div class="inside_contentpanel" style="width:930px;">
+<div class="api_titlebox">
+<div class="api_titlebox_left">
+<span>
+									Citrix CloudPlatform 4.2.0 Domain Admin API Reference
+								</span>
+<p></p>
+<h1>listPrivateGateways</h1>
+<p>List private gateways</p>
+</div>
+<div class="api_titlebox_right">
+<a class="api_backbutton" href="../TOC_Domain_Admin.html"></a>
+</div>
+</div>
+<div class="api_tablepanel">
+<h2>Request parameters</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Parameter Name</strong></td><td style="width:500px;">Description</td><td style="width:180px;">Required</td>
+</tr>
+<tr>
+<td style="width:200px;"><i>account</i></td><td style="width:500px;"><i>list resources by account. Must be used with the domainId parameter.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>domainid</i></td><td style="width:500px;"><i>list only resources belonging to the domain specified</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>id</i></td><td style="width:500px;"><i>list private gateway by id</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>ipaddress</i></td><td style="width:500px;"><i>list gateways by ip address</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>isrecursive</i></td><td style="width:500px;"><i>defaults to false, but if true, lists all resources from the parent specified by the domainId till leaves.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>keyword</i></td><td style="width:500px;"><i>List by keyword</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>listall</i></td><td style="width:500px;"><i>If set to false, list only resources belonging to the command's caller; if set to true - list resources that the caller is authorized to see. Default value is false</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>page</i></td><td style="width:500px;"><i></i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>pagesize</i></td><td style="width:500px;"><i></i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>projectid</i></td><td style="width:500px;"><i>list objects by project</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>state</i></td><td style="width:500px;"><i>list gateways by state</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>vlan</i></td><td style="width:500px;"><i>list gateways by vlan</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>vpcid</i></td><td style="width:500px;"><i>list gateways by vpc</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+</table>
+</div>
+<div class="api_tablepanel">
+<h2>Response Tags</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Response Name</strong></td><td style="width:500px;">Description</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>id</strong></td><td style="width:500px;">the id of the private gateway</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>account</strong></td><td style="width:500px;">the account associated with the private gateway</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>aclid</strong></td><td style="width:500px;">ACL Id set for private gateway</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domain</strong></td><td style="width:500px;">the domain associated with the private gateway</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domainid</strong></td><td style="width:500px;">the ID of the domain associated with the private gateway</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>gateway</strong></td><td style="width:500px;">the gateway</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>ipaddress</strong></td><td style="width:500px;">the private gateway's ip address</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>netmask</strong></td><td style="width:500px;">the private gateway's netmask</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>physicalnetworkid</strong></td><td style="width:500px;">the physical network id</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>project</strong></td><td style="width:500px;">the project name of the private gateway</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>projectid</strong></td><td style="width:500px;">the project id of the private gateway</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>sourcenatsupported</strong></td><td style="width:500px;">Souce Nat enable status</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>state</strong></td><td style="width:500px;">State of the gateway, can be Creating, Ready, Deleting</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vlan</strong></td><td style="width:500px;">the vlan of the private gateway</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vpcid</strong></td><td style="width:500px;">VPC the private gateaway belongs to</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>zoneid</strong></td><td style="width:500px;">zone id of the private gateway</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>zonename</strong></td><td style="width:500px;">the name of the zone the private gateway belongs to</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer_mainmaster">
+<p>Copyright &copy; 2013 Citrix Systems, Inc. All rights reserved. Specifications are subject to change without
+notice. Citrix Systems, Inc., the Citrix logo, Citrix XenServer, Citrix XenCenter, and CloudPlatform
+are trademarks or registered trademarks of Citrix Systems, Inc. All other brands or products are
+trademarks or registered trademarks of their respective holders.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

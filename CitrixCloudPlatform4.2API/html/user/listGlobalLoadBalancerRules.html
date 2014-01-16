@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../includes/main.css" type="text/css">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<title>Citrix CloudPlatform (powered by Apache CloudStack)</title>
+</head>
+<body>
+<div id="insidetopbg">
+<div id="inside_wrapper">
+<div class="uppermenu_panel">
+<div class="uppermenu_box"></div>
+</div>
+<div id="main_master">
+<div id="inside_header">
+<div class="header_top">
+<a class="cloud_logo" href="http://www.citrix.com/products/cloudplatform/overview.html"></a>
+<div class="mainemenu_panel"></div>
+</div>
+</div>
+<div id="main_content">
+<div class="inside_apileftpanel">
+<div class="inside_contentpanel" style="width:930px;">
+<div class="api_titlebox">
+<div class="api_titlebox_left">
+<span>
+									Citrix CloudPlatform 4.2.0 User API Reference
+								</span>
+<p></p>
+<h1>listGlobalLoadBalancerRules</h1>
+<p>Lists load balancer rules.</p>
+</div>
+<div class="api_titlebox_right">
+<a class="api_backbutton" href="../TOC_User.html"></a>
+</div>
+</div>
+<div class="api_tablepanel">
+<h2>Request parameters</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Parameter Name</strong></td><td style="width:500px;">Description</td><td style="width:180px;">Required</td>
+</tr>
+<tr>
+<td style="width:200px;"><i>account</i></td><td style="width:500px;"><i>list resources by account. Must be used with the domainId parameter.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>domainid</i></td><td style="width:500px;"><i>list only resources belonging to the domain specified</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>id</i></td><td style="width:500px;"><i>the ID of the global load balancer rule</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>isrecursive</i></td><td style="width:500px;"><i>defaults to false, but if true, lists all resources from the parent specified by the domainId till leaves.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>keyword</i></td><td style="width:500px;"><i>List by keyword</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>listall</i></td><td style="width:500px;"><i>If set to false, list only resources belonging to the command's caller; if set to true - list resources that the caller is authorized to see. Default value is false</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>page</i></td><td style="width:500px;"><i></i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>pagesize</i></td><td style="width:500px;"><i></i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>projectid</i></td><td style="width:500px;"><i>list objects by project</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>regionid</i></td><td style="width:500px;"><i>region ID</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>tags</i></td><td style="width:500px;"><i>List resources by tags (key/value pairs)</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+</table>
+</div>
+<div class="api_tablepanel">
+<h2>Response Tags</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Response Name</strong></td><td style="width:500px;">Description</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>id</strong></td><td style="width:500px;">global load balancer rule ID</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>account</strong></td><td style="width:500px;">the account of the load balancer rule</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>description</strong></td><td style="width:500px;">the description of the global load balancer rule</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domain</strong></td><td style="width:500px;">the domain of the load balancer rule</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domainid</strong></td><td style="width:500px;">the domain ID of the load balancer rule</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>gslbdomainname</strong></td><td style="width:500px;">DNS domain name given for the global load balancer</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>gslblbmethod</strong></td><td style="width:500px;">Load balancing method used for the global load balancer</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>gslbservicetype</strong></td><td style="width:500px;">GSLB service type</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>gslbstickysessionmethodname</strong></td><td style="width:500px;">session persistence method used for the global load balancer</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>name</strong></td><td style="width:500px;">name of the global load balancer rule</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>project</strong></td><td style="width:500px;">the project name of the load balancer</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>projectid</strong></td><td style="width:500px;">the project id of the load balancer</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>regionid</strong></td><td style="width:500px;">Region Id in which global load balancer is created</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>loadbalancerrule(*)</strong></td><td style="width:500px;">List of load balancer rules that are part of GSLB rule</td>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>id</strong></td><td style="width:500px;">the load balancer rule ID</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>account</strong></td><td style="width:500px;">the account of the load balancer rule</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>algorithm</strong></td><td style="width:500px;">the load balancer algorithm (source, roundrobin, leastconn)</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>cidrlist</strong></td><td style="width:500px;">the cidr list to forward traffic from</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>description</strong></td><td style="width:500px;">the description of the load balancer</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>domain</strong></td><td style="width:500px;">the domain of the load balancer rule</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>domainid</strong></td><td style="width:500px;">the domain ID of the load balancer rule</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>name</strong></td><td style="width:500px;">the name of the load balancer</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>networkid</strong></td><td style="width:500px;">the id of the guest network the lb rule belongs to</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>privateport</strong></td><td style="width:500px;">the private port</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>project</strong></td><td style="width:500px;">the project name of the load balancer</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>projectid</strong></td><td style="width:500px;">the project id of the load balancer</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>publicip</strong></td><td style="width:500px;">the public ip address</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>publicipid</strong></td><td style="width:500px;">the public ip address id</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>publicport</strong></td><td style="width:500px;">the public port</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>state</strong></td><td style="width:500px;">the state of the rule</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>zoneid</strong></td><td style="width:500px;">the id of the zone the rule belongs to</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>tags(*)</strong></td><td style="width:500px;">the list of resource tags associated with load balancer</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">account</td><td style="width:500px;">the account associated with the tag</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">customer</td><td style="width:500px;">customer associated with the tag</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">domain</td><td style="width:500px;">the domain associated with the tag</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">domainid</td><td style="width:500px;">the ID of the domain associated with the tag</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">key</td><td style="width:500px;">tag key name</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">project</td><td style="width:500px;">the project name where tag belongs to</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">projectid</td><td style="width:500px;">the project id the tag belongs to</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">resourceid</td><td style="width:500px;">id of the resource</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">resourcetype</td><td style="width:500px;">resource type</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">value</td><td style="width:500px;">tag value</td>
+</tr>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer_mainmaster">
+<p>Copyright &copy; 2013 Citrix Systems, Inc. All rights reserved. Specifications are subject to change without
+notice. Citrix Systems, Inc., the Citrix logo, Citrix XenServer, Citrix XenCenter, and CloudPlatform
+are trademarks or registered trademarks of Citrix Systems, Inc. All other brands or products are
+trademarks or registered trademarks of their respective holders.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

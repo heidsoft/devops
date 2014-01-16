@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../includes/main.css" type="text/css">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<title>Citrix CloudPlatform (powered by Apache CloudStack)</title>
+</head>
+<body>
+<div id="insidetopbg">
+<div id="inside_wrapper">
+<div class="uppermenu_panel">
+<div class="uppermenu_box"></div>
+</div>
+<div id="main_master">
+<div id="inside_header">
+<div class="header_top">
+<a class="cloud_logo" href="http://www.citrix.com/products/cloudplatform/overview.html"></a>
+<div class="mainemenu_panel"></div>
+</div>
+</div>
+<div id="main_content">
+<div class="inside_apileftpanel">
+<div class="inside_contentpanel" style="width:930px;">
+<div class="api_titlebox">
+<div class="api_titlebox_left">
+<span>
+									Citrix CloudPlatform 4.2.0 Root Admin API Reference
+								</span>
+<p></p>
+<h1>listVMSnapshot</h1>
+<p>List virtual machine snapshot by conditions</p>
+</div>
+<div class="api_titlebox_right">
+<a class="api_backbutton" href="../TOC_Root_Admin.html"></a>
+</div>
+</div>
+<div class="api_tablepanel">
+<h2>Request parameters</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Parameter Name</strong></td><td style="width:500px;">Description</td><td style="width:180px;">Required</td>
+</tr>
+<tr>
+<td style="width:200px;"><i>account</i></td><td style="width:500px;"><i>list resources by account. Must be used with the domainId parameter.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>domainid</i></td><td style="width:500px;"><i>list only resources belonging to the domain specified</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>isrecursive</i></td><td style="width:500px;"><i>defaults to false, but if true, lists all resources from the parent specified by the domainId till leaves.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>keyword</i></td><td style="width:500px;"><i>List by keyword</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>listall</i></td><td style="width:500px;"><i>If set to false, list only resources belonging to the command's caller; if set to true - list resources that the caller is authorized to see. Default value is false</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>name</i></td><td style="width:500px;"><i>lists snapshot by snapshot name or display name</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>page</i></td><td style="width:500px;"><i></i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>pagesize</i></td><td style="width:500px;"><i></i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>projectid</i></td><td style="width:500px;"><i>list objects by project</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>state</i></td><td style="width:500px;"><i>state of the virtual machine snapshot</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>tags</i></td><td style="width:500px;"><i>List resources by tags (key/value pairs)</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>virtualmachineid</i></td><td style="width:500px;"><i>the ID of the vm</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>vmsnapshotid</i></td><td style="width:500px;"><i>The ID of the VM snapshot</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+</table>
+</div>
+<div class="api_tablepanel">
+<h2>Response Tags</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Response Name</strong></td><td style="width:500px;">Description</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>id</strong></td><td style="width:500px;">the ID of the vm snapshot</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>account</strong></td><td style="width:500px;">the account associated with the disk volume</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>created</strong></td><td style="width:500px;">the create date of the vm snapshot</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>current</strong></td><td style="width:500px;">indiates if this is current snapshot</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>description</strong></td><td style="width:500px;">the description of the vm snapshot</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>displayname</strong></td><td style="width:500px;">the display name of the vm snapshot</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domain</strong></td><td style="width:500px;">the domain associated with the disk volume</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domainid</strong></td><td style="width:500px;">the ID of the domain associated with the disk volume</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>name</strong></td><td style="width:500px;">the name of the vm snapshot</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>parent</strong></td><td style="width:500px;">the parent ID of the vm snapshot</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>parentName</strong></td><td style="width:500px;">the parent displayName of the vm snapshot</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>project</strong></td><td style="width:500px;">the project name of the vpn</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>projectid</strong></td><td style="width:500px;">the project id of the vpn</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>state</strong></td><td style="width:500px;">the state of the vm snapshot</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>type</strong></td><td style="width:500px;">VM Snapshot type</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>virtualmachineid</strong></td><td style="width:500px;">the vm ID of the vm snapshot</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>zoneid</strong></td><td style="width:500px;">the Zone ID of the vm snapshot</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="comments_thread">
+<script type="text/javascript" src="https://comments.apache.org/show_comments.lua?site=test" async="true"></script>
+<noscript>
+<iframe width="930" height="500" src="https://comments.apache.org/iframe.lua?site=test&amp;page=4.2.0/rootadmin"></iframe>
+</noscript>
+</div>
+<div id="footer_mainmaster">
+<p>Copyright &copy; 2013 Citrix Systems, Inc. All rights reserved. Specifications are subject to change without
+notice. Citrix Systems, Inc., the Citrix logo, Citrix XenServer, Citrix XenCenter, and CloudPlatform
+are trademarks or registered trademarks of Citrix Systems, Inc. All other brands or products are
+trademarks or registered trademarks of their respective holders.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../includes/main.css" type="text/css">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<title>Citrix CloudPlatform (powered by Apache CloudStack)</title>
+</head>
+<body>
+<div id="insidetopbg">
+<div id="inside_wrapper">
+<div class="uppermenu_panel">
+<div class="uppermenu_box"></div>
+</div>
+<div id="main_master">
+<div id="inside_header">
+<div class="header_top">
+<a class="cloud_logo" href="http://www.citrix.com/products/cloudplatform/overview.html"></a>
+<div class="mainemenu_panel"></div>
+</div>
+</div>
+<div id="main_content">
+<div class="inside_apileftpanel">
+<div class="inside_contentpanel" style="width:930px;">
+<div class="api_titlebox">
+<div class="api_titlebox_left">
+<span>
+									Citrix CloudPlatform 4.2.0 Root Admin API Reference
+								</span>
+<p></p>
+<h1>createServiceOffering</h1>
+<p>Creates a service offering.</p>
+</div>
+<div class="api_titlebox_right">
+<a class="api_backbutton" href="../TOC_Root_Admin.html"></a>
+</div>
+</div>
+<div class="api_tablepanel">
+<h2>Request parameters</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Parameter Name</strong></td><td style="width:500px;">Description</td><td style="width:180px;">Required</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>cpunumber</strong></td><td style="width:500px;"><strong>the CPU number of the service offering</strong></td><td style="width:180px;"><strong>true</strong></td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>cpuspeed</strong></td><td style="width:500px;"><strong>the CPU speed of the service offering in MHz.</strong></td><td style="width:180px;"><strong>true</strong></td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>displaytext</strong></td><td style="width:500px;"><strong>the display text of the service offering</strong></td><td style="width:180px;"><strong>true</strong></td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>memory</strong></td><td style="width:500px;"><strong>the total memory of the service offering in MB</strong></td><td style="width:180px;"><strong>true</strong></td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>name</strong></td><td style="width:500px;"><strong>the name of the service offering</strong></td><td style="width:180px;"><strong>true</strong></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>bytesreadrate</i></td><td style="width:500px;"><i>bytes read rate of the disk offering</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>byteswriterate</i></td><td style="width:500px;"><i>bytes write rate of the disk offering</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>deploymentplanner</i></td><td style="width:500px;"><i>The deployment planner heuristics used to deploy a VM of this offering. If null, value of global config vm.deployment.planner is used</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>domainid</i></td><td style="width:500px;"><i>the ID of the containing domain, null for public offerings</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>hosttags</i></td><td style="width:500px;"><i>the host tag for this service offering.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>iopsreadrate</i></td><td style="width:500px;"><i>io requests read rate of the disk offering</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>iopswriterate</i></td><td style="width:500px;"><i>io requests write rate of the disk offering</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>issystem</i></td><td style="width:500px;"><i>is this a system vm offering</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>isvolatile</i></td><td style="width:500px;"><i>true if the virtual machine needs to be volatile so that on every reboot of VM, original root disk is dettached then destroyed and a fresh root disk is created and attached to VM</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>limitcpuuse</i></td><td style="width:500px;"><i>restrict the CPU usage to committed service offering</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>networkrate</i></td><td style="width:500px;"><i>data transfer rate in megabits per second allowed. Supported only for non-System offering and system offerings having "domainrouter" systemvmtype</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>offerha</i></td><td style="width:500px;"><i>the HA for the service offering</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>serviceofferingdetails</i></td><td style="width:500px;"><i>details for planner, used to store specific parameters</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>storagetype</i></td><td style="width:500px;"><i>the storage type of the service offering. Values are local and shared.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>systemvmtype</i></td><td style="width:500px;"><i>the system VM type. Possible types are "domainrouter", "consoleproxy" and "secondarystoragevm".</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>tags</i></td><td style="width:500px;"><i>the tags for this service offering.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+</table>
+</div>
+<div class="api_tablepanel">
+<h2>Response Tags</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Response Name</strong></td><td style="width:500px;">Description</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>id</strong></td><td style="width:500px;">the id of the service offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>cpunumber</strong></td><td style="width:500px;">the number of CPU</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>cpuspeed</strong></td><td style="width:500px;">the clock rate CPU speed in Mhz</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>created</strong></td><td style="width:500px;">the date this service offering was created</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>defaultuse</strong></td><td style="width:500px;">is this a  default system vm offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>deploymentplanner</strong></td><td style="width:500px;">deployment strategy used to deploy VM.</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>diskBytesReadRate</strong></td><td style="width:500px;">bytes read rate of the service offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>diskBytesWriteRate</strong></td><td style="width:500px;">bytes write rate of the service offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>diskIopsReadRate</strong></td><td style="width:500px;">io requests read rate of the service offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>diskIopsWriteRate</strong></td><td style="width:500px;">io requests write rate of the service offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>displaytext</strong></td><td style="width:500px;">an alternate display text of the service offering.</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domain</strong></td><td style="width:500px;">Domain name for the offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domainid</strong></td><td style="width:500px;">the domain id of the service offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>hosttags</strong></td><td style="width:500px;">the host tag for the service offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>issystem</strong></td><td style="width:500px;">is this a system vm offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>isvolatile</strong></td><td style="width:500px;">true if the vm needs to be volatile, i.e., on every reboot of vm from API root disk is discarded and creates a new root disk</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>limitcpuuse</strong></td><td style="width:500px;">restrict the CPU usage to committed service offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>memory</strong></td><td style="width:500px;">the memory in MB</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>name</strong></td><td style="width:500px;">the name of the service offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>networkrate</strong></td><td style="width:500px;">data transfer rate in megabits per second allowed.</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>offerha</strong></td><td style="width:500px;">the ha support in the service offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>serviceofferingdetails</strong></td><td style="width:500px;">additional key/value details tied with this service offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>storagetype</strong></td><td style="width:500px;">the storage type for this service offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>systemvmtype</strong></td><td style="width:500px;">is this a the systemvm type for system vm offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>tags</strong></td><td style="width:500px;">the tags for the service offering</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="comments_thread">
+<script type="text/javascript" src="https://comments.apache.org/show_comments.lua?site=test" async="true"></script>
+<noscript>
+<iframe width="930" height="500" src="https://comments.apache.org/iframe.lua?site=test&amp;page=4.2.0/rootadmin"></iframe>
+</noscript>
+</div>
+<div id="footer_mainmaster">
+<p>Copyright &copy; 2013 Citrix Systems, Inc. All rights reserved. Specifications are subject to change without
+notice. Citrix Systems, Inc., the Citrix logo, Citrix XenServer, Citrix XenCenter, and CloudPlatform
+are trademarks or registered trademarks of Citrix Systems, Inc. All other brands or products are
+trademarks or registered trademarks of their respective holders.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

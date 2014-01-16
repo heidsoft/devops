@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../includes/main.css" type="text/css">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<title>Citrix CloudPlatform (powered by Apache CloudStack)</title>
+</head>
+<body>
+<div id="insidetopbg">
+<div id="inside_wrapper">
+<div class="uppermenu_panel">
+<div class="uppermenu_box"></div>
+</div>
+<div id="main_master">
+<div id="inside_header">
+<div class="header_top">
+<a class="cloud_logo" href="http://www.citrix.com/products/cloudplatform/overview.html"></a>
+<div class="mainemenu_panel"></div>
+</div>
+</div>
+<div id="main_content">
+<div class="inside_apileftpanel">
+<div class="inside_contentpanel" style="width:930px;">
+<div class="api_titlebox">
+<div class="api_titlebox_left">
+<span>
+									Citrix CloudPlatform 4.2.0 User API Reference
+								</span>
+<p></p>
+<h1>listNetworkOfferings</h1>
+<p>Lists all available network offerings.</p>
+</div>
+<div class="api_titlebox_right">
+<a class="api_backbutton" href="../TOC_User.html"></a>
+</div>
+</div>
+<div class="api_tablepanel">
+<h2>Request parameters</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Parameter Name</strong></td><td style="width:500px;">Description</td><td style="width:180px;">Required</td>
+</tr>
+<tr>
+<td style="width:200px;"><i>availability</i></td><td style="width:500px;"><i>the availability of network offering. Default value is Required</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>displaytext</i></td><td style="width:500px;"><i>list network offerings by display text</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>forvpc</i></td><td style="width:500px;"><i>the network offering can be used only for network creation inside the VPC</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>guestiptype</i></td><td style="width:500px;"><i>list network offerings by guest type: Shared or Isolated</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>id</i></td><td style="width:500px;"><i>list network offerings by id</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>isdefault</i></td><td style="width:500px;"><i>true if need to list only default network offerings. Default value is false</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>istagged</i></td><td style="width:500px;"><i>true if offering has tags specified</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>keyword</i></td><td style="width:500px;"><i>List by keyword</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>name</i></td><td style="width:500px;"><i>list network offerings by name</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>networkid</i></td><td style="width:500px;"><i>the ID of the network. Pass this in if you want to see the available network offering that a network can be changed to.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>page</i></td><td style="width:500px;"><i></i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>pagesize</i></td><td style="width:500px;"><i></i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>sourcenatsupported</i></td><td style="width:500px;"><i>true if need to list only netwok offerings where source nat is supported, false otherwise</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>specifyipranges</i></td><td style="width:500px;"><i>true if need to list only network offerings which support specifying ip ranges</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>specifyvlan</i></td><td style="width:500px;"><i>the tags for the network offering.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>state</i></td><td style="width:500px;"><i>list network offerings by state</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>supportedservices</i></td><td style="width:500px;"><i>list network offerings supporting certain services</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>tags</i></td><td style="width:500px;"><i>list network offerings by tags</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>traffictype</i></td><td style="width:500px;"><i>list by traffic type</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>zoneid</i></td><td style="width:500px;"><i>list netowrk offerings available for network creation in specific zone</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+</table>
+</div>
+<div class="api_tablepanel">
+<h2>Response Tags</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Response Name</strong></td><td style="width:500px;">Description</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>id</strong></td><td style="width:500px;">the id of the network offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>availability</strong></td><td style="width:500px;">availability of the network offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>conservemode</strong></td><td style="width:500px;">true if network offering is ip conserve mode enabled</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>created</strong></td><td style="width:500px;">the date this network offering was created</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>details</strong></td><td style="width:500px;">additional key/value details tied with network offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>displaytext</strong></td><td style="width:500px;">an alternate display text of the network offering.</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>egressdefaultpolicy</strong></td><td style="width:500px;">true if network offering supports persistent networks, false otherwise</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>forvpc</strong></td><td style="width:500px;">true if network offering can be used by VPC networks only</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>guestiptype</strong></td><td style="width:500px;">guest type of the network offering, can be Shared or Isolated</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>isdefault</strong></td><td style="width:500px;">true if network offering is default, false otherwise</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>ispersistent</strong></td><td style="width:500px;">true if network offering supports persistent networks, false otherwise</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>maxconnections</strong></td><td style="width:500px;">maximum number of concurrents connections to be handled by lb</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>name</strong></td><td style="width:500px;">the name of the network offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>networkrate</strong></td><td style="width:500px;">data transfer rate in megabits per second allowed.</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>serviceofferingid</strong></td><td style="width:500px;">the ID of the service offering used by virtual router provider</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>specifyipranges</strong></td><td style="width:500px;">true if network offering supports specifying ip ranges, false otherwise</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>specifyvlan</strong></td><td style="width:500px;">true if network offering supports vlans, false otherwise</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>state</strong></td><td style="width:500px;">state of the network offering. Can be Disabled/Enabled/Inactive</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>tags</strong></td><td style="width:500px;">the tags for the network offering</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>traffictype</strong></td><td style="width:500px;">the traffic type for the network offering, supported types are Public, Management, Control, Guest, Vlan or Storage.</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>service(*)</strong></td><td style="width:500px;">the list of supported services</td>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>name</strong></td><td style="width:500px;">the service name</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>capability(*)</strong></td><td style="width:500px;">the list of capabilities</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">canchooseservicecapability</td><td style="width:500px;">can this service capability value can be choosable while creatine network offerings</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">name</td><td style="width:500px;">the capability name</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">value</td><td style="width:500px;">the capability value</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>provider(*)</strong></td><td style="width:500px;">the service provider name</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">id</td><td style="width:500px;">uuid of the network provider</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">canenableindividualservice</td><td style="width:500px;">true if individual services can be enabled/disabled</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">destinationphysicalnetworkid</td><td style="width:500px;">the destination physical network</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">name</td><td style="width:500px;">the provider name</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">physicalnetworkid</td><td style="width:500px;">the physical network this belongs to</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">servicelist</td><td style="width:500px;">services for this provider</td>
+</tr>
+<tr>
+<td style="width:165px; padding-left:40px;">state</td><td style="width:500px;">state of the network provider</td>
+</tr>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer_mainmaster">
+<p>Copyright &copy; 2013 Citrix Systems, Inc. All rights reserved. Specifications are subject to change without
+notice. Citrix Systems, Inc., the Citrix logo, Citrix XenServer, Citrix XenCenter, and CloudPlatform
+are trademarks or registered trademarks of Citrix Systems, Inc. All other brands or products are
+trademarks or registered trademarks of their respective holders.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

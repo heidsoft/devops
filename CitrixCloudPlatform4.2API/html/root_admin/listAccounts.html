@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../includes/main.css" type="text/css">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<title>Citrix CloudPlatform (powered by Apache CloudStack)</title>
+</head>
+<body>
+<div id="insidetopbg">
+<div id="inside_wrapper">
+<div class="uppermenu_panel">
+<div class="uppermenu_box"></div>
+</div>
+<div id="main_master">
+<div id="inside_header">
+<div class="header_top">
+<a class="cloud_logo" href="http://www.citrix.com/products/cloudplatform/overview.html"></a>
+<div class="mainemenu_panel"></div>
+</div>
+</div>
+<div id="main_content">
+<div class="inside_apileftpanel">
+<div class="inside_contentpanel" style="width:930px;">
+<div class="api_titlebox">
+<div class="api_titlebox_left">
+<span>
+									Citrix CloudPlatform 4.2.0 Root Admin API Reference
+								</span>
+<p></p>
+<h1>listAccounts</h1>
+<p>Lists accounts and provides detailed account information for listed accounts</p>
+</div>
+<div class="api_titlebox_right">
+<a class="api_backbutton" href="../TOC_Root_Admin.html"></a>
+</div>
+</div>
+<div class="api_tablepanel">
+<h2>Request parameters</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Parameter Name</strong></td><td style="width:500px;">Description</td><td style="width:180px;">Required</td>
+</tr>
+<tr>
+<td style="width:200px;"><i>accounttype</i></td><td style="width:500px;"><i>list accounts by account type. Valid account types are 1 (admin), 2 (domain-admin), and 0 (user).</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>domainid</i></td><td style="width:500px;"><i>list only resources belonging to the domain specified</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>id</i></td><td style="width:500px;"><i>list account by account ID</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>iscleanuprequired</i></td><td style="width:500px;"><i>list accounts by cleanuprequred attribute (values are true or false)</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>isrecursive</i></td><td style="width:500px;"><i>defaults to false, but if true, lists all resources from the parent specified by the domainId till leaves.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>keyword</i></td><td style="width:500px;"><i>List by keyword</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>listall</i></td><td style="width:500px;"><i>If set to false, list only resources belonging to the command's caller; if set to true - list resources that the caller is authorized to see. Default value is false</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>name</i></td><td style="width:500px;"><i>list account by account name</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>page</i></td><td style="width:500px;"><i></i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>pagesize</i></td><td style="width:500px;"><i></i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>state</i></td><td style="width:500px;"><i>list accounts by state. Valid states are enabled, disabled, and locked.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+</table>
+</div>
+<div class="api_tablepanel">
+<h2>Response Tags</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Response Name</strong></td><td style="width:500px;">Description</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>id</strong></td><td style="width:500px;">the id of the account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>accountdetails</strong></td><td style="width:500px;">details for the account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>accounttype</strong></td><td style="width:500px;">account type (admin, domain-admin, user)</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>cpuavailable</strong></td><td style="width:500px;">the total number of cpu cores available to be created for this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>cpulimit</strong></td><td style="width:500px;">the total number of cpu cores the account can own</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>cputotal</strong></td><td style="width:500px;">the total number of cpu cores owned by account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>defaultzoneid</strong></td><td style="width:500px;">the default zone of the account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domain</strong></td><td style="width:500px;">name of the Domain the account belongs too</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domainid</strong></td><td style="width:500px;">id of the Domain the account belongs too</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>ipavailable</strong></td><td style="width:500px;">the total number of public ip addresses available for this account to acquire</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>iplimit</strong></td><td style="width:500px;">the total number of public ip addresses this account can acquire</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>iptotal</strong></td><td style="width:500px;">the total number of public ip addresses allocated for this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>iscleanuprequired</strong></td><td style="width:500px;">true if the account requires cleanup</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>isdefault</strong></td><td style="width:500px;">true if account is default, false otherwise</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>memoryavailable</strong></td><td style="width:500px;">the total memory (in MB) available to be created for this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>memorylimit</strong></td><td style="width:500px;">the total memory (in MB) the account can own</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>memorytotal</strong></td><td style="width:500px;">the total memory (in MB) owned by account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>name</strong></td><td style="width:500px;">the name of the account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>networkavailable</strong></td><td style="width:500px;">the total number of networks available to be created for this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>networkdomain</strong></td><td style="width:500px;">the network domain</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>networklimit</strong></td><td style="width:500px;">the total number of networks the account can own</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>networktotal</strong></td><td style="width:500px;">the total number of networks owned by account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>primarystorageavailable</strong></td><td style="width:500px;">the total primary storage space (in GiB) available to be used for this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>primarystoragelimit</strong></td><td style="width:500px;">the total primary storage space (in GiB) the account can own</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>primarystoragetotal</strong></td><td style="width:500px;">the total primary storage space (in GiB) owned by account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>projectavailable</strong></td><td style="width:500px;">the total number of projects available for administration by this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>projectlimit</strong></td><td style="width:500px;">the total number of projects the account can own</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>projecttotal</strong></td><td style="width:500px;">the total number of projects being administrated by this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>receivedbytes</strong></td><td style="width:500px;">the total number of network traffic bytes received</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>secondarystorageavailable</strong></td><td style="width:500px;">the total secondary storage space (in GiB) available to be used for this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>secondarystoragelimit</strong></td><td style="width:500px;">the total secondary storage space (in GiB) the account can own</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>secondarystoragetotal</strong></td><td style="width:500px;">the total secondary storage space (in GiB) owned by account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>sentbytes</strong></td><td style="width:500px;">the total number of network traffic bytes sent</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>snapshotavailable</strong></td><td style="width:500px;">the total number of snapshots available for this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>snapshotlimit</strong></td><td style="width:500px;">the total number of snapshots which can be stored by this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>snapshottotal</strong></td><td style="width:500px;">the total number of snapshots stored by this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>state</strong></td><td style="width:500px;">the state of the account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>templateavailable</strong></td><td style="width:500px;">the total number of templates available to be created by this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>templatelimit</strong></td><td style="width:500px;">the total number of templates which can be created by this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>templatetotal</strong></td><td style="width:500px;">the total number of templates which have been created by this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vmavailable</strong></td><td style="width:500px;">the total number of virtual machines available for this account to acquire</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vmlimit</strong></td><td style="width:500px;">the total number of virtual machines that can be deployed by this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vmrunning</strong></td><td style="width:500px;">the total number of virtual machines running for this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vmstopped</strong></td><td style="width:500px;">the total number of virtual machines stopped for this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vmtotal</strong></td><td style="width:500px;">the total number of virtual machines deployed by this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>volumeavailable</strong></td><td style="width:500px;">the total volume available for this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>volumelimit</strong></td><td style="width:500px;">the total volume which can be used by this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>volumetotal</strong></td><td style="width:500px;">the total volume being used by this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vpcavailable</strong></td><td style="width:500px;">the total number of vpcs available to be created for this account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vpclimit</strong></td><td style="width:500px;">the total number of vpcs the account can own</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vpctotal</strong></td><td style="width:500px;">the total number of vpcs owned by account</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>user(*)</strong></td><td style="width:500px;">the list of users associated with account</td>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>id</strong></td><td style="width:500px;">the user ID</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>account</strong></td><td style="width:500px;">the account name of the user</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>accountid</strong></td><td style="width:500px;">the account ID of the user</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>accounttype</strong></td><td style="width:500px;">the account type of the user</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>apikey</strong></td><td style="width:500px;">the api key of the user</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>created</strong></td><td style="width:500px;">the date and time the user account was created</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>domain</strong></td><td style="width:500px;">the domain name of the user</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>domainid</strong></td><td style="width:500px;">the domain ID of the user</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>email</strong></td><td style="width:500px;">the user email address</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>firstname</strong></td><td style="width:500px;">the user firstname</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>iscallerchilddomain</strong></td><td style="width:500px;">the boolean value representing if the updating target is in caller's child domain</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>isdefault</strong></td><td style="width:500px;">true if user is default, false otherwise</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>lastname</strong></td><td style="width:500px;">the user lastname</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>secretkey</strong></td><td style="width:500px;">the secret key of the user</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>state</strong></td><td style="width:500px;">the user state</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>timezone</strong></td><td style="width:500px;">the timezone user was created in</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>username</strong></td><td style="width:500px;">the user name</td>
+</tr>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="comments_thread">
+<script type="text/javascript" src="https://comments.apache.org/show_comments.lua?site=test" async="true"></script>
+<noscript>
+<iframe width="930" height="500" src="https://comments.apache.org/iframe.lua?site=test&amp;page=4.2.0/rootadmin"></iframe>
+</noscript>
+</div>
+<div id="footer_mainmaster">
+<p>Copyright &copy; 2013 Citrix Systems, Inc. All rights reserved. Specifications are subject to change without
+notice. Citrix Systems, Inc., the Citrix logo, Citrix XenServer, Citrix XenCenter, and CloudPlatform
+are trademarks or registered trademarks of Citrix Systems, Inc. All other brands or products are
+trademarks or registered trademarks of their respective holders.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

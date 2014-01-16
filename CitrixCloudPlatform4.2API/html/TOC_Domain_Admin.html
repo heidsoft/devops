@@ -1,0 +1,1001 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="includes/main.css" type="text/css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<title>Citrix CloudPlatform (powered by Apache CloudStack)</title>
+</head>
+<body>
+<div id="insidetopbg">
+<div id="inside_wrapper">
+<div class="uppermenu_panel">
+<div class="uppermenu_box"></div>
+</div>
+<div id="main_master">
+<div id="inside_header">
+<div class="header_top">
+<a class="cloud_logo" href="http://www.citrix.com/products/cloudplatform/overview.html"></a>
+<div class="mainemenu_panel"></div>
+</div>
+</div>
+<div id="main_content">
+<div class="inside_apileftpanel">
+<div class="inside_contentpanel" style="width:930px;">
+<h1>Citrix CloudPlatform 4.2.0 API Reference</h1>
+<div class="apiannouncement_box">
+<div class="apiannouncement_contentarea">
+<h3>Using the CloudPlatform API</h3>
+<p>For information about how the APIs work, and tips on how to use them, see the
+                                    <a href="http://support.citrix.com/proddocs/topic/cloudplatform/clst-wrapper.html">Developer's Guide</a>.</p>
+</div>
+</div>
+<div class="api_leftsections">
+<h3>Domain Admin API</h3>
+<div class="api_legends">
+<p>
+<span class="api_legends_async">(A)</span> implies that the command is asynchronous.</p>
+<p>(*) implies element has a child.</p>
+</div>
+<div class="apismallsections">
+<div class="apismallbullet_box">
+<h5>Load Balancer</h5>
+<ul>
+<li>
+<a href="domain_admin/createLoadBalancerRule.html">createLoadBalancerRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteLoadBalancerRule.html">deleteLoadBalancerRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/removeFromLoadBalancerRule.html">removeFromLoadBalancerRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/assignToLoadBalancerRule.html">assignToLoadBalancerRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/createLBStickinessPolicy.html">createLBStickinessPolicy (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteLBStickinessPolicy.html">deleteLBStickinessPolicy (A)</a>
+</li>
+<li>
+<a href="domain_admin/listLoadBalancerRules.html">listLoadBalancerRules</a>
+</li>
+<li>
+<a href="domain_admin/listLBStickinessPolicies.html">listLBStickinessPolicies</a>
+</li>
+<li>
+<a href="domain_admin/listLBHealthCheckPolicies.html">listLBHealthCheckPolicies</a>
+</li>
+<li>
+<a href="domain_admin/createLBHealthCheckPolicy.html">createLBHealthCheckPolicy (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteLBHealthCheckPolicy.html">deleteLBHealthCheckPolicy (A)</a>
+</li>
+<li>
+<a href="domain_admin/listLoadBalancerRuleInstances.html">listLoadBalancerRuleInstances</a>
+</li>
+<li>
+<a href="domain_admin/updateLoadBalancerRule.html">updateLoadBalancerRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/createGlobalLoadBalancerRule.html">createGlobalLoadBalancerRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteGlobalLoadBalancerRule.html">deleteGlobalLoadBalancerRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/updateGlobalLoadBalancerRule.html">updateGlobalLoadBalancerRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/listGlobalLoadBalancerRules.html">listGlobalLoadBalancerRules</a>
+</li>
+<li>
+<a href="domain_admin/assignToGlobalLoadBalancerRule.html">assignToGlobalLoadBalancerRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/removeFromGlobalLoadBalancerRule.html">removeFromGlobalLoadBalancerRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/createLoadBalancer.html">createLoadBalancer (A)</a>
+</li>
+<li>
+<a href="domain_admin/listLoadBalancers.html">listLoadBalancers</a>
+</li>
+<li>
+<a href="domain_admin/deleteLoadBalancer.html">deleteLoadBalancer (A)</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>AutoScale</h5>
+<ul>
+<li>
+<a href="domain_admin/createCondition.html">createCondition (A)</a>
+</li>
+<li>
+<a href="domain_admin/createAutoScalePolicy.html">createAutoScalePolicy (A)</a>
+</li>
+<li>
+<a href="domain_admin/createAutoScaleVmProfile.html">createAutoScaleVmProfile (A)</a>
+</li>
+<li>
+<a href="domain_admin/createAutoScaleVmGroup.html">createAutoScaleVmGroup (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteCondition.html">deleteCondition (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteAutoScalePolicy.html">deleteAutoScalePolicy (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteAutoScaleVmProfile.html">deleteAutoScaleVmProfile (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteAutoScaleVmGroup.html">deleteAutoScaleVmGroup (A)</a>
+</li>
+<li>
+<a href="domain_admin/listCounters.html">listCounters</a>
+</li>
+<li>
+<a href="domain_admin/listConditions.html">listConditions</a>
+</li>
+<li>
+<a href="domain_admin/listAutoScalePolicies.html">listAutoScalePolicies</a>
+</li>
+<li>
+<a href="domain_admin/listAutoScaleVmProfiles.html">listAutoScaleVmProfiles</a>
+</li>
+<li>
+<a href="domain_admin/listAutoScaleVmGroups.html">listAutoScaleVmGroups</a>
+</li>
+<li>
+<a href="domain_admin/enableAutoScaleVmGroup.html">enableAutoScaleVmGroup (A)</a>
+</li>
+<li>
+<a href="domain_admin/disableAutoScaleVmGroup.html">disableAutoScaleVmGroup (A)</a>
+</li>
+<li>
+<a href="domain_admin/updateAutoScalePolicy.html">updateAutoScalePolicy (A)</a>
+</li>
+<li>
+<a href="domain_admin/updateAutoScaleVmProfile.html">updateAutoScaleVmProfile (A)</a>
+</li>
+<li>
+<a href="domain_admin/updateAutoScaleVmGroup.html">updateAutoScaleVmGroup (A)</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Virtual Machine</h5>
+<ul>
+<li>
+<a href="domain_admin/deployVirtualMachine.html">deployVirtualMachine (A)</a>
+</li>
+<li>
+<a href="domain_admin/destroyVirtualMachine.html">destroyVirtualMachine (A)</a>
+</li>
+<li>
+<a href="domain_admin/rebootVirtualMachine.html">rebootVirtualMachine (A)</a>
+</li>
+<li>
+<a href="domain_admin/startVirtualMachine.html">startVirtualMachine (A)</a>
+</li>
+<li>
+<a href="domain_admin/stopVirtualMachine.html">stopVirtualMachine (A)</a>
+</li>
+<li>
+<a href="domain_admin/resetPasswordForVirtualMachine.html">resetPasswordForVirtualMachine (A)</a>
+</li>
+<li>
+<a href="domain_admin/updateVirtualMachine.html">updateVirtualMachine</a>
+</li>
+<li>
+<a href="domain_admin/listVirtualMachines.html">listVirtualMachines</a>
+</li>
+<li>
+<a href="domain_admin/getVMPassword.html">getVMPassword</a>
+</li>
+<li>
+<a href="domain_admin/restoreVirtualMachine.html">restoreVirtualMachine (A)</a>
+</li>
+<li>
+<a href="domain_admin/changeServiceForVirtualMachine.html">changeServiceForVirtualMachine</a>
+</li>
+<li>
+<a href="domain_admin/scaleVirtualMachine.html">scaleVirtualMachine (A)</a>
+</li>
+<li>
+<a href="domain_admin/assignVirtualMachine.html">assignVirtualMachine</a>
+</li>
+<li>
+<a href="domain_admin/recoverVirtualMachine.html">recoverVirtualMachine</a>
+</li>
+<li>
+<a href="domain_admin/addNicToVirtualMachine.html">addNicToVirtualMachine (A)</a>
+</li>
+<li>
+<a href="domain_admin/removeNicFromVirtualMachine.html">removeNicFromVirtualMachine (A)</a>
+</li>
+<li>
+<a href="domain_admin/updateDefaultNicForVirtualMachine.html">updateDefaultNicForVirtualMachine (A)</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>VPN</h5>
+<ul>
+<li>
+<a href="domain_admin/createRemoteAccessVpn.html">createRemoteAccessVpn (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteRemoteAccessVpn.html">deleteRemoteAccessVpn (A)</a>
+</li>
+<li>
+<a href="domain_admin/listRemoteAccessVpns.html">listRemoteAccessVpns</a>
+</li>
+<li>
+<a href="domain_admin/addVpnUser.html">addVpnUser (A)</a>
+</li>
+<li>
+<a href="domain_admin/removeVpnUser.html">removeVpnUser (A)</a>
+</li>
+<li>
+<a href="domain_admin/listVpnUsers.html">listVpnUsers</a>
+</li>
+<li>
+<a href="domain_admin/createVpnCustomerGateway.html">createVpnCustomerGateway (A)</a>
+</li>
+<li>
+<a href="domain_admin/createVpnGateway.html">createVpnGateway (A)</a>
+</li>
+<li>
+<a href="domain_admin/createVpnConnection.html">createVpnConnection (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteVpnCustomerGateway.html">deleteVpnCustomerGateway (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteVpnGateway.html">deleteVpnGateway (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteVpnConnection.html">deleteVpnConnection (A)</a>
+</li>
+<li>
+<a href="domain_admin/updateVpnCustomerGateway.html">updateVpnCustomerGateway (A)</a>
+</li>
+<li>
+<a href="domain_admin/resetVpnConnection.html">resetVpnConnection (A)</a>
+</li>
+<li>
+<a href="domain_admin/listVpnCustomerGateways.html">listVpnCustomerGateways</a>
+</li>
+<li>
+<a href="domain_admin/listVpnGateways.html">listVpnGateways</a>
+</li>
+<li>
+<a href="domain_admin/listVpnConnections.html">listVpnConnections</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="apismallsections">
+<div class="apismallbullet_box">
+<h5>VPC</h5>
+<ul>
+<li>
+<a href="domain_admin/createVPC.html">createVPC (A)</a>
+</li>
+<li>
+<a href="domain_admin/listVPCs.html">listVPCs</a>
+</li>
+<li>
+<a href="domain_admin/deleteVPC.html">deleteVPC (A)</a>
+</li>
+<li>
+<a href="domain_admin/updateVPC.html">updateVPC (A)</a>
+</li>
+<li>
+<a href="domain_admin/restartVPC.html">restartVPC (A)</a>
+</li>
+<li>
+<a href="domain_admin/listVPCOfferings.html">listVPCOfferings</a>
+</li>
+<li>
+<a href="domain_admin/listPrivateGateways.html">listPrivateGateways</a>
+</li>
+<li>
+<a href="domain_admin/createStaticRoute.html">createStaticRoute (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteStaticRoute.html">deleteStaticRoute (A)</a>
+</li>
+<li>
+<a href="domain_admin/listStaticRoutes.html">listStaticRoutes</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Snapshot</h5>
+<ul>
+<li>
+<a href="domain_admin/createSnapshot.html">createSnapshot (A)</a>
+</li>
+<li>
+<a href="domain_admin/listSnapshots.html">listSnapshots</a>
+</li>
+<li>
+<a href="domain_admin/deleteSnapshot.html">deleteSnapshot (A)</a>
+</li>
+<li>
+<a href="domain_admin/createSnapshotPolicy.html">createSnapshotPolicy</a>
+</li>
+<li>
+<a href="domain_admin/deleteSnapshotPolicies.html">deleteSnapshotPolicies</a>
+</li>
+<li>
+<a href="domain_admin/listSnapshotPolicies.html">listSnapshotPolicies</a>
+</li>
+<li>
+<a href="domain_admin/listVMSnapshot.html">listVMSnapshot</a>
+</li>
+<li>
+<a href="domain_admin/createVMSnapshot.html">createVMSnapshot (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteVMSnapshot.html">deleteVMSnapshot (A)</a>
+</li>
+<li>
+<a href="domain_admin/revertToVMSnapshot.html">revertToVMSnapshot (A)</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>ISO</h5>
+<ul>
+<li>
+<a href="domain_admin/attachIso.html">attachIso (A)</a>
+</li>
+<li>
+<a href="domain_admin/detachIso.html">detachIso (A)</a>
+</li>
+<li>
+<a href="domain_admin/listIsos.html">listIsos</a>
+</li>
+<li>
+<a href="domain_admin/registerIso.html">registerIso</a>
+</li>
+<li>
+<a href="domain_admin/updateIso.html">updateIso</a>
+</li>
+<li>
+<a href="domain_admin/deleteIso.html">deleteIso (A)</a>
+</li>
+<li>
+<a href="domain_admin/copyIso.html">copyIso (A)</a>
+</li>
+<li>
+<a href="domain_admin/updateIsoPermissions.html">updateIsoPermissions</a>
+</li>
+<li>
+<a href="domain_admin/listIsoPermissions.html">listIsoPermissions</a>
+</li>
+<li>
+<a href="domain_admin/extractIso.html">extractIso (A)</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Firewall</h5>
+<ul>
+<li>
+<a href="domain_admin/listPortForwardingRules.html">listPortForwardingRules</a>
+</li>
+<li>
+<a href="domain_admin/createPortForwardingRule.html">createPortForwardingRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/deletePortForwardingRule.html">deletePortForwardingRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/updatePortForwardingRule.html">updatePortForwardingRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/createFirewallRule.html">createFirewallRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteFirewallRule.html">deleteFirewallRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/listFirewallRules.html">listFirewallRules</a>
+</li>
+<li>
+<a href="domain_admin/createEgressFirewallRule.html">createEgressFirewallRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteEgressFirewallRule.html">deleteEgressFirewallRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/listEgressFirewallRules.html">listEgressFirewallRules</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="apismallsections">
+<div class="apismallbullet_box">
+<h5>Volume</h5>
+<ul>
+<li>
+<a href="domain_admin/attachVolume.html">attachVolume (A)</a>
+</li>
+<li>
+<a href="domain_admin/uploadVolume.html">uploadVolume (A)</a>
+</li>
+<li>
+<a href="domain_admin/detachVolume.html">detachVolume (A)</a>
+</li>
+<li>
+<a href="domain_admin/createVolume.html">createVolume (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteVolume.html">deleteVolume</a>
+</li>
+<li>
+<a href="domain_admin/listVolumes.html">listVolumes</a>
+</li>
+<li>
+<a href="domain_admin/extractVolume.html">extractVolume (A)</a>
+</li>
+<li>
+<a href="domain_admin/migrateVolume.html">migrateVolume (A)</a>
+</li>
+<li>
+<a href="domain_admin/resizeVolume.html">resizeVolume (A)</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Template</h5>
+<ul>
+<li>
+<a href="domain_admin/createTemplate.html">createTemplate (A)</a>
+</li>
+<li>
+<a href="domain_admin/registerTemplate.html">registerTemplate</a>
+</li>
+<li>
+<a href="domain_admin/updateTemplate.html">updateTemplate</a>
+</li>
+<li>
+<a href="domain_admin/copyTemplate.html">copyTemplate (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteTemplate.html">deleteTemplate (A)</a>
+</li>
+<li>
+<a href="domain_admin/listTemplates.html">listTemplates</a>
+</li>
+<li>
+<a href="domain_admin/updateTemplatePermissions.html">updateTemplatePermissions</a>
+</li>
+<li>
+<a href="domain_admin/listTemplatePermissions.html">listTemplatePermissions</a>
+</li>
+<li>
+<a href="domain_admin/extractTemplate.html">extractTemplate (A)</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Router</h5>
+<ul>
+<li>
+<a href="domain_admin/startRouter.html">startRouter (A)</a>
+</li>
+<li>
+<a href="domain_admin/rebootRouter.html">rebootRouter (A)</a>
+</li>
+<li>
+<a href="domain_admin/stopRouter.html">stopRouter (A)</a>
+</li>
+<li>
+<a href="domain_admin/destroyRouter.html">destroyRouter (A)</a>
+</li>
+<li>
+<a href="domain_admin/changeServiceForRouter.html">changeServiceForRouter</a>
+</li>
+<li>
+<a href="domain_admin/listRouters.html">listRouters</a>
+</li>
+<li>
+<a href="domain_admin/listVirtualRouterElements.html">listVirtualRouterElements</a>
+</li>
+<li>
+<a href="domain_admin/configureVirtualRouterElement.html">configureVirtualRouterElement (A)</a>
+</li>
+<li>
+<a href="domain_admin/createVirtualRouterElement.html">createVirtualRouterElement (A)</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Project</h5>
+<ul>
+<li>
+<a href="domain_admin/createProject.html">createProject (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteProject.html">deleteProject (A)</a>
+</li>
+<li>
+<a href="domain_admin/updateProject.html">updateProject (A)</a>
+</li>
+<li>
+<a href="domain_admin/activateProject.html">activateProject (A)</a>
+</li>
+<li>
+<a href="domain_admin/suspendProject.html">suspendProject (A)</a>
+</li>
+<li>
+<a href="domain_admin/listProjects.html">listProjects</a>
+</li>
+<li>
+<a href="domain_admin/listProjectInvitations.html">listProjectInvitations</a>
+</li>
+<li>
+<a href="domain_admin/updateProjectInvitation.html">updateProjectInvitation (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteProjectInvitation.html">deleteProjectInvitation (A)</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="apismallsections">
+<div class="apismallbullet_box">
+<h5>Network ACL</h5>
+<ul>
+<li>
+<a href="domain_admin/createNetworkACL.html">createNetworkACL (A)</a>
+</li>
+<li>
+<a href="domain_admin/updateNetworkACLItem.html">updateNetworkACLItem (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteNetworkACL.html">deleteNetworkACL (A)</a>
+</li>
+<li>
+<a href="domain_admin/listNetworkACLs.html">listNetworkACLs</a>
+</li>
+<li>
+<a href="domain_admin/createNetworkACLList.html">createNetworkACLList (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteNetworkACLList.html">deleteNetworkACLList (A)</a>
+</li>
+<li>
+<a href="domain_admin/replaceNetworkACLList.html">replaceNetworkACLList (A)</a>
+</li>
+<li>
+<a href="domain_admin/listNetworkACLLists.html">listNetworkACLLists</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Security Group</h5>
+<ul>
+<li>
+<a href="domain_admin/createSecurityGroup.html">createSecurityGroup</a>
+</li>
+<li>
+<a href="domain_admin/deleteSecurityGroup.html">deleteSecurityGroup</a>
+</li>
+<li>
+<a href="domain_admin/authorizeSecurityGroupIngress.html">authorizeSecurityGroupIngress (A)</a>
+</li>
+<li>
+<a href="domain_admin/revokeSecurityGroupIngress.html">revokeSecurityGroupIngress (A)</a>
+</li>
+<li>
+<a href="domain_admin/authorizeSecurityGroupEgress.html">authorizeSecurityGroupEgress (A)</a>
+</li>
+<li>
+<a href="domain_admin/revokeSecurityGroupEgress.html">revokeSecurityGroupEgress (A)</a>
+</li>
+<li>
+<a href="domain_admin/listSecurityGroups.html">listSecurityGroups</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Account</h5>
+<ul>
+<li>
+<a href="domain_admin/disableAccount.html">disableAccount (A)</a>
+</li>
+<li>
+<a href="domain_admin/enableAccount.html">enableAccount</a>
+</li>
+<li>
+<a href="domain_admin/lockAccount.html">lockAccount</a>
+</li>
+<li>
+<a href="domain_admin/listAccounts.html">listAccounts</a>
+</li>
+<li>
+<a href="domain_admin/addAccountToProject.html">addAccountToProject (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteAccountFromProject.html">deleteAccountFromProject (A)</a>
+</li>
+<li>
+<a href="domain_admin/listProjectAccounts.html">listProjectAccounts</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>User</h5>
+<ul>
+<li>
+<a href="domain_admin/updateUser.html">updateUser</a>
+</li>
+<li>
+<a href="domain_admin/listUsers.html">listUsers</a>
+</li>
+<li>
+<a href="domain_admin/lockUser.html">lockUser</a>
+</li>
+<li>
+<a href="domain_admin/disableUser.html">disableUser (A)</a>
+</li>
+<li>
+<a href="domain_admin/enableUser.html">enableUser</a>
+</li>
+<li>
+<a href="domain_admin/registerUserKeys.html">registerUserKeys</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="apismallsections">
+<div class="apismallbullet_box">
+<h5>SSH</h5>
+<ul>
+<li>
+<a href="domain_admin/resetSSHKeyForVirtualMachine.html">resetSSHKeyForVirtualMachine (A)</a>
+</li>
+<li>
+<a href="domain_admin/registerSSHKeyPair.html">registerSSHKeyPair</a>
+</li>
+<li>
+<a href="domain_admin/createSSHKeyPair.html">createSSHKeyPair</a>
+</li>
+<li>
+<a href="domain_admin/deleteSSHKeyPair.html">deleteSSHKeyPair</a>
+</li>
+<li>
+<a href="domain_admin/listSSHKeyPairs.html">listSSHKeyPairs</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Network</h5>
+<ul>
+<li>
+<a href="domain_admin/createNetwork.html">createNetwork</a>
+</li>
+<li>
+<a href="domain_admin/deleteNetwork.html">deleteNetwork (A)</a>
+</li>
+<li>
+<a href="domain_admin/listNetworks.html">listNetworks</a>
+</li>
+<li>
+<a href="domain_admin/restartNetwork.html">restartNetwork (A)</a>
+</li>
+<li>
+<a href="domain_admin/updateNetwork.html">updateNetwork (A)</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>NAT</h5>
+<ul>
+<li>
+<a href="domain_admin/enableStaticNat.html">enableStaticNat</a>
+</li>
+<li>
+<a href="domain_admin/createIpForwardingRule.html">createIpForwardingRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteIpForwardingRule.html">deleteIpForwardingRule (A)</a>
+</li>
+<li>
+<a href="domain_admin/listIpForwardingRules.html">listIpForwardingRules</a>
+</li>
+<li>
+<a href="domain_admin/disableStaticNat.html">disableStaticNat (A)</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Affinity Group</h5>
+<ul>
+<li>
+<a href="domain_admin/createAffinityGroup.html">createAffinityGroup (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteAffinityGroup.html">deleteAffinityGroup (A)</a>
+</li>
+<li>
+<a href="domain_admin/listAffinityGroups.html">listAffinityGroups</a>
+</li>
+<li>
+<a href="domain_admin/updateVMAffinityGroup.html">updateVMAffinityGroup (A)</a>
+</li>
+<li>
+<a href="domain_admin/listAffinityGroupTypes.html">listAffinityGroupTypes</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="apismallsections">
+<div class="apismallbullet_box">
+<h5>VM Group</h5>
+<ul>
+<li>
+<a href="domain_admin/createInstanceGroup.html">createInstanceGroup</a>
+</li>
+<li>
+<a href="domain_admin/deleteInstanceGroup.html">deleteInstanceGroup</a>
+</li>
+<li>
+<a href="domain_admin/updateInstanceGroup.html">updateInstanceGroup</a>
+</li>
+<li>
+<a href="domain_admin/listInstanceGroups.html">listInstanceGroups</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Limit</h5>
+<ul>
+<li>
+<a href="domain_admin/updateResourceLimit.html">updateResourceLimit</a>
+</li>
+<li>
+<a href="domain_admin/updateResourceCount.html">updateResourceCount</a>
+</li>
+<li>
+<a href="domain_admin/listResourceLimits.html">listResourceLimits</a>
+</li>
+<li>
+<a href="domain_admin/getApiLimit.html">getApiLimit</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Event</h5>
+<ul>
+<li>
+<a href="domain_admin/listEvents.html">listEvents</a>
+</li>
+<li>
+<a href="domain_admin/listEventTypes.html">listEventTypes</a>
+</li>
+<li>
+<a href="domain_admin/archiveEvents.html">archiveEvents</a>
+</li>
+<li>
+<a href="domain_admin/deleteEvents.html">deleteEvents</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Resource tags</h5>
+<ul>
+<li>
+<a href="domain_admin/createTags.html">createTags (A)</a>
+</li>
+<li>
+<a href="domain_admin/deleteTags.html">deleteTags (A)</a>
+</li>
+<li>
+<a href="domain_admin/listTags.html">listTags</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="apismallsections">
+<div class="apismallbullet_box">
+<h5>Nic</h5>
+<ul>
+<li>
+<a href="domain_admin/addIpToNic.html">addIpToNic (A)</a>
+</li>
+<li>
+<a href="domain_admin/removeIpFromNic.html">removeIpFromNic (A)</a>
+</li>
+<li>
+<a href="domain_admin/listNics.html">listNics</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Internal LB</h5>
+<ul>
+<li>
+<a href="domain_admin/configureInternalLoadBalancerElement.html">configureInternalLoadBalancerElement (A)</a>
+</li>
+<li>
+<a href="domain_admin/createInternalLoadBalancerElement.html">createInternalLoadBalancerElement (A)</a>
+</li>
+<li>
+<a href="domain_admin/listInternalLoadBalancerElements.html">listInternalLoadBalancerElements</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Address</h5>
+<ul>
+<li>
+<a href="domain_admin/associateIpAddress.html">associateIpAddress (A)</a>
+</li>
+<li>
+<a href="domain_admin/disassociateIpAddress.html">disassociateIpAddress (A)</a>
+</li>
+<li>
+<a href="domain_admin/listPublicIpAddresses.html">listPublicIpAddresses</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Guest OS</h5>
+<ul>
+<li>
+<a href="domain_admin/listOsTypes.html">listOsTypes</a>
+</li>
+<li>
+<a href="domain_admin/listOsCategories.html">listOsCategories</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="apismallsections">
+<div class="apismallbullet_box">
+<h5>Domain</h5>
+<ul>
+<li>
+<a href="domain_admin/listDomains.html">listDomains</a>
+</li>
+<li>
+<a href="domain_admin/listDomainChildren.html">listDomainChildren</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Async job</h5>
+<ul>
+<li>
+<a href="domain_admin/queryAsyncJobResult.html">queryAsyncJobResult</a>
+</li>
+<li>
+<a href="domain_admin/listAsyncJobs.html">listAsyncJobs</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Zone</h5>
+<ul>
+<li>
+<a href="domain_admin/listZones.html">listZones</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Service Offering</h5>
+<ul>
+<li>
+<a href="domain_admin/listServiceOfferings.html">listServiceOfferings</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="apismallsections">
+<div class="apismallbullet_box">
+<h5>Region</h5>
+<ul>
+<li>
+<a href="domain_admin/listRegions.html">listRegions</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Network Offering</h5>
+<ul>
+<li>
+<a href="domain_admin/listNetworkOfferings.html">listNetworkOfferings</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Logout</h5>
+<ul>
+<li>
+<a href="domain_admin/logout.html">logout</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Login</h5>
+<ul>
+<li>
+<a href="domain_admin/login.html">login</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="apismallsections">
+<div class="apismallbullet_box">
+<h5>Hypervisor</h5>
+<ul>
+<li>
+<a href="domain_admin/listHypervisors.html">listHypervisors</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Disk Offering</h5>
+<ul>
+<li>
+<a href="domain_admin/listDiskOfferings.html">listDiskOfferings</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Configuration</h5>
+<ul>
+<li>
+<a href="domain_admin/listCapabilities.html">listCapabilities</a>
+</li>
+</ul>
+</div>
+<div class="apismallbullet_box">
+<h5>Cloud Identifier</h5>
+<ul>
+<li>
+<a href="domain_admin/getCloudIdentifier.html">getCloudIdentifier</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="apismallsections">
+<div class="apismallbullet_box">
+<h5>API Discovery</h5>
+<ul>
+<li>
+<a href="domain_admin/listApis.html">listApis</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer_mainmaster">
+<p>Copyright &copy; 2013 Citrix Systems, Inc. All rights reserved. Specifications are subject to change without
+notice. Citrix Systems, Inc., the Citrix logo, Citrix XenServer, Citrix XenCenter, and CloudPlatform
+are trademarks or registered trademarks of Citrix Systems, Inc. All other brands or products are
+trademarks or registered trademarks of their respective holders.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

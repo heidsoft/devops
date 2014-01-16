@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../includes/main.css" type="text/css">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<title>Citrix CloudPlatform (powered by Apache CloudStack)</title>
+</head>
+<body>
+<div id="insidetopbg">
+<div id="inside_wrapper">
+<div class="uppermenu_panel">
+<div class="uppermenu_box"></div>
+</div>
+<div id="main_master">
+<div id="inside_header">
+<div class="header_top">
+<a class="cloud_logo" href="http://www.citrix.com/products/cloudplatform/overview.html"></a>
+<div class="mainemenu_panel"></div>
+</div>
+</div>
+<div id="main_content">
+<div class="inside_apileftpanel">
+<div class="inside_contentpanel" style="width:930px;">
+<div class="api_titlebox">
+<div class="api_titlebox_left">
+<span>
+									Citrix CloudPlatform 4.2.0 Domain Admin API Reference
+								</span>
+<p></p>
+<h1>createLBHealthCheckPolicy</h1>
+<p>Creates a Load Balancer healthcheck policy </p>
+</div>
+<div class="api_titlebox_right">
+<a class="api_backbutton" href="../TOC_Domain_Admin.html"></a>
+</div>
+</div>
+<div class="api_tablepanel">
+<h2>Request parameters</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Parameter Name</strong></td><td style="width:500px;">Description</td><td style="width:180px;">Required</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>lbruleid</strong></td><td style="width:500px;"><strong>the ID of the load balancer rule</strong></td><td style="width:180px;"><strong>true</strong></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>description</i></td><td style="width:500px;"><i>the description of the load balancer HealthCheck policy</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>healthythreshold</i></td><td style="width:500px;"><i>Number of consecutive health check success before declaring an instance healthy</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>intervaltime</i></td><td style="width:500px;"><i>Amount of time between health checks (1 sec - 20940 sec)</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>pingpath</i></td><td style="width:500px;"><i>HTTP Ping Path</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>responsetimeout</i></td><td style="width:500px;"><i>Time to wait when receiving a response from the health check (2sec - 60 sec)</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>unhealthythreshold</i></td><td style="width:500px;"><i>Number of consecutive health check failures before declaring an instance unhealthy</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+</table>
+</div>
+<div class="api_tablepanel">
+<h2>Response Tags</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Response Name</strong></td><td style="width:500px;">Description</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>account</strong></td><td style="width:500px;">the account of the HealthCheck policy</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domain</strong></td><td style="width:500px;">the domain of the HealthCheck policy</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domainid</strong></td><td style="width:500px;">the domain ID of the HealthCheck policy</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>lbruleid</strong></td><td style="width:500px;">the LB rule ID</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>zoneid</strong></td><td style="width:500px;">the id of the zone the HealthCheck policy belongs to</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>healthcheckpolicy(*)</strong></td><td style="width:500px;">the list of healthcheckpolicies</td>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>id</strong></td><td style="width:500px;">the LB HealthCheck policy ID</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>description</strong></td><td style="width:500px;">the description of the healthcheck policy</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>healthcheckinterval</strong></td><td style="width:500px;">Amount of time between health checks</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>healthcheckthresshold</strong></td><td style="width:500px;">Number of consecutive health check success before declaring an instance healthy</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>pingpath</strong></td><td style="width:500px;">the pingpath  of the healthcheck policy</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>responsetime</strong></td><td style="width:500px;">Time to wait when receiving a response from the health check</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>state</strong></td><td style="width:500px;">the state of the policy</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>unhealthcheckthresshold</strong></td><td style="width:500px;">Number of consecutive health check failures before declaring an instance unhealthy.</td>
+</tr>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer_mainmaster">
+<p>Copyright &copy; 2013 Citrix Systems, Inc. All rights reserved. Specifications are subject to change without
+notice. Citrix Systems, Inc., the Citrix logo, Citrix XenServer, Citrix XenCenter, and CloudPlatform
+are trademarks or registered trademarks of Citrix Systems, Inc. All other brands or products are
+trademarks or registered trademarks of their respective holders.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

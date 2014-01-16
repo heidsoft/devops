@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../includes/main.css" type="text/css">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<title>Citrix CloudPlatform (powered by Apache CloudStack)</title>
+</head>
+<body>
+<div id="insidetopbg">
+<div id="inside_wrapper">
+<div class="uppermenu_panel">
+<div class="uppermenu_box"></div>
+</div>
+<div id="main_master">
+<div id="inside_header">
+<div class="header_top">
+<a class="cloud_logo" href="http://www.citrix.com/products/cloudplatform/overview.html"></a>
+<div class="mainemenu_panel"></div>
+</div>
+</div>
+<div id="main_content">
+<div class="inside_apileftpanel">
+<div class="inside_contentpanel" style="width:930px;">
+<div class="api_titlebox">
+<div class="api_titlebox_left">
+<span>
+									Citrix CloudPlatform 4.2.0 Root Admin API Reference
+								</span>
+<p></p>
+<h1>associateIpAddress</h1>
+<p>Acquires and associates a public IP to an account.</p>
+</div>
+<div class="api_titlebox_right">
+<a class="api_backbutton" href="../TOC_Root_Admin.html"></a>
+</div>
+</div>
+<div class="api_tablepanel">
+<h2>Request parameters</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Parameter Name</strong></td><td style="width:500px;">Description</td><td style="width:180px;">Required</td>
+</tr>
+<tr>
+<td style="width:200px;"><i>account</i></td><td style="width:500px;"><i>the account to associate with this IP address</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>domainid</i></td><td style="width:500px;"><i>the ID of the domain to associate with this IP address</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>isportable</i></td><td style="width:500px;"><i>should be set to true if public IP is required to be transferable across zones, if not specified defaults to false</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>networkid</i></td><td style="width:500px;"><i>The network this ip address should be associated to.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>projectid</i></td><td style="width:500px;"><i>Deploy vm for the project</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>regionid</i></td><td style="width:500px;"><i>region ID from where portable ip is to be associated.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>vpcid</i></td><td style="width:500px;"><i>the VPC you want the ip address to be associated with</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>zoneid</i></td><td style="width:500px;"><i>the ID of the availability zone you want to acquire an public IP address from</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+</table>
+</div>
+<div class="api_tablepanel">
+<h2>Response Tags</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Response Name</strong></td><td style="width:500px;">Description</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>id</strong></td><td style="width:500px;">public IP address id</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>account</strong></td><td style="width:500px;">the account the public IP address is associated with</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>allocated</strong></td><td style="width:500px;">date the public IP address was acquired</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>associatednetworkid</strong></td><td style="width:500px;">the ID of the Network associated with the IP address</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>associatednetworkname</strong></td><td style="width:500px;">the name of the Network associated with the IP address</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domain</strong></td><td style="width:500px;">the domain the public IP address is associated with</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domainid</strong></td><td style="width:500px;">the domain ID the public IP address is associated with</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>forvirtualnetwork</strong></td><td style="width:500px;">the virtual network for the IP address</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>ipaddress</strong></td><td style="width:500px;">public IP address</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>isportable</strong></td><td style="width:500px;">is public IP portable across the zones</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>issourcenat</strong></td><td style="width:500px;">true if the IP address is a source nat address, false otherwise</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>isstaticnat</strong></td><td style="width:500px;">true if this ip is for static nat, false otherwise</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>issystem</strong></td><td style="width:500px;">true if this ip is system ip (was allocated as a part of deployVm or createLbRule)</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>networkid</strong></td><td style="width:500px;">the ID of the Network where ip belongs to</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>physicalnetworkid</strong></td><td style="width:500px;">the physical network this belongs to</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>project</strong></td><td style="width:500px;">the project name of the address</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>projectid</strong></td><td style="width:500px;">the project id of the ipaddress</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>purpose</strong></td><td style="width:500px;">purpose of the IP address. In Acton this value is not null for Ips with isSystem=true, and can have either StaticNat or LB value</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>state</strong></td><td style="width:500px;">State of the ip address. Can be: Allocatin, Allocated and Releasing</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>virtualmachinedisplayname</strong></td><td style="width:500px;">virutal machine display name the ip address is assigned to (not null only for static nat Ip)</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>virtualmachineid</strong></td><td style="width:500px;">virutal machine id the ip address is assigned to (not null only for static nat Ip)</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>virtualmachinename</strong></td><td style="width:500px;">virutal machine name the ip address is assigned to (not null only for static nat Ip)</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vlanid</strong></td><td style="width:500px;">the ID of the VLAN associated with the IP address. This parameter is visible to ROOT admins only</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vlanname</strong></td><td style="width:500px;">the VLAN associated with the IP address</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vmipaddress</strong></td><td style="width:500px;">virutal machine (dnat) ip address (not null only for static nat Ip)</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vpcid</strong></td><td style="width:500px;">VPC the ip belongs to</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>zoneid</strong></td><td style="width:500px;">the ID of the zone the public IP address belongs to</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>zonename</strong></td><td style="width:500px;">the name of the zone the public IP address belongs to</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>tags(*)</strong></td><td style="width:500px;">the list of resource tags associated with ip address</td>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>account</strong></td><td style="width:500px;">the account associated with the tag</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>customer</strong></td><td style="width:500px;">customer associated with the tag</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>domain</strong></td><td style="width:500px;">the domain associated with the tag</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>domainid</strong></td><td style="width:500px;">the ID of the domain associated with the tag</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>key</strong></td><td style="width:500px;">tag key name</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>project</strong></td><td style="width:500px;">the project name where tag belongs to</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>projectid</strong></td><td style="width:500px;">the project id the tag belongs to</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>resourceid</strong></td><td style="width:500px;">id of the resource</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>resourcetype</strong></td><td style="width:500px;">resource type</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>value</strong></td><td style="width:500px;">tag value</td>
+</tr>
+</tr>
+<tr>
+<td style="width:200px;"><strong>jobid</strong></td><td style="width:500px;">the ID of the latest async job acting on this object</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>jobstatus</strong></td><td style="width:500px;">the current status of the latest async job acting on this object</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="comments_thread">
+<script type="text/javascript" src="https://comments.apache.org/show_comments.lua?site=test" async="true"></script>
+<noscript>
+<iframe width="930" height="500" src="https://comments.apache.org/iframe.lua?site=test&amp;page=4.2.0/rootadmin"></iframe>
+</noscript>
+</div>
+<div id="footer_mainmaster">
+<p>Copyright &copy; 2013 Citrix Systems, Inc. All rights reserved. Specifications are subject to change without
+notice. Citrix Systems, Inc., the Citrix logo, Citrix XenServer, Citrix XenCenter, and CloudPlatform
+are trademarks or registered trademarks of Citrix Systems, Inc. All other brands or products are
+trademarks or registered trademarks of their respective holders.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

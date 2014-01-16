@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../includes/main.css" type="text/css">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<title>Citrix CloudPlatform (powered by Apache CloudStack)</title>
+</head>
+<body>
+<div id="insidetopbg">
+<div id="inside_wrapper">
+<div class="uppermenu_panel">
+<div class="uppermenu_box"></div>
+</div>
+<div id="main_master">
+<div id="inside_header">
+<div class="header_top">
+<a class="cloud_logo" href="http://www.citrix.com/products/cloudplatform/overview.html"></a>
+<div class="mainemenu_panel"></div>
+</div>
+</div>
+<div id="main_content">
+<div class="inside_apileftpanel">
+<div class="inside_contentpanel" style="width:930px;">
+<div class="api_titlebox">
+<div class="api_titlebox_left">
+<span>
+									Citrix CloudPlatform 4.2.0 Domain Admin API Reference
+								</span>
+<p></p>
+<h1>suspendProject</h1>
+<p>Suspends a project</p>
+</div>
+<div class="api_titlebox_right">
+<a class="api_backbutton" href="../TOC_Domain_Admin.html"></a>
+</div>
+</div>
+<div class="api_tablepanel">
+<h2>Request parameters</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Parameter Name</strong></td><td style="width:500px;">Description</td><td style="width:180px;">Required</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>id</strong></td><td style="width:500px;"><strong>id of the project to be suspended</strong></td><td style="width:180px;"><strong>true</strong></td>
+</tr>
+</table>
+</div>
+<div class="api_tablepanel">
+<h2>Response Tags</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Response Name</strong></td><td style="width:500px;">Description</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>id</strong></td><td style="width:500px;">the id of the project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>account</strong></td><td style="width:500px;">the account name of the project's owner</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>cpuavailable</strong></td><td style="width:500px;">the total number of cpu cores available to be created for this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>cpulimit</strong></td><td style="width:500px;">the total number of cpu cores the project can own</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>cputotal</strong></td><td style="width:500px;">the total number of cpu cores owned by project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>displaytext</strong></td><td style="width:500px;">the displaytext of the project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domain</strong></td><td style="width:500px;">the domain name where the project belongs to</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domainid</strong></td><td style="width:500px;">the domain id the project belongs to</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>ipavailable</strong></td><td style="width:500px;">the total number of public ip addresses available for this project to acquire</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>iplimit</strong></td><td style="width:500px;">the total number of public ip addresses this project can acquire</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>iptotal</strong></td><td style="width:500px;">the total number of public ip addresses allocated for this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>memoryavailable</strong></td><td style="width:500px;">the total memory (in MB) available to be created for this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>memorylimit</strong></td><td style="width:500px;">the total memory (in MB) the project can own</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>memorytotal</strong></td><td style="width:500px;">the total memory (in MB) owned by project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>name</strong></td><td style="width:500px;">the name of the project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>networkavailable</strong></td><td style="width:500px;">the total number of networks available to be created for this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>networklimit</strong></td><td style="width:500px;">the total number of networks the project can own</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>networktotal</strong></td><td style="width:500px;">the total number of networks owned by project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>primarystorageavailable</strong></td><td style="width:500px;">the total primary storage space (in GiB) available to be used for this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>primarystoragelimit</strong></td><td style="width:500px;">the total primary storage space (in GiB) the project can own</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>primarystoragetotal</strong></td><td style="width:500px;">the total primary storage space (in GiB) owned by project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>secondarystorageavailable</strong></td><td style="width:500px;">the total secondary storage space (in GiB) available to be used for this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>secondarystoragelimit</strong></td><td style="width:500px;">the total secondary storage space (in GiB) the project can own</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>secondarystoragetotal</strong></td><td style="width:500px;">the total secondary storage space (in GiB) owned by project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>snapshotavailable</strong></td><td style="width:500px;">the total number of snapshots available for this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>snapshotlimit</strong></td><td style="width:500px;">the total number of snapshots which can be stored by this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>snapshottotal</strong></td><td style="width:500px;">the total number of snapshots stored by this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>state</strong></td><td style="width:500px;">the state of the project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>templateavailable</strong></td><td style="width:500px;">the total number of templates available to be created by this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>templatelimit</strong></td><td style="width:500px;">the total number of templates which can be created by this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>templatetotal</strong></td><td style="width:500px;">the total number of templates which have been created by this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vmavailable</strong></td><td style="width:500px;">the total number of virtual machines available for this project to acquire</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vmlimit</strong></td><td style="width:500px;">the total number of virtual machines that can be deployed by this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vmrunning</strong></td><td style="width:500px;">the total number of virtual machines running for this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vmstopped</strong></td><td style="width:500px;">the total number of virtual machines stopped for this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vmtotal</strong></td><td style="width:500px;">the total number of virtual machines deployed by this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>volumeavailable</strong></td><td style="width:500px;">the total volume available for this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>volumelimit</strong></td><td style="width:500px;">the total volume which can be used by this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>volumetotal</strong></td><td style="width:500px;">the total volume being used by this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vpcavailable</strong></td><td style="width:500px;">the total number of vpcs available to be created for this project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vpclimit</strong></td><td style="width:500px;">the total number of vpcs the project can own</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>vpctotal</strong></td><td style="width:500px;">the total number of vpcs owned by project</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>tags(*)</strong></td><td style="width:500px;">the list of resource tags associated with vm</td>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>account</strong></td><td style="width:500px;">the account associated with the tag</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>customer</strong></td><td style="width:500px;">customer associated with the tag</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>domain</strong></td><td style="width:500px;">the domain associated with the tag</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>domainid</strong></td><td style="width:500px;">the ID of the domain associated with the tag</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>key</strong></td><td style="width:500px;">tag key name</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>project</strong></td><td style="width:500px;">the project name where tag belongs to</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>projectid</strong></td><td style="width:500px;">the project id the tag belongs to</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>resourceid</strong></td><td style="width:500px;">id of the resource</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>resourcetype</strong></td><td style="width:500px;">resource type</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>value</strong></td><td style="width:500px;">tag value</td>
+</tr>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer_mainmaster">
+<p>Copyright &copy; 2013 Citrix Systems, Inc. All rights reserved. Specifications are subject to change without
+notice. Citrix Systems, Inc., the Citrix logo, Citrix XenServer, Citrix XenCenter, and CloudPlatform
+are trademarks or registered trademarks of Citrix Systems, Inc. All other brands or products are
+trademarks or registered trademarks of their respective holders.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../includes/main.css" type="text/css">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<title>Citrix CloudPlatform (powered by Apache CloudStack)</title>
+</head>
+<body>
+<div id="insidetopbg">
+<div id="inside_wrapper">
+<div class="uppermenu_panel">
+<div class="uppermenu_box"></div>
+</div>
+<div id="main_master">
+<div id="inside_header">
+<div class="header_top">
+<a class="cloud_logo" href="http://www.citrix.com/products/cloudplatform/overview.html"></a>
+<div class="mainemenu_panel"></div>
+</div>
+</div>
+<div id="main_content">
+<div class="inside_apileftpanel">
+<div class="inside_contentpanel" style="width:930px;">
+<div class="api_titlebox">
+<div class="api_titlebox_left">
+<span>
+									Citrix CloudPlatform 4.2.0 User API Reference
+								</span>
+<p></p>
+<h1>createSecurityGroup</h1>
+<p>Creates a security group</p>
+</div>
+<div class="api_titlebox_right">
+<a class="api_backbutton" href="../TOC_User.html"></a>
+</div>
+</div>
+<div class="api_tablepanel">
+<h2>Request parameters</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Parameter Name</strong></td><td style="width:500px;">Description</td><td style="width:180px;">Required</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>name</strong></td><td style="width:500px;"><strong>name of the security group</strong></td><td style="width:180px;"><strong>true</strong></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>account</i></td><td style="width:500px;"><i>an optional account for the security group. Must be used with domainId.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>description</i></td><td style="width:500px;"><i>the description of the security group</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>domainid</i></td><td style="width:500px;"><i>an optional domainId for the security group. If the account parameter is used, domainId must also be used.</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+<tr>
+<td style="width:200px;"><i>projectid</i></td><td style="width:500px;"><i>Create security group for project</i></td><td style="width:180px;"><i>false</i></td>
+</tr>
+</table>
+</div>
+<div class="api_tablepanel">
+<h2>Response Tags</h2>
+<table class="apitable">
+<tr class="hed">
+<td style="width:200px;"><strong>Response Name</strong></td><td style="width:500px;">Description</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>id</strong></td><td style="width:500px;">the ID of the security group</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>account</strong></td><td style="width:500px;">the account owning the security group</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>description</strong></td><td style="width:500px;">the description of the security group</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domain</strong></td><td style="width:500px;">the domain name of the security group</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>domainid</strong></td><td style="width:500px;">the domain ID of the security group</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>name</strong></td><td style="width:500px;">the name of the security group</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>project</strong></td><td style="width:500px;">the project name of the group</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>projectid</strong></td><td style="width:500px;">the project id of the group</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>egressrule(*)</strong></td><td style="width:500px;">the list of egress rules associated with the security group</td>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>account</strong></td><td style="width:500px;">account owning the security group rule</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>cidr</strong></td><td style="width:500px;">the CIDR notation for the base IP address of the security group rule</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>endport</strong></td><td style="width:500px;">the ending IP of the security group rule </td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>icmpcode</strong></td><td style="width:500px;">the code for the ICMP message response</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>icmptype</strong></td><td style="width:500px;">the type of the ICMP message response</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>protocol</strong></td><td style="width:500px;">the protocol of the security group rule</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>ruleid</strong></td><td style="width:500px;">the id of the security group rule</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>securitygroupname</strong></td><td style="width:500px;">security group name</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>startport</strong></td><td style="width:500px;">the starting IP of the security group rule</td>
+</tr>
+</tr>
+<tr>
+<td style="width:200px;"><strong>ingressrule(*)</strong></td><td style="width:500px;">the list of ingress rules associated with the security group</td>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>account</strong></td><td style="width:500px;">account owning the security group rule</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>cidr</strong></td><td style="width:500px;">the CIDR notation for the base IP address of the security group rule</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>endport</strong></td><td style="width:500px;">the ending IP of the security group rule </td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>icmpcode</strong></td><td style="width:500px;">the code for the ICMP message response</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>icmptype</strong></td><td style="width:500px;">the type of the ICMP message response</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>protocol</strong></td><td style="width:500px;">the protocol of the security group rule</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>ruleid</strong></td><td style="width:500px;">the id of the security group rule</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>securitygroupname</strong></td><td style="width:500px;">security group name</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>startport</strong></td><td style="width:500px;">the starting IP of the security group rule</td>
+</tr>
+</tr>
+<tr>
+<td style="width:200px;"><strong>tags(*)</strong></td><td style="width:500px;">the list of resource tags associated with the rule</td>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>account</strong></td><td style="width:500px;">the account associated with the tag</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>customer</strong></td><td style="width:500px;">customer associated with the tag</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>domain</strong></td><td style="width:500px;">the domain associated with the tag</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>domainid</strong></td><td style="width:500px;">the ID of the domain associated with the tag</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>key</strong></td><td style="width:500px;">tag key name</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>project</strong></td><td style="width:500px;">the project name where tag belongs to</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>projectid</strong></td><td style="width:500px;">the project id the tag belongs to</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>resourceid</strong></td><td style="width:500px;">id of the resource</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>resourcetype</strong></td><td style="width:500px;">resource type</td>
+</tr>
+<tr>
+<td style="width:180px; padding-left:25px;"><strong>value</strong></td><td style="width:500px;">tag value</td>
+</tr>
+</tr>
+<tr>
+<td style="width:200px;"><strong>jobid</strong></td><td style="width:500px;">the ID of the latest async job acting on this object</td>
+</tr>
+<tr>
+<td style="width:200px;"><strong>jobstatus</strong></td><td style="width:500px;">the current status of the latest async job acting on this object</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer_mainmaster">
+<p>Copyright &copy; 2013 Citrix Systems, Inc. All rights reserved. Specifications are subject to change without
+notice. Citrix Systems, Inc., the Citrix logo, Citrix XenServer, Citrix XenCenter, and CloudPlatform
+are trademarks or registered trademarks of Citrix Systems, Inc. All other brands or products are
+trademarks or registered trademarks of their respective holders.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
