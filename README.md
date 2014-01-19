@@ -2,15 +2,9 @@
 =====
 
 #第一章 操作系统
-* 内核编译
-
-
-    make config 该工具会遍历所有配置项，要求用户选择yes/no或是module 
-    make menuconfig 使用基于X11的图形化工具编译 
-    make gconfig 
-    make defconfig  使用默认配置
-    make oldconfig  使用老配置
-    make
+* [内核启动过程](./内核启动过程.md)
+* [内核编译](./内核编译.md)
+    
 
 #第二章 算法分析与设计#
 * 空间复杂度
