@@ -41,6 +41,6 @@
 
 
 #第九章 自动化#
-* [Chef](https://learnchef.opscode.com/
+* [Chef](https://learnchef.opscode.com/)
 
 #第十章 监控#
