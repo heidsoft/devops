@@ -6,3 +6,6 @@
 * https://x86.trystack.org/dashboard/
 * http://stackalytics.com/
 * http://openstack.redhat.com/Quickstart
+
+##mirantis开发##
+* http://docs.mirantis.com/fuel-dev/develop.html
