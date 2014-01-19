@@ -16,6 +16,7 @@
 * 时间复杂度
 
 #第三章 深入理解计算机体系结构#
+* [北京大学微处理器研究中心](http://mprc.pku.edu.cn/index.htm)
 
 #第四章 计算网络原理#
 * [tcp](./tcp.md)
@@ -41,3 +42,8 @@
 
 #第八章 软件定义网络#
 * [SDN](./sdn.md)
+
+#第九章 自动化#
+* [Chef](https://learnchef.opscode.com/
+
+#第十章 监控#
