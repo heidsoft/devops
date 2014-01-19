@@ -17,6 +17,7 @@
 * [tcp](./tcp.md)
 * [udp](./udp)
 * [ip](./ip)
+* [SDN](./sdn.md)
 
 #第五章 云计算#
 * [CloudStack](./cloudstack.md)
@@ -35,8 +36,9 @@
 #第七章 App架构#
 * [Android](./android.md)
 
-#第八章 软件定义网络#
-* [SDN](./sdn.md)
+#第八章 存储#
+* [EMC存储讨论社区](https://community.emc.com/docs/DOC-19472)
+
 
 #第九章 自动化#
 * [Chef](https://learnchef.opscode.com/
