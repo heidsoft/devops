@@ -45,3 +45,6 @@
 * [Chef](https://learnchef.opscode.com/)
 
 #第十章 监控#
+
+#第十一章 工作流
+* [纵观jBPM：从jBPM3到jBPM5以及Activiti5](http://www.infoq.com/cn/articles/rh-jbpm5-activiti5)
