@@ -20,3 +20,4 @@
 - [XenApi-Github](https://github.com/xapi-project/xen-api)
 - [Xen讨论](http://xen.1045712.n5.nabble.com/)
 - [Xen Python Api](http://docs.vmd.citrix.com/XenServer/4.0.1/api/client-examples/python/index.html)
+- [Citrix-book](http://citrix-book.org/)
