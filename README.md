@@ -26,13 +26,18 @@
 * [ESB](./esb.md)
 * [SOA](./soa.md)
 
-#第六章 存储#
+##第六章 存储#
 * [EMC存储讨论社区](https://community.emc.com/docs/DOC-19472)
 
 
-#第七章 自动化#
+##第七章 自动化#
 * [Chef](https://learnchef.opscode.com/)
 
 
-#第八章 工作流
+##第八章 工作流
 * [纵观jBPM：从jBPM3到jBPM5以及Activiti5](http://www.infoq.com/cn/articles/rh-jbpm5-activiti5)
+
+##参考资料
+- http://www.csdn.net/article/2014-03-26/2818977-Cloud-BigData-Teradata
+- http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
+- http://books.sonatype.com/mvnex-book/reference/web-sect-creating-project.html
