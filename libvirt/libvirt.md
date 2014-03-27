@@ -62,6 +62,16 @@
 	virConnectPtr virConnectOpenAuth(const char* name, virConnectAuthPtr auth, int flag);
 
 ##参考资料
-- [官网](http://libvirt.org/downloads.html)
-- [Scripting KVM with Python](http://www.ibm.com/developerworks/linux/library/os-python-kvm-scripting1/index.html?ca=dat)
-- [Getting started with LXC using libvirt](https://help.ubuntu.com/10.04/serverguide/libvirt.html)
+- http://libvirt.org/downloads.html
+- http://www.ibm.com/developerworks/linux/library/os-python-kvm-scripting1/index.html?ca=dat
+- https://help.ubuntu.com/10.04/serverguide/libvirt.html
+- http://www.ibm.com/developerworks/library/l-libvirt/
+- http://cloud.dzone.com/news/libvirt-for-fog
+- http://www.cppblog.com/LIULIANG/archive/2012/05/22/175822.html
+- http://fr2.rpmfind.net/linux/RPM/centos/updates/6.5/x86_64/Packages/libvirt-devel-0.10.2-29.el6.1.i686.html
+- http://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html-single/Virtualization_Deployment_and_Administration_Guide/index.html
+- http://www.virtualopensystems.com/
+- ftp://ftpeng.cisco.com/openstack/cisco/pkgs/libvirt/docs/java.html.in
+- http://www.informit.com/articles/article.aspx?p=1867761&seqNum=3
+- http://libvirt.org/java.html
+- http://www.dedoimedo.com/computers/kvm-storage.html
