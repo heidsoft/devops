@@ -34,6 +34,20 @@ func main() {
 	pp.age = 25
 	pp.name = "heidsoft"
 	
-	fmt.Printf("%v\n",pp)
+	fmt.Printf("%v\n",pp);
 	
+	testIf();
+	
+}
+
+//判断语句if
+func testIf(){
+	var aa int 
+	aa = 15
+	if aa > 0 {
+		aa = -aa
+	}
+	fmt.Println("-----test if-----")
+	fmt.Println(aa)
+	fmt.Println("-----test end----")
 }
