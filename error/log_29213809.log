@@ -1,0 +1,1082 @@
+[BEGIN] 2015/6/29 21:38:09
+Jun 29 09:36:46 localhost kernel: device-mapper: thin: 253:4: reached low water mark for data device: sending event.
+Jun 29 09:36:46 localhost kernel: device-mapper: thin: 253:4: switching pool to out-of-data-space mode
+Jun 29 09:36:46 localhost lvm[526]: Thin centos-docker--pool is now 100% full.
+Jun 29 09:36:46 localhost lvm[526]: Insufficient free space: 2 extents needed, but only 1 available
+Jun 29 09:36:46 localhost lvm[526]: Failed to extend thin centos-docker--pool.
+Jun 29 09:36:46 localhost lvm[526]: Thin centos-docker--pool is now 100% full.
+Jun 29 09:36:46 localhost lvm[526]: Insufficient free space: 2 extents needed, but only 1 available
+Jun 29 09:36:46 localhost lvm[526]: Failed to extend thin centos-docker--pool.
+Jun 29 09:37:46 localhost kernel: device-mapper: thin: 253:4: switching pool to read-only mode
+Jun 29 09:37:46 localhost lvm[526]: Thin centos-docker--pool is now 100% full.
+Jun 29 09:37:46 localhost lvm[526]: Insufficient free space: 2 extents needed, but only 1 available
+Jun 29 09:37:46 localhost lvm[526]: Failed to extend thin centos-docker--pool.
+Jun 29 09:37:46 localhost kernel: XFS (dm-5): metadata I/O error: block 0x1 ("xfs_buf_iodone_callbacks") error 5 numblks 1
+Jun 29 09:37:46 localhost kernel: Buffer I/O error on device dm-5, logical block 1637252
+Jun 29 09:37:46 localhost kernel: lost page write due to I/O error on dm-5
+Jun 29 09:37:46 localhost kernel: Buffer I/O error on device dm-5, logical block 1800964
+Jun 29 09:37:46 localhost kernel: lost page write due to I/O error on dm-5
+Jun 29 09:37:46 localhost kernel: Buffer I/O error on device dm-5, logical block 1964676
+Jun 29 09:37:46 localhost kernel: lost page write due to I/O error on dm-5
+Jun 29 09:37:46 localhost kernel: Buffer I/O error on device dm-5, logical block 2292103
+Jun 29 09:37:46 localhost kernel: lost page write due to I/O error on dm-5
+Jun 29 09:37:46 localhost kernel: Buffer I/O error on device dm-5, logical block 2455812
+Jun 29 09:37:46 localhost kernel: lost page write due to I/O error on dm-5
+Jun 29 09:37:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140030. Retrying async write.
+
+Jun 29 09:37:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140020. Retrying async write.
+
+Jun 29 09:37:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc810. Retrying async write.
+
+Jun 29 09:37:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc800. Retrying async write.
+
+Jun 29 09:37:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc10. Retrying async write.
+
+Jun 29 09:37:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc00. Retrying async write.
+
+Jun 29 09:37:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d010. Retrying async write.
+
+Jun 29 09:37:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d000. Retrying async write.
+
+Jun 29 09:37:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0xefd410. Retrying async write.
+
+Jun 29 09:37:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0xefd400. Retrying async write.
+
+Jun 29 09:37:46 localhost kernel: Buffer I/O error on device dm-5, logical block 982280
+Jun 29 09:37:46 localhost kernel: lost page write due to I/O error on dm-5
+Jun 29 09:37:46 localhost kernel: Buffer I/O error on device dm-5, logical block 982281
+Jun 29 09:37:46 localhost kernel: lost page write due to I/O error on dm-5
+Jun 29 09:37:46 localhost kernel: Buffer I/O error on device dm-5, logical block 982282
+Jun 29 09:37:46 localhost kernel: lost page write due to I/O error on dm-5
+Jun 29 09:37:46 localhost kernel: Buffer I/O error on device dm-5, logical block 982283
+Jun 29 09:37:46 localhost kernel: lost page write due to I/O error on dm-5
+Jun 29 09:37:51 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:37:56 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:38:01 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:38:06 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:38:11 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:38:16 localhost kernel: XFS:: 60473 callbacks suppressed
+Jun 29 09:38:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140030. Retrying async write.
+
+Jun 29 09:38:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140020. Retrying async write.
+
+Jun 29 09:38:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc810. Retrying async write.
+
+Jun 29 09:38:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc800. Retrying async write.
+
+Jun 29 09:38:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cbf8. Retrying async write.
+
+Jun 29 09:38:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc10. Retrying async write.
+
+Jun 29 09:38:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc00. Retrying async write.
+
+Jun 29 09:38:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d010. Retrying async write.
+
+Jun 29 09:38:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d000. Retrying async write.
+
+Jun 29 09:38:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103cc08. Retrying async write.
+
+Jun 29 09:38:16 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:38:21 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:38:26 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:38:31 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:38:36 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:38:41 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:38:46 localhost kernel: XFS:: 60245 callbacks suppressed
+Jun 29 09:38:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140030. Retrying async write.
+
+Jun 29 09:38:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140020. Retrying async write.
+
+Jun 29 09:38:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc810. Retrying async write.
+
+Jun 29 09:38:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc800. Retrying async write.
+
+Jun 29 09:38:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cbf8. Retrying async write.
+
+Jun 29 09:38:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc10. Retrying async write.
+
+Jun 29 09:38:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc00. Retrying async write.
+
+Jun 29 09:38:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d010. Retrying async write.
+
+Jun 29 09:38:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d000. Retrying async write.
+
+Jun 29 09:38:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103cc08. Retrying async write.
+
+Jun 29 09:38:46 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:38:51 localhost kernel: XFS (dm-5): metadata I/O error: block 0x103d000 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:38:56 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:39:01 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:39:07 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:39:12 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:39:16 localhost kernel: XFS:: 60760 callbacks suppressed
+Jun 29 09:39:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140030. Retrying async write.
+
+Jun 29 09:39:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140020. Retrying async write.
+
+Jun 29 09:39:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc810. Retrying async write.
+
+Jun 29 09:39:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc800. Retrying async write.
+
+Jun 29 09:39:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cbf8. Retrying async write.
+
+Jun 29 09:39:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc10. Retrying async write.
+
+Jun 29 09:39:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc00. Retrying async write.
+
+Jun 29 09:39:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d010. Retrying async write.
+
+Jun 29 09:39:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d000. Retrying async write.
+
+Jun 29 09:39:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103cc08. Retrying async write.
+
+Jun 29 09:39:17 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:39:22 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:39:27 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:39:32 localhost kernel: XFS (dm-5): metadata I/O error: block 0x12bc800 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:39:37 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:39:42 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:39:46 localhost kernel: XFS:: 60554 callbacks suppressed
+Jun 29 09:39:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140030. Retrying async write.
+
+Jun 29 09:39:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140020. Retrying async write.
+
+Jun 29 09:39:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc810. Retrying async write.
+
+Jun 29 09:39:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc800. Retrying async write.
+
+Jun 29 09:39:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cbf8. Retrying async write.
+
+Jun 29 09:39:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc10. Retrying async write.
+
+Jun 29 09:39:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc00. Retrying async write.
+
+Jun 29 09:39:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d010. Retrying async write.
+
+Jun 29 09:39:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d000. Retrying async write.
+
+Jun 29 09:39:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103cc08. Retrying async write.
+
+Jun 29 09:39:47 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:39:52 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:39:57 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:40:01 localhost systemd: Starting Session 4 of user root.
+Jun 29 09:40:01 localhost systemd: Started Session 4 of user root.
+Jun 29 09:40:02 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:40:07 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:40:10 localhost systemd: Starting Cleanup of Temporary Directories...
+Jun 29 09:40:10 localhost systemd: Started Cleanup of Temporary Directories.
+Jun 29 09:40:12 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:40:16 localhost kernel: XFS:: 60554 callbacks suppressed
+Jun 29 09:40:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140030. Retrying async write.
+
+Jun 29 09:40:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140020. Retrying async write.
+
+Jun 29 09:40:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc810. Retrying async write.
+
+Jun 29 09:40:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc800. Retrying async write.
+
+Jun 29 09:40:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cbf8. Retrying async write.
+
+Jun 29 09:40:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc10. Retrying async write.
+
+Jun 29 09:40:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc00. Retrying async write.
+
+Jun 29 09:40:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d010. Retrying async write.
+
+Jun 29 09:40:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d000. Retrying async write.
+
+Jun 29 09:40:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103cc08. Retrying async write.
+
+Jun 29 09:40:17 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:40:22 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:40:27 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:40:32 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:40:37 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:40:42 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:40:46 localhost kernel: XFS:: 60657 callbacks suppressed
+Jun 29 09:40:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140030. Retrying async write.
+
+Jun 29 09:40:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140020. Retrying async write.
+
+Jun 29 09:40:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc810. Retrying async write.
+
+Jun 29 09:40:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc800. Retrying async write.
+
+Jun 29 09:40:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cbf8. Retrying async write.
+
+Jun 29 09:40:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc10. Retrying async write.
+
+Jun 29 09:40:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc00. Retrying async write.
+
+Jun 29 09:40:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d010. Retrying async write.
+
+Jun 29 09:40:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d000. Retrying async write.
+
+Jun 29 09:40:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103cc08. Retrying async write.
+
+Jun 29 09:40:47 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:40:52 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:40:57 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:41:02 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:41:07 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:41:11 localhost kernel: INFO: task kworker/u2:1:39 blocked for more than 120 seconds.
+Jun 29 09:41:11 localhost kernel: "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+Jun 29 09:41:11 localhost kernel: kworker/u2:1    D ffff88003fc13680     0    39      2 0x00000000
+Jun 29 09:41:11 localhost kernel: Workqueue: writeback bdi_writeback_workfn (flush-253:5)
+Jun 29 09:41:11 localhost kernel: ffff88003d57f710 0000000000000046 ffff88003d57ffd8 0000000000013680
+Jun 29 09:41:11 localhost kernel: ffff88003d57ffd8 0000000000013680 ffff88003686b8e0 ffff88003ba66400
+Jun 29 09:41:11 localhost kernel: ffff880039968958 ffff88003ba665c0 00000000000565e0 0000000000000004
+Jun 29 09:41:11 localhost kernel: Call Trace:
+Jun 29 09:41:11 localhost kernel: [<ffffffff81609e39>] schedule+0x29/0x70
+Jun 29 09:41:11 localhost kernel: [<ffffffffa01d763d>] xlog_grant_head_wait+0x9d/0x180 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffffa01d77be>] xlog_grant_head_check+0x9e/0x110 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffffa01db14f>] xfs_log_reserve+0xdf/0x1b0 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffffa01946c4>] xfs_trans_reserve+0x204/0x210 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffffa018a009>] xfs_iomap_write_allocate+0x1c9/0x350 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffffa0175376>] xfs_map_blocks+0x216/0x240 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffffa01765e3>] xfs_vm_writepage+0x263/0x5d0 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffff811610c3>] __writepage+0x13/0x50
+Jun 29 09:41:11 localhost kernel: [<ffffffff81161be1>] write_cache_pages+0x251/0x4d0
+Jun 29 09:41:11 localhost kernel: [<ffffffff811610b0>] ? global_dirtyable_memory+0x70/0x70
+Jun 29 09:41:11 localhost kernel: [<ffffffff81161ead>] generic_writepages+0x4d/0x80
+Jun 29 09:41:11 localhost kernel: [<ffffffffa0175ec3>] xfs_vm_writepages+0x43/0x50 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffff81162f5e>] do_writepages+0x1e/0x40
+Jun 29 09:41:11 localhost kernel: [<ffffffff811f04e0>] __writeback_single_inode+0x40/0x220
+Jun 29 09:41:11 localhost kernel: [<ffffffff811f11de>] writeback_sb_inodes+0x25e/0x420
+Jun 29 09:41:11 localhost kernel: [<ffffffff811f143f>] __writeback_inodes_wb+0x9f/0xd0
+Jun 29 09:41:11 localhost kernel: [<ffffffff811f1c83>] wb_writeback+0x263/0x2f0
+Jun 29 09:41:11 localhost kernel: [<ffffffff811625f0>] ? bdi_dirty_limit+0x40/0xe0
+Jun 29 09:41:11 localhost kernel: [<ffffffff811f31cc>] bdi_writeback_workfn+0x1cc/0x460
+Jun 29 09:41:11 localhost kernel: [<ffffffff8108f1db>] process_one_work+0x17b/0x470
+Jun 29 09:41:11 localhost kernel: [<ffffffff8108ffbb>] worker_thread+0x11b/0x400
+Jun 29 09:41:11 localhost kernel: [<ffffffff8108fea0>] ? rescuer_thread+0x400/0x400
+Jun 29 09:41:11 localhost kernel: [<ffffffff8109739f>] kthread+0xcf/0xe0
+Jun 29 09:41:11 localhost kernel: [<ffffffff810972d0>] ? kthread_create_on_node+0x140/0x140
+Jun 29 09:41:11 localhost kernel: [<ffffffff8161497c>] ret_from_fork+0x7c/0xb0
+Jun 29 09:41:11 localhost kernel: [<ffffffff810972d0>] ? kthread_create_on_node+0x140/0x140
+Jun 29 09:41:11 localhost kernel: INFO: task docker:2589 blocked for more than 120 seconds.
+Jun 29 09:41:11 localhost kernel: "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+Jun 29 09:41:11 localhost kernel: docker          D ffff88003fc13680     0  2589   1195 0x00000080
+Jun 29 09:41:11 localhost kernel: ffff88003b107af8 0000000000000082 ffff88003b107fd8 0000000000013680
+Jun 29 09:41:11 localhost kernel: ffff88003b107fd8 0000000000013680 ffff8800361916c0 ffff88003ba66400
+Jun 29 09:41:11 localhost kernel: ffff88003bf13c38 ffff88003ba665c0 00000000000105cc 0000000000000000
+Jun 29 09:41:11 localhost kernel: Call Trace:
+Jun 29 09:41:11 localhost kernel: [<ffffffff81609e39>] schedule+0x29/0x70
+Jun 29 09:41:11 localhost kernel: [<ffffffffa01d763d>] xlog_grant_head_wait+0x9d/0x180 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffffa01d77be>] xlog_grant_head_check+0x9e/0x110 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffffa01db14f>] xfs_log_reserve+0xdf/0x1b0 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffffa01946c4>] xfs_trans_reserve+0x204/0x210 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffffa018a6d6>] xfs_vn_update_time+0x56/0x190 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffff811e1ba5>] update_time+0x25/0xd0
+Jun 29 09:41:11 localhost kernel: [<ffffffff811e1e50>] file_update_time+0xa0/0xf0
+Jun 29 09:41:11 localhost kernel: [<ffffffffa0181a5b>] xfs_file_aio_write_checks+0xdb/0xf0 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffffa0181b03>] xfs_file_buffered_aio_write+0x93/0x260 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffff810a6775>] ? check_preempt_curr+0x85/0xa0
+Jun 29 09:41:11 localhost kernel: [<ffffffff810a67a9>] ? ttwu_do_wakeup+0x19/0xc0
+Jun 29 09:41:11 localhost kernel: [<ffffffff810a692d>] ? ttwu_do_activate.constprop.85+0x5d/0x70
+Jun 29 09:41:11 localhost kernel: [<ffffffffa0181da0>] xfs_file_aio_write+0xd0/0x150 [xfs]
+Jun 29 09:41:11 localhost kernel: [<ffffffff811c64cd>] do_sync_write+0x8d/0xd0
+Jun 29 09:41:11 localhost kernel: [<ffffffff811c6c6d>] vfs_write+0xbd/0x1e0
+Jun 29 09:41:11 localhost kernel: [<ffffffff811c76b8>] SyS_write+0x58/0xb0
+Jun 29 09:41:11 localhost kernel: [<ffffffff81614a29>] system_call_fastpath+0x16/0x1b
+Jun 29 09:41:12 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:41:16 localhost kernel: XFS:: 60760 callbacks suppressed
+Jun 29 09:41:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140030. Retrying async write.
+
+Jun 29 09:41:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140020. Retrying async write.
+
+Jun 29 09:41:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc810. Retrying async write.
+
+Jun 29 09:41:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc800. Retrying async write.
+
+Jun 29 09:41:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cbf8. Retrying async write.
+
+Jun 29 09:41:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc10. Retrying async write.
+
+Jun 29 09:41:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc00. Retrying async write.
+
+Jun 29 09:41:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d010. Retrying async write.
+
+Jun 29 09:41:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d000. Retrying async write.
+
+Jun 29 09:41:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103cc08. Retrying async write.
+
+Jun 29 09:41:17 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:41:22 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:41:27 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:41:32 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:41:37 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:41:42 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:41:46 localhost kernel: XFS:: 60554 callbacks suppressed
+Jun 29 09:41:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140030. Retrying async write.
+
+Jun 29 09:41:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140020. Retrying async write.
+
+Jun 29 09:41:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc810. Retrying async write.
+
+Jun 29 09:41:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc800. Retrying async write.
+
+Jun 29 09:41:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cbf8. Retrying async write.
+
+Jun 29 09:41:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc10. Retrying async write.
+
+Jun 29 09:41:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc00. Retrying async write.
+
+Jun 29 09:41:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d010. Retrying async write.
+
+Jun 29 09:41:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d000. Retrying async write.
+
+Jun 29 09:41:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103cc08. Retrying async write.
+
+Jun 29 09:41:47 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:41:52 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:41:57 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:42:02 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:42:07 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:42:12 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:42:16 localhost kernel: XFS:: 60657 callbacks suppressed
+Jun 29 09:42:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140030. Retrying async write.
+
+Jun 29 09:42:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140020. Retrying async write.
+
+Jun 29 09:42:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc810. Retrying async write.
+
+Jun 29 09:42:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc800. Retrying async write.
+
+Jun 29 09:42:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cbf8. Retrying async write.
+
+Jun 29 09:42:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc10. Retrying async write.
+
+Jun 29 09:42:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc00. Retrying async write.
+
+Jun 29 09:42:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d010. Retrying async write.
+
+Jun 29 09:42:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d000. Retrying async write.
+
+Jun 29 09:42:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103cc08. Retrying async write.
+
+Jun 29 09:42:17 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:42:22 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:42:27 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:42:32 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:42:38 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:42:43 localhost kernel: XFS (dm-5): metadata I/O error: block 0x4ff008 ("xfs_buf_iodone_callbacks") error 5 numblks 8
+Jun 29 09:42:46 localhost kernel: XFS:: 60657 callbacks suppressed
+Jun 29 09:42:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140030. Retrying async write.
+
+Jun 29 09:42:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140020. Retrying async write.
+
+Jun 29 09:42:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc810. Retrying async write.
+
+Jun 29 09:42:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc800. Retrying async write.
+
+Jun 29 09:42:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cbf8. Retrying async write.
+
+Jun 29 09:42:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc10. Retrying async write.
+
+Jun 29 09:42:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc00. Retrying async write.
+
+Jun 29 09:42:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d010. Retrying async write.
+
+Jun 29 09:42:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d000. Retrying async write.
+
+Jun 29 09:42:46 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103cc08. Retrying async write.
+
+Jun 29 09:42:48 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:42:53 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:42:58 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:43:03 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:43:08 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:43:11 localhost kernel: INFO: task kworker/u2:1:39 blocked for more than 120 seconds.
+Jun 29 09:43:11 localhost kernel: "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+Jun 29 09:43:11 localhost kernel: kworker/u2:1    D ffff88003fc13680     0    39      2 0x00000000
+Jun 29 09:43:11 localhost kernel: Workqueue: writeback bdi_writeback_workfn (flush-253:5)
+Jun 29 09:43:11 localhost kernel: ffff88003d57f710 0000000000000046 ffff88003d57ffd8 0000000000013680
+Jun 29 09:43:11 localhost kernel: ffff88003d57ffd8 0000000000013680 ffff88003686b8e0 ffff88003ba66400
+Jun 29 09:43:11 localhost kernel: ffff880039968958 ffff88003ba665c0 00000000000565e0 0000000000000004
+Jun 29 09:43:11 localhost kernel: Call Trace:
+Jun 29 09:43:11 localhost kernel: [<ffffffff81609e39>] schedule+0x29/0x70
+Jun 29 09:43:11 localhost kernel: [<ffffffffa01d763d>] xlog_grant_head_wait+0x9d/0x180 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffffa01d77be>] xlog_grant_head_check+0x9e/0x110 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffffa01db14f>] xfs_log_reserve+0xdf/0x1b0 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffffa01946c4>] xfs_trans_reserve+0x204/0x210 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffffa018a009>] xfs_iomap_write_allocate+0x1c9/0x350 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffffa0175376>] xfs_map_blocks+0x216/0x240 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffffa01765e3>] xfs_vm_writepage+0x263/0x5d0 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffff811610c3>] __writepage+0x13/0x50
+Jun 29 09:43:11 localhost kernel: [<ffffffff81161be1>] write_cache_pages+0x251/0x4d0
+Jun 29 09:43:11 localhost kernel: [<ffffffff811610b0>] ? global_dirtyable_memory+0x70/0x70
+Jun 29 09:43:11 localhost kernel: [<ffffffff81161ead>] generic_writepages+0x4d/0x80
+Jun 29 09:43:11 localhost kernel: [<ffffffffa0175ec3>] xfs_vm_writepages+0x43/0x50 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffff81162f5e>] do_writepages+0x1e/0x40
+Jun 29 09:43:11 localhost kernel: [<ffffffff811f04e0>] __writeback_single_inode+0x40/0x220
+Jun 29 09:43:11 localhost kernel: [<ffffffff811f11de>] writeback_sb_inodes+0x25e/0x420
+Jun 29 09:43:11 localhost kernel: [<ffffffff811f143f>] __writeback_inodes_wb+0x9f/0xd0
+Jun 29 09:43:11 localhost kernel: [<ffffffff811f1c83>] wb_writeback+0x263/0x2f0
+Jun 29 09:43:11 localhost kernel: [<ffffffff811625f0>] ? bdi_dirty_limit+0x40/0xe0
+Jun 29 09:43:11 localhost kernel: [<ffffffff811f31cc>] bdi_writeback_workfn+0x1cc/0x460
+Jun 29 09:43:11 localhost kernel: [<ffffffff8108f1db>] process_one_work+0x17b/0x470
+Jun 29 09:43:11 localhost kernel: [<ffffffff8108ffbb>] worker_thread+0x11b/0x400
+Jun 29 09:43:11 localhost kernel: [<ffffffff8108fea0>] ? rescuer_thread+0x400/0x400
+Jun 29 09:43:11 localhost kernel: [<ffffffff8109739f>] kthread+0xcf/0xe0
+Jun 29 09:43:11 localhost kernel: [<ffffffff810972d0>] ? kthread_create_on_node+0x140/0x140
+Jun 29 09:43:11 localhost kernel: [<ffffffff8161497c>] ret_from_fork+0x7c/0xb0
+Jun 29 09:43:11 localhost kernel: [<ffffffff810972d0>] ? kthread_create_on_node+0x140/0x140
+Jun 29 09:43:11 localhost kernel: INFO: task docker:2589 blocked for more than 120 seconds.
+Jun 29 09:43:11 localhost kernel: "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+Jun 29 09:43:11 localhost kernel: docker          D ffff88003fc13680     0  2589   1195 0x00000080
+Jun 29 09:43:11 localhost kernel: ffff88003b107af8 0000000000000082 ffff88003b107fd8 0000000000013680
+Jun 29 09:43:11 localhost kernel: ffff88003b107fd8 0000000000013680 ffff8800361916c0 ffff88003ba66400
+Jun 29 09:43:11 localhost kernel: ffff88003bf13c38 ffff88003ba665c0 00000000000105cc 0000000000000000
+Jun 29 09:43:11 localhost kernel: Call Trace:
+Jun 29 09:43:11 localhost kernel: [<ffffffff81609e39>] schedule+0x29/0x70
+Jun 29 09:43:11 localhost kernel: [<ffffffffa01d763d>] xlog_grant_head_wait+0x9d/0x180 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffffa01d77be>] xlog_grant_head_check+0x9e/0x110 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffffa01db14f>] xfs_log_reserve+0xdf/0x1b0 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffffa01946c4>] xfs_trans_reserve+0x204/0x210 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffffa018a6d6>] xfs_vn_update_time+0x56/0x190 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffff811e1ba5>] update_time+0x25/0xd0
+Jun 29 09:43:11 localhost kernel: [<ffffffff811e1e50>] file_update_time+0xa0/0xf0
+Jun 29 09:43:11 localhost kernel: [<ffffffffa0181a5b>] xfs_file_aio_write_checks+0xdb/0xf0 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffffa0181b03>] xfs_file_buffered_aio_write+0x93/0x260 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffff810a6775>] ? check_preempt_curr+0x85/0xa0
+Jun 29 09:43:11 localhost kernel: [<ffffffff810a67a9>] ? ttwu_do_wakeup+0x19/0xc0
+Jun 29 09:43:11 localhost kernel: [<ffffffff810a692d>] ? ttwu_do_activate.constprop.85+0x5d/0x70
+Jun 29 09:43:11 localhost kernel: [<ffffffffa0181da0>] xfs_file_aio_write+0xd0/0x150 [xfs]
+Jun 29 09:43:11 localhost kernel: [<ffffffff811c64cd>] do_sync_write+0x8d/0xd0
+Jun 29 09:43:11 localhost kernel: [<ffffffff811c6c6d>] vfs_write+0xbd/0x1e0
+Jun 29 09:43:11 localhost kernel: [<ffffffff811c76b8>] SyS_write+0x58/0xb0
+Jun 29 09:43:11 localhost kernel: [<ffffffff81614a29>] system_call_fastpath+0x16/0x1b
+Jun 29 09:43:13 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:43:16 localhost kernel: XFS:: 60451 callbacks suppressed
+Jun 29 09:43:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140030. Retrying async write.
+
+Jun 29 09:43:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x140020. Retrying async write.
+
+Jun 29 09:43:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc810. Retrying async write.
+
+Jun 29 09:43:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x12bc800. Retrying async write.
+
+Jun 29 09:43:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cbf8. Retrying async write.
+
+Jun 29 09:43:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc10. Retrying async write.
+
+Jun 29 09:43:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x117cc00. Retrying async write.
+
+Jun 29 09:43:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d010. Retrying async write.
+
+Jun 29 09:43:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103d000. Retrying async write.
+
+Jun 29 09:43:16 localhost kernel: XFS (dm-5): Detected failing async write on buffer block 0x103cc08. Retrying async write.
+
+Jun 29 09:43:18 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:43:23 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:43:28 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:43:33 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:43:38 localhost kernel: XFS (dm-5): metadata I/O error: block 0x140020 ("xfs_buf_iodone_callbacks") error 5 numblks 16
+Jun 29 09:43:39 localhost lvm[526]: No longer monitoring thin centos-docker--pool.
+Jun 29 09:43:39 localhost kernel: device-mapper: thin: Data device (dm-3) discard unsupported: Disabling discard passdown.
+Jun 29 09:43:39 localhost kernel: device-mapper: thin: 253:4: switching pool to write mode
+Jun 29 09:43:39 localhost kernel: device-mapper: thin: 253:4: growing the data device from 64 to 10304 blocks
+Jun 29 09:43:39 localhost lvm[526]: Monitoring thin centos-docker--pool.
+Jun 29 09:45:11 localhost kernel: INFO: task kworker/u2:1:39 blocked for more than 120 seconds.
+Jun 29 09:45:11 localhost kernel: "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+Jun 29 09:45:11 localhost kernel: kworker/u2:1    D ffff88003fc13680     0    39      2 0x00000000
+Jun 29 09:45:11 localhost kernel: Workqueue: writeback bdi_writeback_workfn (flush-253:5)
+Jun 29 09:45:11 localhost kernel: ffff88003d57f710 0000000000000046 ffff88003d57ffd8 0000000000013680
+Jun 29 09:45:11 localhost kernel: ffff88003d57ffd8 0000000000013680 ffff88003686b8e0 ffff88003ba66400
+Jun 29 09:45:11 localhost kernel: ffff880039968958 ffff88003ba665c0 00000000000565e0 0000000000000004
+Jun 29 09:45:11 localhost kernel: Call Trace:
+Jun 29 09:45:11 localhost kernel: [<ffffffff81609e39>] schedule+0x29/0x70
+Jun 29 09:45:11 localhost kernel: [<ffffffffa01d763d>] xlog_grant_head_wait+0x9d/0x180 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffffa01d77be>] xlog_grant_head_check+0x9e/0x110 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffffa01db14f>] xfs_log_reserve+0xdf/0x1b0 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffffa01946c4>] xfs_trans_reserve+0x204/0x210 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffffa018a009>] xfs_iomap_write_allocate+0x1c9/0x350 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffffa0175376>] xfs_map_blocks+0x216/0x240 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffffa01765e3>] xfs_vm_writepage+0x263/0x5d0 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffff811610c3>] __writepage+0x13/0x50
+Jun 29 09:45:11 localhost kernel: [<ffffffff81161be1>] write_cache_pages+0x251/0x4d0
+Jun 29 09:45:11 localhost kernel: [<ffffffff811610b0>] ? global_dirtyable_memory+0x70/0x70
+Jun 29 09:45:11 localhost kernel: [<ffffffff81161ead>] generic_writepages+0x4d/0x80
+Jun 29 09:45:11 localhost kernel: [<ffffffffa0175ec3>] xfs_vm_writepages+0x43/0x50 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffff81162f5e>] do_writepages+0x1e/0x40
+Jun 29 09:45:11 localhost kernel: [<ffffffff811f04e0>] __writeback_single_inode+0x40/0x220
+Jun 29 09:45:11 localhost kernel: [<ffffffff811f11de>] writeback_sb_inodes+0x25e/0x420
+Jun 29 09:45:11 localhost kernel: [<ffffffff811f143f>] __writeback_inodes_wb+0x9f/0xd0
+Jun 29 09:45:11 localhost kernel: [<ffffffff811f1c83>] wb_writeback+0x263/0x2f0
+Jun 29 09:45:11 localhost kernel: [<ffffffff811625f0>] ? bdi_dirty_limit+0x40/0xe0
+Jun 29 09:45:11 localhost kernel: [<ffffffff811f31cc>] bdi_writeback_workfn+0x1cc/0x460
+Jun 29 09:45:11 localhost kernel: [<ffffffff8108f1db>] process_one_work+0x17b/0x470
+Jun 29 09:45:11 localhost kernel: [<ffffffff8108ffbb>] worker_thread+0x11b/0x400
+Jun 29 09:45:11 localhost kernel: [<ffffffff8108fea0>] ? rescuer_thread+0x400/0x400
+Jun 29 09:45:11 localhost kernel: [<ffffffff8109739f>] kthread+0xcf/0xe0
+Jun 29 09:45:11 localhost kernel: [<ffffffff810972d0>] ? kthread_create_on_node+0x140/0x140
+Jun 29 09:45:11 localhost kernel: [<ffffffff8161497c>] ret_from_fork+0x7c/0xb0
+Jun 29 09:45:11 localhost kernel: [<ffffffff810972d0>] ? kthread_create_on_node+0x140/0x140
+Jun 29 09:45:11 localhost kernel: INFO: task docker:2589 blocked for more than 120 seconds.
+Jun 29 09:45:11 localhost kernel: "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+Jun 29 09:45:11 localhost kernel: docker          D ffff88003fc13680     0  2589   1195 0x00000080
+Jun 29 09:45:11 localhost kernel: ffff88003b107af8 0000000000000082 ffff88003b107fd8 0000000000013680
+Jun 29 09:45:11 localhost kernel: ffff88003b107fd8 0000000000013680 ffff8800361916c0 ffff88003ba66400
+Jun 29 09:45:11 localhost kernel: ffff88003bf13c38 ffff88003ba665c0 00000000000105cc 0000000000000000
+Jun 29 09:45:11 localhost kernel: Call Trace:
+Jun 29 09:45:11 localhost kernel: [<ffffffff81609e39>] schedule+0x29/0x70
+Jun 29 09:45:11 localhost kernel: [<ffffffffa01d763d>] xlog_grant_head_wait+0x9d/0x180 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffffa01d77be>] xlog_grant_head_check+0x9e/0x110 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffffa01db14f>] xfs_log_reserve+0xdf/0x1b0 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffffa01946c4>] xfs_trans_reserve+0x204/0x210 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffffa018a6d6>] xfs_vn_update_time+0x56/0x190 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffff811e1ba5>] update_time+0x25/0xd0
+Jun 29 09:45:11 localhost kernel: [<ffffffff811e1e50>] file_update_time+0xa0/0xf0
+Jun 29 09:45:11 localhost kernel: [<ffffffffa0181a5b>] xfs_file_aio_write_checks+0xdb/0xf0 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffffa0181b03>] xfs_file_buffered_aio_write+0x93/0x260 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffff810a6775>] ? check_preempt_curr+0x85/0xa0
+Jun 29 09:45:11 localhost kernel: [<ffffffff810a67a9>] ? ttwu_do_wakeup+0x19/0xc0
+Jun 29 09:45:11 localhost kernel: [<ffffffff810a692d>] ? ttwu_do_activate.constprop.85+0x5d/0x70
+Jun 29 09:45:11 localhost kernel: [<ffffffffa0181da0>] xfs_file_aio_write+0xd0/0x150 [xfs]
+Jun 29 09:45:11 localhost kernel: [<ffffffff811c64cd>] do_sync_write+0x8d/0xd0
+Jun 29 09:45:11 localhost kernel: [<ffffffff811c6c6d>] vfs_write+0xbd/0x1e0
+Jun 29 09:45:11 localhost kernel: [<ffffffff811c76b8>] SyS_write+0x58/0xb0
+Jun 29 09:45:11 localhost kernel: [<ffffffff81614a29>] system_call_fastpath+0x16/0x1b
+Jun 29 09:47:11 localhost kernel: INFO: task kworker/u2:1:39 blocked for more than 120 seconds.
+Jun 29 09:47:11 localhost kernel: "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+Jun 29 09:47:11 localhost kernel: kworker/u2:1    D ffff88003fc13680     0    39      2 0x00000000
+Jun 29 09:47:11 localhost kernel: Workqueue: writeback bdi_writeback_workfn (flush-253:5)
+Jun 29 09:47:11 localhost kernel: ffff88003d57f710 0000000000000046 ffff88003d57ffd8 0000000000013680
+Jun 29 09:47:11 localhost kernel: ffff88003d57ffd8 0000000000013680 ffff88003686b8e0 ffff88003ba66400
+Jun 29 09:47:11 localhost kernel: ffff880039968958 ffff88003ba665c0 00000000000565e0 0000000000000004
+Jun 29 09:47:11 localhost kernel: Call Trace:
+Jun 29 09:47:11 localhost kernel: [<ffffffff81609e39>] schedule+0x29/0x70
+Jun 29 09:47:11 localhost kernel: [<ffffffffa01d763d>] xlog_grant_head_wait+0x9d/0x180 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffffa01d77be>] xlog_grant_head_check+0x9e/0x110 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffffa01db14f>] xfs_log_reserve+0xdf/0x1b0 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffffa01946c4>] xfs_trans_reserve+0x204/0x210 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffffa018a009>] xfs_iomap_write_allocate+0x1c9/0x350 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffffa0175376>] xfs_map_blocks+0x216/0x240 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffffa01765e3>] xfs_vm_writepage+0x263/0x5d0 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffff811610c3>] __writepage+0x13/0x50
+Jun 29 09:47:11 localhost kernel: [<ffffffff81161be1>] write_cache_pages+0x251/0x4d0
+Jun 29 09:47:11 localhost kernel: [<ffffffff811610b0>] ? global_dirtyable_memory+0x70/0x70
+Jun 29 09:47:11 localhost kernel: [<ffffffff81161ead>] generic_writepages+0x4d/0x80
+Jun 29 09:47:11 localhost kernel: [<ffffffffa0175ec3>] xfs_vm_writepages+0x43/0x50 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffff81162f5e>] do_writepages+0x1e/0x40
+Jun 29 09:47:11 localhost kernel: [<ffffffff811f04e0>] __writeback_single_inode+0x40/0x220
+Jun 29 09:47:11 localhost kernel: [<ffffffff811f11de>] writeback_sb_inodes+0x25e/0x420
+Jun 29 09:47:11 localhost kernel: [<ffffffff811f143f>] __writeback_inodes_wb+0x9f/0xd0
+Jun 29 09:47:11 localhost kernel: [<ffffffff811f1c83>] wb_writeback+0x263/0x2f0
+Jun 29 09:47:11 localhost kernel: [<ffffffff811625f0>] ? bdi_dirty_limit+0x40/0xe0
+Jun 29 09:47:11 localhost kernel: [<ffffffff811f31cc>] bdi_writeback_workfn+0x1cc/0x460
+Jun 29 09:47:11 localhost kernel: [<ffffffff8108f1db>] process_one_work+0x17b/0x470
+Jun 29 09:47:11 localhost kernel: [<ffffffff8108ffbb>] worker_thread+0x11b/0x400
+Jun 29 09:47:11 localhost kernel: [<ffffffff8108fea0>] ? rescuer_thread+0x400/0x400
+Jun 29 09:47:11 localhost kernel: [<ffffffff8109739f>] kthread+0xcf/0xe0
+Jun 29 09:47:11 localhost kernel: [<ffffffff810972d0>] ? kthread_create_on_node+0x140/0x140
+Jun 29 09:47:11 localhost kernel: [<ffffffff8161497c>] ret_from_fork+0x7c/0xb0
+Jun 29 09:47:11 localhost kernel: [<ffffffff810972d0>] ? kthread_create_on_node+0x140/0x140
+Jun 29 09:47:11 localhost kernel: INFO: task docker:2589 blocked for more than 120 seconds.
+Jun 29 09:47:11 localhost kernel: "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+Jun 29 09:47:11 localhost kernel: docker          D ffff88003fc13680     0  2589   1195 0x00000080
+Jun 29 09:47:11 localhost kernel: ffff88003b107af8 0000000000000082 ffff88003b107fd8 0000000000013680
+Jun 29 09:47:11 localhost kernel: ffff88003b107fd8 0000000000013680 ffff8800361916c0 ffff88003ba66400
+Jun 29 09:47:11 localhost kernel: ffff88003bf13c38 ffff88003ba665c0 00000000000105cc 0000000000000000
+Jun 29 09:47:11 localhost kernel: Call Trace:
+Jun 29 09:47:11 localhost kernel: [<ffffffff81609e39>] schedule+0x29/0x70
+Jun 29 09:47:11 localhost kernel: [<ffffffffa01d763d>] xlog_grant_head_wait+0x9d/0x180 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffffa01d77be>] xlog_grant_head_check+0x9e/0x110 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffffa01db14f>] xfs_log_reserve+0xdf/0x1b0 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffffa01946c4>] xfs_trans_reserve+0x204/0x210 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffffa018a6d6>] xfs_vn_update_time+0x56/0x190 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffff811e1ba5>] update_time+0x25/0xd0
+Jun 29 09:47:11 localhost kernel: [<ffffffff811e1e50>] file_update_time+0xa0/0xf0
+Jun 29 09:47:11 localhost kernel: [<ffffffffa0181a5b>] xfs_file_aio_write_checks+0xdb/0xf0 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffffa0181b03>] xfs_file_buffered_aio_write+0x93/0x260 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffff810a6775>] ? check_preempt_curr+0x85/0xa0
+Jun 29 09:47:11 localhost kernel: [<ffffffff810a67a9>] ? ttwu_do_wakeup+0x19/0xc0
+Jun 29 09:47:11 localhost kernel: [<ffffffff810a692d>] ? ttwu_do_activate.constprop.85+0x5d/0x70
+Jun 29 09:47:11 localhost kernel: [<ffffffffa0181da0>] xfs_file_aio_write+0xd0/0x150 [xfs]
+Jun 29 09:47:11 localhost kernel: [<ffffffff811c64cd>] do_sync_write+0x8d/0xd0
+Jun 29 09:47:11 localhost kernel: [<ffffffff811c6c6d>] vfs_write+0xbd/0x1e0
+Jun 29 09:47:11 localhost kernel: [<ffffffff811c76b8>] SyS_write+0x58/0xb0
+Jun 29 09:47:11 localhost kernel: [<ffffffff81614a29>] system_call_fastpath+0x16/0x1b
+Jun 29 09:49:11 localhost kernel: INFO: task kworker/u2:1:39 blocked for more than 120 seconds.
+Jun 29 09:49:11 localhost kernel: "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+Jun 29 09:49:11 localhost kernel: kworker/u2:1    D ffff88003fc13680     0    39      2 0x00000000
+Jun 29 09:49:11 localhost kernel: Workqueue: writeback bdi_writeback_workfn (flush-253:5)
+Jun 29 09:49:11 localhost kernel: ffff88003d57f710 0000000000000046 ffff88003d57ffd8 0000000000013680
+Jun 29 09:49:11 localhost kernel: ffff88003d57ffd8 0000000000013680 ffff88003686b8e0 ffff88003ba66400
+Jun 29 09:49:11 localhost kernel: ffff880039968958 ffff88003ba665c0 00000000000565e0 0000000000000004
+Jun 29 09:49:11 localhost kernel: Call Trace:
+Jun 29 09:49:11 localhost kernel: [<ffffffff81609e39>] schedule+0x29/0x70
+Jun 29 09:49:11 localhost kernel: [<ffffffffa01d763d>] xlog_grant_head_wait+0x9d/0x180 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffffa01d77be>] xlog_grant_head_check+0x9e/0x110 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffffa01db14f>] xfs_log_reserve+0xdf/0x1b0 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffffa01946c4>] xfs_trans_reserve+0x204/0x210 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffffa018a009>] xfs_iomap_write_allocate+0x1c9/0x350 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffffa0175376>] xfs_map_blocks+0x216/0x240 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffffa01765e3>] xfs_vm_writepage+0x263/0x5d0 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffff811610c3>] __writepage+0x13/0x50
+Jun 29 09:49:11 localhost kernel: [<ffffffff81161be1>] write_cache_pages+0x251/0x4d0
+Jun 29 09:49:11 localhost kernel: [<ffffffff811610b0>] ? global_dirtyable_memory+0x70/0x70
+Jun 29 09:49:11 localhost kernel: [<ffffffff81161ead>] generic_writepages+0x4d/0x80
+Jun 29 09:49:11 localhost kernel: [<ffffffffa0175ec3>] xfs_vm_writepages+0x43/0x50 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffff81162f5e>] do_writepages+0x1e/0x40
+Jun 29 09:49:11 localhost kernel: [<ffffffff811f04e0>] __writeback_single_inode+0x40/0x220
+Jun 29 09:49:11 localhost kernel: [<ffffffff811f11de>] writeback_sb_inodes+0x25e/0x420
+Jun 29 09:49:11 localhost kernel: [<ffffffff811f143f>] __writeback_inodes_wb+0x9f/0xd0
+Jun 29 09:49:11 localhost kernel: [<ffffffff811f1c83>] wb_writeback+0x263/0x2f0
+Jun 29 09:49:11 localhost kernel: [<ffffffff811625f0>] ? bdi_dirty_limit+0x40/0xe0
+Jun 29 09:49:11 localhost kernel: [<ffffffff811f31cc>] bdi_writeback_workfn+0x1cc/0x460
+Jun 29 09:49:11 localhost kernel: [<ffffffff8108f1db>] process_one_work+0x17b/0x470
+Jun 29 09:49:11 localhost kernel: [<ffffffff8108ffbb>] worker_thread+0x11b/0x400
+Jun 29 09:49:11 localhost kernel: [<ffffffff8108fea0>] ? rescuer_thread+0x400/0x400
+Jun 29 09:49:11 localhost kernel: [<ffffffff8109739f>] kthread+0xcf/0xe0
+Jun 29 09:49:11 localhost kernel: [<ffffffff810972d0>] ? kthread_create_on_node+0x140/0x140
+Jun 29 09:49:11 localhost kernel: [<ffffffff8161497c>] ret_from_fork+0x7c/0xb0
+Jun 29 09:49:11 localhost kernel: [<ffffffff810972d0>] ? kthread_create_on_node+0x140/0x140
+Jun 29 09:49:11 localhost kernel: INFO: task docker:2589 blocked for more than 120 seconds.
+Jun 29 09:49:11 localhost kernel: "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+Jun 29 09:49:11 localhost kernel: docker          D ffff88003fc13680     0  2589   1195 0x00000080
+Jun 29 09:49:11 localhost kernel: ffff88003b107af8 0000000000000082 ffff88003b107fd8 0000000000013680
+Jun 29 09:49:11 localhost kernel: ffff88003b107fd8 0000000000013680 ffff8800361916c0 ffff88003ba66400
+Jun 29 09:49:11 localhost kernel: ffff88003bf13c38 ffff88003ba665c0 00000000000105cc 0000000000000000
+Jun 29 09:49:11 localhost kernel: Call Trace:
+Jun 29 09:49:11 localhost kernel: [<ffffffff81609e39>] schedule+0x29/0x70
+Jun 29 09:49:11 localhost kernel: [<ffffffffa01d763d>] xlog_grant_head_wait+0x9d/0x180 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffffa01d77be>] xlog_grant_head_check+0x9e/0x110 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffffa01db14f>] xfs_log_reserve+0xdf/0x1b0 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffffa01946c4>] xfs_trans_reserve+0x204/0x210 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffffa018a6d6>] xfs_vn_update_time+0x56/0x190 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffff811e1ba5>] update_time+0x25/0xd0
+Jun 29 09:49:11 localhost kernel: [<ffffffff811e1e50>] file_update_time+0xa0/0xf0
+Jun 29 09:49:11 localhost kernel: [<ffffffffa0181a5b>] xfs_file_aio_write_checks+0xdb/0xf0 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffffa0181b03>] xfs_file_buffered_aio_write+0x93/0x260 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffff810a6775>] ? check_preempt_curr+0x85/0xa0
+Jun 29 09:49:11 localhost kernel: [<ffffffff810a67a9>] ? ttwu_do_wakeup+0x19/0xc0
+Jun 29 09:49:11 localhost kernel: [<ffffffff810a692d>] ? ttwu_do_activate.constprop.85+0x5d/0x70
+Jun 29 09:49:11 localhost kernel: [<ffffffffa0181da0>] xfs_file_aio_write+0xd0/0x150 [xfs]
+Jun 29 09:49:11 localhost kernel: [<ffffffff811c64cd>] do_sync_write+0x8d/0xd0
+Jun 29 09:49:11 localhost kernel: [<ffffffff811c6c6d>] vfs_write+0xbd/0x1e0
+Jun 29 09:49:11 localhost kernel: [<ffffffff811c76b8>] SyS_write+0x58/0xb0
+Jun 29 09:49:11 localhost kernel: [<ffffffff81614a29>] system_call_fastpath+0x16/0x1b
+Jun 29 09:50:01 localhost systemd: Starting Session 5 of user root.
+Jun 29 09:50:01 localhost systemd: Started Session 5 of user root.
+Jun 29 09:55:20 localhost smartd[597]: System clock time adjusted to the past. Resetting next wakeup time.
+Jun 29 10:00:01 localhost systemd: Starting Session 6 of user root.
+Jun 29 10:00:01 localhost systemd: Started Session 6 of user root.
+Jun 29 10:01:01 localhost systemd: Starting Session 7 of user root.
+Jun 29 10:01:01 localhost systemd: Started Session 7 of user root.
+Jun 29 10:07:10 localhost chronyd[602]: Selected source 202.112.31.197
+Jun 29 10:10:01 localhost systemd: Starting Session 8 of user root.
+Jun 29 10:10:01 localhost systemd: Started Session 8 of user root.
+^C
+[root@localhost log]# v
+vdir             vgck             vgimport         vgrename         vigr             visudo           
+verify_blkparse  vgconvert        vgimportclone    vgs              vim              vlock            
+verifytree       vgcreate         vgmerge          vgscan           vimdiff          vmcore-dmesg     
+vgcfgbackup      vgdisplay        vgmknodes        vgsplit          vimtutor         vmstat           
+vgcfgrestore     vgexport         vgreduce         vi               vipw             vpddecode        
+vgchange         vgextend         vgremove         view             virt-what        vxloader         
+[root@localhost log]# lv
+lvchange     lvdisplay    lvmchange    lvmdump      lvmsar       lvrename     lvscan       
+lvconvert    lvextend     lvmconf      lvmetad      lvreduce     lvresize     
+lvcreate     lvm          lvmdiskscan  lvmsadc      lvremove     lvs          
+[root@localhost log]# lvdisplay 
+  --- Logical volume ---
+  LV Path                /dev/centos/swap
+  LV Name                swap
+  VG Name                centos
+  LV UUID                IdSfke-TDhg-NDNi-1Cde-y0r3-lYe2-pvnwdC
+  LV Write Access        read/write
+  LV Creation host, time localhost, 2015-06-26 20:36:01 -0400
+  LV Status              available
+  # open                 2
+  LV Size                204.00 MiB
+  Current LE             51
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     8192
+  Block device           253:1
+   
+  --- Logical volume ---
+  LV Path                /dev/centos/root
+  LV Name                root
+  VG Name                centos
+  LV UUID                FfleEg-qk4p-KdRP-vGgB-N0IL-XVEt-DfxknO
+  LV Write Access        read/write
+  LV Creation host, time localhost, 2015-06-26 20:36:02 -0400
+  LV Status              available
+  # open                 1
+  LV Size                1.27 GiB
+  Current LE             324
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     8192
+  Block device           253:0
+   
+  --- Logical volume ---
+  LV Name                docker-pool
+  VG Name                centos
+  LV UUID                2aOySE-dgCE-7Dzt-EXkn-zIMw-CeU1-BBaRBq
+  LV Write Access        read/write
+  LV Creation host, time localhost.localdomain, 2015-06-27 11:42:54 -0400
+  LV Pool metadata       docker-pool_tmeta
+  LV Pool data           docker-pool_tdata
+  LV Status              available
+  # open                 1
+  LV Size                5.03 GiB
+  Allocated pool data    0.85%
+  Allocated metadata     1.17%
+  Current LE             1288
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     8192
+  Block device           253:4
+   
+[root@localhost log]# fdisk -l
+
+Disk /dev/vda: 2147 MB, 2147483648 bytes, 4194304 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x000c868c
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/vda1   *        2048     1026047      512000   83  Linux
+/dev/vda2         1026048     4194303     1584128   8e  Linux LVM
+
+Disk /dev/vdb: 5368 MB, 5368709120 bytes, 10485760 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x85529305
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/vdb1            2048    10485759     5241856   8e  Linux LVM
+
+Disk /dev/vdc: 5368 MB, 5368709120 bytes, 10485760 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0xef018633
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/vdc1            2048    10485759     5241856   8e  Linux LVM
+
+Disk /dev/mapper/centos-root: 1358 MB, 1358954496 bytes, 2654208 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/mapper/centos-swap: 213 MB, 213909504 bytes, 417792 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/mapper/centos-docker--pool_tmeta: 4 MB, 4194304 bytes, 8192 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/mapper/centos-docker--pool_tdata: 5402 MB, 5402263552 bytes, 10551296 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/mapper/centos-docker--pool: 5402 MB, 5402263552 bytes, 10551296 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 524288 bytes / 524288 bytes
+
+
+Disk /dev/mapper/docker-253:0-6892148-c852f6d61e65cddf1e8af1f6cd7db78543bfb83cdcd36845541cf6d9dfef20a0: 10.7 GB, 10737418240 bytes, 20971520 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 524288 bytes / 524288 bytes
+
+[root@localhost log]# fdisk -l|grep vd
+Disk /dev/vda: 2147 MB, 2147483648 bytes, 4194304 sectors
+/dev/vda1   *        2048     1026047      512000   83  Linux
+/dev/vda2         1026048     4194303     1584128   8e  Linux LVM
+Disk /dev/vdb: 5368 MB, 5368709120 bytes, 10485760 sectors
+/dev/vdb1            2048    10485759     5241856   8e  Linux LVM
+Disk /dev/vdc: 5368 MB, 5368709120 bytes, 10485760 sectors
+/dev/vdc1            2048    10485759     5241856   8e  Linux LVM
+[root@localhost log]# fdisk /dev/vdc
+Welcome to fdisk (util-linux 2.23.2).
+
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): m
+Command action
+   a   toggle a bootable flag
+   b   edit bsd disklabel
+   c   toggle the dos compatibility flag
+   d   delete a partition
+   g   create a new empty GPT partition table
+   G   create an IRIX (SGI) partition table
+   l   list known partition types
+   m   print this menu
+   n   add a new partition
+   o   create a new empty DOS partition table
+   p   print the partition table
+   q   quit without saving changes
+   s   create a new empty Sun disklabel
+   t   change a partition's system id
+   u   change display/entry units
+   v   verify the partition table
+   w   write table to disk and exit
+   x   extra functionality (experts only)
+
+Command (m for help): d
+Selected partition 1
+Partition 1 is deleted
+
+Command (m for help): m
+Command action
+   a   toggle a bootable flag
+   b   edit bsd disklabel
+   c   toggle the dos compatibility flag
+   d   delete a partition
+   g   create a new empty GPT partition table
+   G   create an IRIX (SGI) partition table
+   l   list known partition types
+   m   print this menu
+   n   add a new partition
+   o   create a new empty DOS partition table
+   p   print the partition table
+   q   quit without saving changes
+   s   create a new empty Sun disklabel
+   t   change a partition's system id
+   u   change display/entry units
+   v   verify the partition table
+   w   write table to disk and exit
+   x   extra functionality (experts only)
+
+Command (m for help): l
+
+ 0  Empty           24  NEC DOS         81  Minix / old Lin bf  Solaris        
+ 1  FAT12           27  Hidden NTFS Win 82  Linux swap / So c1  DRDOS/sec (FAT-
+ 2  XENIX root      39  Plan 9          83  Linux           c4  DRDOS/sec (FAT-
+ 3  XENIX usr       3c  PartitionMagic  84  OS/2 hidden C:  c6  DRDOS/sec (FAT-
+ 4  FAT16 <32M      40  Venix 80286     85  Linux extended  c7  Syrinx         
+ 5  Extended        41  PPC PReP Boot   86  NTFS volume set da  Non-FS data    
+ 6  FAT16           42  SFS             87  NTFS volume set db  CP/M / CTOS / .
+ 7  HPFS/NTFS/exFAT 4d  QNX4.x          88  Linux plaintext de  Dell Utility   
+ 8  AIX             4e  QNX4.x 2nd part 8e  Linux LVM       df  BootIt         
+ 9  AIX bootable    4f  QNX4.x 3rd part 93  Amoeba          e1  DOS access     
+ a  OS/2 Boot Manag 50  OnTrack DM      94  Amoeba BBT      e3  DOS R/O        
+ b  W95 FAT32       51  OnTrack DM6 Aux 9f  BSD/OS          e4  SpeedStor      
+ c  W95 FAT32 (LBA) 52  CP/M            a0  IBM Thinkpad hi eb  BeOS fs        
+ e  W95 FAT16 (LBA) 53  OnTrack DM6 Aux a5  FreeBSD         ee  GPT            
+ f  W95 Ext'd (LBA) 54  OnTrackDM6      a6  OpenBSD         ef  EFI (FAT-12/16/
+10  OPUS            55  EZ-Drive        a7  NeXTSTEP        f0  Linux/PA-RISC b
+11  Hidden FAT12    56  Golden Bow      a8  Darwin UFS      f1  SpeedStor      
+12  Compaq diagnost 5c  Priam Edisk     a9  NetBSD          f4  SpeedStor      
+14  Hidden FAT16 <3 61  SpeedStor       ab  Darwin boot     f2  DOS secondary  
+16  Hidden FAT16    63  GNU HURD or Sys af  HFS / HFS+      fb  VMware VMFS    
+17  Hidden HPFS/NTF 64  Novell Netware  b7  BSDI fs         fc  VMware VMKCORE 
+18  AST SmartSleep  65  Novell Netware  b8  BSDI swap       fd  Linux raid auto
+1b  Hidden W95 FAT3 70  DiskSecure Mult bb  Boot Wizard hid fe  LANstep        
+1c  Hidden W95 FAT3 75  PC/IX           be  Solaris boot    ff  BBT            
+1e  Hidden W95 FAT1 80  Old Minix      
+
+Command (m for help): m
+Command action
+   a   toggle a bootable flag
+   b   edit bsd disklabel
+   c   toggle the dos compatibility flag
+   d   delete a partition
+   g   create a new empty GPT partition table
+   G   create an IRIX (SGI) partition table
+   l   list known partition types
+   m   print this menu
+   n   add a new partition
+   o   create a new empty DOS partition table
+   p   print the partition table
+   q   quit without saving changes
+   s   create a new empty Sun disklabel
+   t   change a partition's system id
+   u   change display/entry units
+   v   verify the partition table
+   w   write table to disk and exit
+   x   extra functionality (experts only)
+
+Command (m for help): m
+Command action
+   a   toggle a bootable flag
+   b   edit bsd disklabel
+   c   toggle the dos compatibility flag
+   d   delete a partition
+   g   create a new empty GPT partition table
+   G   create an IRIX (SGI) partition table
+   l   list known partition types
+   m   print this menu
+   n   add a new partition
+   o   create a new empty DOS partition table
+   p   print the partition table
+   q   quit without saving changes
+   s   create a new empty Sun disklabel
+   t   change a partition's system id
+   u   change display/entry units
+   v   verify the partition table
+   w   write table to disk and exit
+   x   extra functionality (experts only)
+
+Command (m for help): p
+
+Disk /dev/vdc: 5368 MB, 5368709120 bytes, 10485760 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0xef018633
+
+   Device Boot      Start         End      Blocks   Id  System
+
+Command (m for help): p
+
+Disk /dev/vdc: 5368 MB, 5368709120 bytes, 10485760 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0xef018633
+
+   Device Boot      Start         End      Blocks   Id  System
+
+Command (m for help): n
+Partition type:
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended
+Select (default p): p
+Partition number (1-4, default 1): ^C
+[root@localhost log]# fdisk /dev/vdc
+Welcome to fdisk (util-linux 2.23.2).
+
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): m
+Command action
+   a   toggle a bootable flag
+   b   edit bsd disklabel
+   c   toggle the dos compatibility flag
+   d   delete a partition
+   g   create a new empty GPT partition table
+   G   create an IRIX (SGI) partition table
+   l   list known partition types
+   m   print this menu
+   n   add a new partition
+   o   create a new empty DOS partition table
+   p   print the partition table
+   q   quit without saving changes
+   s   create a new empty Sun disklabel
+   t   change a partition's system id
+   u   change display/entry units
+   v   verify the partition table
+   w   write table to disk and exit
+   x   extra functionality (experts only)
+
+Command (m for help): p
+
+Disk /dev/vdc: 5368 MB, 5368709120 bytes, 10485760 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0xef018633
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/vdc1            2048    10485759     5241856   8e  Linux LVM
+
+Command (m for help): d
+Selected partition 1
+Partition 1 is deleted
+
+Command (m for help): p
+
+Disk /dev/vdc: 5368 MB, 5368709120 bytes, 10485760 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0xef018633
+
+   Device Boot      Start         End      Blocks   Id  System
+
+Command (m for help): n
+Partition type:
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended
+Select (default p): e
+Partition number (1-4, default 1): 1
+First sector (2048-10485759, default 2048): 
+Using default value 2048
+Last sector, +sectors or +size{K,M,G} (2048-10485759, default 10485759): 
+Using default value 10485759
+Partition 1 of type Extended and of size 5 GiB is set
+
+Command (m for help): t
+Selected partition 1
+Hex code (type L to list all codes): L
+
+ 0  Empty           24  NEC DOS         81  Minix / old Lin bf  Solaris        
+ 1  FAT12           27  Hidden NTFS Win 82  Linux swap / So c1  DRDOS/sec (FAT-
+ 2  XENIX root      39  Plan 9          83  Linux           c4  DRDOS/sec (FAT-
+ 3  XENIX usr       3c  PartitionMagic  84  OS/2 hidden C:  c6  DRDOS/sec (FAT-
+ 4  FAT16 <32M      40  Venix 80286     85  Linux extended  c7  Syrinx         
+ 5  Extended        41  PPC PReP Boot   86  NTFS volume set da  Non-FS data    
+ 6  FAT16           42  SFS             87  NTFS volume set db  CP/M / CTOS / .
+ 7  HPFS/NTFS/exFAT 4d  QNX4.x          88  Linux plaintext de  Dell Utility   
+ 8  AIX             4e  QNX4.x 2nd part 8e  Linux LVM       df  BootIt         
+ 9  AIX bootable    4f  QNX4.x 3rd part 93  Amoeba          e1  DOS access     
+ a  OS/2 Boot Manag 50  OnTrack DM      94  Amoeba BBT      e3  DOS R/O        
+ b  W95 FAT32       51  OnTrack DM6 Aux 9f  BSD/OS          e4  SpeedStor      
+ c  W95 FAT32 (LBA) 52  CP/M            a0  IBM Thinkpad hi eb  BeOS fs        
+ e  W95 FAT16 (LBA) 53  OnTrack DM6 Aux a5  FreeBSD         ee  GPT            
+ f  W95 Ext'd (LBA) 54  OnTrackDM6      a6  OpenBSD         ef  EFI (FAT-12/16/
+10  OPUS            55  EZ-Drive        a7  NeXTSTEP        f0  Linux/PA-RISC b
+11  Hidden FAT12    56  Golden Bow      a8  Darwin UFS      f1  SpeedStor      
+12  Compaq diagnost 5c  Priam Edisk     a9  NetBSD          f4  SpeedStor      
+14  Hidden FAT16 <3 61  SpeedStor       ab  Darwin boot     f2  DOS secondary  
+16  Hidden FAT16    63  GNU HURD or Sys af  HFS / HFS+      fb  VMware VMFS    
+17  Hidden HPFS/NTF 64  Novell Netware  b7  BSDI fs         fc  VMware VMKCORE 
+18  AST SmartSleep  65  Novell Netware  b8  BSDI swap       fd  Linux raid auto
+1b  Hidden W95 FAT3 70  DiskSecure Mult bb  Boot Wizard hid fe  LANstep        
+1c  Hidden W95 FAT3 75  PC/IX           be  Solaris boot    ff  BBT            
+1e  Hidden W95 FAT1 80  Old Minix      
+Hex code (type L to list all codes): 8e
+
+You cannot change a partition into an extended one or vice versa.
+Delete it first.
+
+Type of partition 1 is unchanged: Extended
+
+Command (m for help): w
+The partition table has been altered!
+
+
+
+
+
+
+^C
+
+
+^C^A
+[END] 2015/6/29 22:28:19
