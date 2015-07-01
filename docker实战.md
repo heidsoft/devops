@@ -631,3 +631,115 @@ Jun 30 01:16:02 localhost docker: time="2015-06-30T01:16:02-04:00" level=info ms
 Jun 30 01:16:02 localhost docker: time="2015-06-30T01:16:02-04:00" level=info msg="-job log(pull, docker.io/webhippie/python:latest, ) = OK (0)"
 Jun 30 01:16:02 localhost docker: time="2015-06-30T01:16:02-04:00" level=info msg="-job pull(docker.io/webhippie/python, latest) = OK (0)"
 ```
+##扩展Docker默认存储的逻辑卷大小
+```
+前提是centos 卷组拥有容量，可用vgdisplay显示
+lvresize -L 5G centos /dev/centos/docker-pool
+```
+##挂在新逻辑卷到opt
+```
+cloudstack kvm的虚拟机默认使用virtio作为磁盘驱动，新加的磁盘标记是:/dev/vd[a-z]
+格式化磁盘:fdisk /dev/vda ，先选择p,然后选择n,在选择p,然后默认，然后选择分区t,然后选择8e<表示lvm>,然后选择w
+将新分区的磁盘，做成物理卷:pvcreate /dev/vda1
+扫描一下当前系统的，卷组：vgdisplay
+将新创建的物理卷，放到卷组中:vgextend centos /dev/vda1
+然后可以创建新的逻辑卷，或者扩充已有的逻辑卷容量：
+lvcreate -L 5G centos
+mount /dev/mapper/centos-lvol1 /opt
+```
+##Docker搭建Registry  
+```
+	若果使用http需要docker启动参数加入:--insecure-registry=10.1.1.166:5000 
+	将 /opt/data/registry设置为存储私有仓库的目录，扩大opt的空间：
+	lvcreate -L 5G centos
+	mkfs.ext4 /dev/centos/lvol1 
+	mount /dev/centos/lvol1 /opt/
+	mkdir -p  /opt/data/registry
+	
+	docker run -d -p 5000:5000 -v /opt/data/registry:/tmp/registry docker.io/registry 
+	docker run -d -p 5000:5000 docker.io/registry 
+	docker pull busybox
+	docker push 10.1.1.166:5000/busybox
+```
+
+##私有仓库镜像的查询
+```
+curl http://10.1.1.166:5000/v1/search
+```
+##上传镜像到私有仓库
+```
+docker pull 10.1.1.166:5000/busybox 
+```
+
+##保存Docker的镜像
+```
+[root@dockerRegistry ~]# docker save 10.1.1.166:5000/busybox > ./busybox.tar.gz
+[root@dockerRegistry ~]# ls
+anaconda-ks.cfg  busybox.tar.gz
+[root@dockerRegistry ~]# 
+```
+
+##导出Docker的容器
+```
+docker tag docker.io/dockerui/dockerui  10.1.1.166:5000/dockerui
+先从公共仓库拉取一个Image
+[root@dockerRegistry opt]# docker pull docker.io/dockerui/dockerui         
+[root@dockerRegistry opt]# docker images
+保存拉取到本地镜像为文件
+[root@dockerRegistry opt]# docker save docker.io/dockerui/dockerui > dockerui.tar.gz
+删除掉本地的images列表中
+[root@dockerRegistry opt]# docker rmi docker.io/dockerui/dockerui
+导入本地镜像
+[root@dockerRegistry opt]# docker load < ./dockerui.tar.gz  
+注意进行tag标记时，镜像的仓库位置必须正确如：10.1.1.166:5000/[镜像名称]
+[root@dockerRegistry opt]# docker tag docker.io/dockerui/dockerui  10.1.1.166:5000/dockerui
+将本地镜像推送到私有仓库
+[root@dockerRegistry opt]# docker push  10.1.1.166:5000/dockerui
+The push refers to a repository [10.1.1.166:5000/dockerui] (len: 1)
+Sending image list
+Pushing repository 10.1.1.166:5000/dockerui (1 tags)
+8260944ecb7d: Image successfully pushed 
+70d943b8199f: Image successfully pushed 
+337b54cfbd39: Image successfully pushed 
+9ac79962b9b0: Image successfully pushed 
+Pushing tag for rev [9ac79962b9b0] on {http://10.1.1.166:5000/v1/repositories/dockerui/tags/latest}
+[root@dockerRegistry opt]# 
+```
+##按条件检索私有仓库镜像
+```
+[root@dockerRegistry opt]# curl -X GET http://10.1.1.166:5000/v1/search?q=dockerui
+{"num_results": 1, "query": "dockerui", "results": [{"description": "", "name": "library/dockerui"}]}[root@dockerRegistry opt]# 
+[root@dockerRegistry opt]# 
+```
+##下载私有仓库的镜像
+```
+[root@dockerHost ~]# docker pull 10.1.1.166:5000/busybox 
+Trying to pull repository 10.1.1.166:5000/busybox ...
+8c2e06607696: Download complete 
+cf2616975b4a: Download complete 
+6ce2e90b0bc7: Download complete 
+Status: Downloaded newer image for 10.1.1.166:5000/busybox:latest
+[root@dockerHost ~]# docker images
+REPOSITORY                TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+<none>                    <none>              8509607578d1        12 days ago         233.5 MB
+<none>                    <none>              f1b10cd84249        9 weeks ago         0 B
+docker.io/hello-world     latest              91c95931e552        10 weeks ago        910 B
+10.1.1.166:5000/busybox   latest              8c2e06607696        10 weeks ago        2.43 MB
+[root@dockerHost ~]# 
+
+[root@dockerHost ~]# docker pull 10.1.1.166:5000/dockerui
+Trying to pull repository 10.1.1.166:5000/dockerui ...
+9ac79962b9b0: Download complete 
+8260944ecb7d: Download complete 
+70d943b8199f: Download complete 
+337b54cfbd39: Download complete 
+Status: Downloaded newer image for 10.1.1.166:5000/dockerui:latest
+[root@dockerHost ~]# docker images
+REPOSITORY                 TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+<none>                     <none>              8509607578d1        13 days ago         233.5 MB
+10.1.1.166:5000/dockerui   latest              9ac79962b9b0        5 weeks ago         5.422 MB
+<none>                     <none>              f1b10cd84249        10 weeks ago        0 B
+docker.io/hello-world      latest              91c95931e552        10 weeks ago        910 B
+10.1.1.166:5000/busybox    latest              8c2e06607696        10 weeks ago        2.43 MB
+[root@dockerHost ~]# 
+```
