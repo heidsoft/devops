@@ -743,3 +743,11 @@ docker.io/hello-world      latest              91c95931e552        10 weeks ago 
 10.1.1.166:5000/busybox    latest              8c2e06607696        10 weeks ago        2.43 MB
 [root@dockerHost ~]# 
 ```
+
+##Rest API 
+##´´½¨¾µÏñ
+```
+post  application/json
+http://192.168.16.14:8888/v1/images/create?fromImage=hello-world&tag=latest
+http://docs.docker.com/reference/api/remote_api_client_libraries/
+```
