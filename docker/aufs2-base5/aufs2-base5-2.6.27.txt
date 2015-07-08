@@ -1,0 +1,87 @@
+
+Release Note for aufs2-base5-2.6.27
+J. R. Okajima
+Feb 16 2009
+
+This version of AUFS has several purposes.
+- to be reviewed easily and widely.
+- to make the source files simpler and smaller by dropping several
+  original features.
+
+Through this work, I may find some bad things in original source code
+and have a chance to fix them. Some of the dropped features will be
+reverted in the future, but not all I'm afraid.
+If you are using AUFS currently and don't need the dropped features,
+then I'd recommend you to use this version.
+
+To Use This Version
+- plain linux-2.6.27
+- apply patches. all are essentially necessary except
+  ecryptfs-2.6.XX.patch. if you don't use ecryptfs, then the patch is
+  unnecessary.
+- make menuconfig, and enable CONFIG_AUFS_FS
+- build your kernel, install and reboot.
+- build aufs2-util and install.
+  + make variable: KDIR
+    specify your kernel source path
+  + make variable: DESTDIR
+    specify your install path.
+    some commands have to be installed under /sbin.
+- almost all information about the CVS version are still valid,
+  except the dropped features and below.
+
+If you find something wrong, please let me know (or aufs-users ML). It
+will be surely drive me ahead and really appriciated.
+
+########################################
+
+Changes from aufs2-base4
+- bugfix: test LOOKUP_CONTINUE flag in au_store_oflag(), and pass 'file'
+  to au_hfput() to test FMODE_EXEC flag, reported by James.
+- define s_magic number for 9P_FS and UBIFS_FS in magic.mk, reported by
+  John Jemiolo.
+- au_br_mod(): remove whiteout base earlier, and support a nested error
+  case.
+- minor enhancements...
+
+Changes from aufs2-base3
+- bugfix: copy-up/down i_flags from nfs and fuse which doesn't update
+  [amc]time, reported by Mattias Schffersmann.
+- bugfix: support xino files on tmpfs, reported by "James ."
+- restore udba=inotify and refine au_pin and resetting xino.
+- enhance udba=reval (default).
+- stop showing xino= from /proc/mounts (and /etc/mtab) when it is
+  default, instead always show it in /sys/fs/aufs/si_*/xino.
+- enhance getattr.
+- specify AuLock_FLUSH in rmdir and rename.
+- and others.
+
+Changes from aufs2-base2
+- stop parsing colon ':' for some options.
+- rename .wh..wh.tmp dir to .wh..wh.orph.
+- change the order of mount options in /proc/mounts.
+- refine the inode attribute and the getattr operation.
+- enhance the truncate operation.
+- revert the old approach to support FMODE_EXEC and deny_write_access()
+  which prohibits the write-acces to the executing binary.
+- reallocate memory at del-branch.
+- several internal enhancements and bugfixes
+
+Changes from aufs2-base1
+- restore NFS branch support (except atomic-open in NFSv4)
+- aufs-util (with new ioctl)
+- the module parameter 'brs' set to 1 by default.
+- several internal enhancements
+
+Dropped features from the CVS version (aufs1)
+- NFS branch
+- NFS exporting
+- detecting user's direct access to branch (udba=inotify)
+- test only the highest one for the directory permission (dirperm1)
+- show whiteout mode (shwh)
+- copyup on open (coo=)
+- being another aufs's readonly branch (robr)
+- statistics of aufs thread (/sys/fs/aufs/stat)
+- delegation mode (dlgt)
+- intent.open/create (file open in a single lookup)
+- etc...

@@ -1,0 +1,36 @@
+diff --git a/include/linux/namei.h b/include/linux/namei.h
+index 68f8c32..2378cf1 100644
+--- a/include/linux/namei.h
++++ b/include/linux/namei.h
+@@ -71,6 +71,9 @@ extern struct file *lookup_instantiate_filp(struct nameidata *nd, struct dentry
+ extern struct file *nameidata_to_filp(struct nameidata *nd, int flags);
+ extern void release_open_intent(struct nameidata *);
+ 
++extern struct dentry *lookup_hash(struct nameidata *nd);
++extern int __lookup_one_len(const char *name, struct qstr *this,
++			    struct dentry *base, int len);
+ extern struct dentry *lookup_one_len(const char *, struct dentry *, int);
+ extern struct dentry *lookup_one_noperm(const char *, struct dentry *);
+ 
+diff --git a/fs/namei.c b/fs/namei.c
+index 4ea63ed..e3c28b6 100644
+--- a/fs/namei.c
++++ b/fs/namei.c
+@@ -1241,7 +1242,7 @@ out:
+  * needs parent already locked. Doesn't follow mounts.
+  * SMP-safe.
+  */
+-static struct dentry *lookup_hash(struct nameidata *nd)
++struct dentry *lookup_hash(struct nameidata *nd)
+ {
+ 	int err;
+ 
+@@ -1251,7 +1252,7 @@ static struct dentry *lookup_hash(struct nameidata *nd)
+ 	return __lookup_hash(&nd->last, nd->path.dentry, nd);
+ }
+ 
+-static int __lookup_one_len(const char *name, struct qstr *this,
++int __lookup_one_len(const char *name, struct qstr *this,
+ 		struct dentry *base, int len)
+ {
+ 	unsigned long hash;

@@ -1,0 +1,83 @@
+#
+# Copyright (C) 2005-2009 Junjiro Okajima
+#
+# This program, aufs is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+# library functions for aufs shell scripts
+
+# path in canonical representation
+SetDir() # var dir
+{
+	cd "$2"
+	eval "$1=\"$PWD\""
+	cd "$OLDPWD"
+}
+
+# escape the unprintable characters, mainly for grep-ping /proc/mounts
+Esc() # [-e]
+{
+	sed -r -e '
+	s/\\/\\134/g
+	s/$/\\012/
+	' |
+	tr -d '\n' |
+	sed -r -e '
+	s/ /\\040/g
+	s/\t/\\011/g
+	s/\r/\\015/g
+	s/\\012$//
+	' |
+	{ test $# -eq 1 &&
+	test "$1" = "-e" &&
+	sed -r -e 's/\\/\\\\/g' ||
+	cat; }
+	echo
+}
+
+# find a mount-entry by its mount-point
+FindMntEnt() # mntpnt
+{
+	proc_mounts=/proc/self/mounts
+	test ! -e $proc_mounts && proc_mounts=/proc/$$/mounts
+	test ! -e $proc_mounts && proc_mounts=/proc/mounts
+	fgrep \ $(echo "$1" | Esc)\ aufs\  $proc_mounts |
+	tail -n 1
+}
+
+# current mount options
+MntOpts() # mntpnt
+{
+	FindMntEnt "$1" |
+	cut -f4 -d' '
+}
+
+########################################
+
+AuDebug() # 1 | 0 [sec]
+{
+	test $1 -eq 0 && set +x
+	sysaufs_debug=/sys/fs/aufs/debug
+	if [ -f $sysaufs_debug ]
+	then
+		echo $1 | sudo dd of=$sysaufs_debug 2> /dev/null
+	fi
+	test "$2" && sleep $2
+	test $1 -eq 1 && set -x
+	true
+}
+
+# Local variables: ;
+# mode: text;
+# End: ;

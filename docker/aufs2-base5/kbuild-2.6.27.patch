@@ -1,0 +1,22 @@
+diff --git a/fs/Kconfig b/fs/Kconfig
+index abccb5d..b987e5e 100644
+--- a/fs/Kconfig
++++ b/fs/Kconfig
+@@ -1539,6 +1539,8 @@ config UFS_DEBUG
+ 	  Y here.  This will result in _many_ additional debugging messages to be
+ 	  written to the system log.
+ 
++source "fs/aufs/Kconfig"
++
+ endmenu
+ 
+ menuconfig NETWORK_FILESYSTEMS
+diff --git a/fs/Makefile b/fs/Makefile
+index a1482a5..aa51c5a 100644
+--- a/fs/Makefile
++++ b/fs/Makefile
+@@ -122,3 +122,4 @@ obj-$(CONFIG_HPPFS)		+= hppfs/
+ obj-$(CONFIG_DEBUG_FS)		+= debugfs/
+ obj-$(CONFIG_OCFS2_FS)		+= ocfs2/
+ obj-$(CONFIG_GFS2_FS)           += gfs2/
++obj-$(CONFIG_AUFS_FS)           += aufs/
