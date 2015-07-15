@@ -745,6 +745,20 @@ docker.io/hello-world      latest              91c95931e552        10 weeks ago 
 ```
 
 ##Rest API 
+##开启rest服务的参数
+```
+--selinux-enabled --registry-mirror=http://b22d3f91.m.daocloud.io -H tcp://0.0.0.0:8888 -H unix:///var/run/docker.sock
+
+[root@localhost ~]# curl 'http://127.0.0.1:8888/images/json?all=0'
+[{"Created":1429308098,"Id":"91c95931e552b11604fea91c2f537284149ec32fff0f700a4769cfd31d7696ae","Labels":{},"ParentId":"a8219747be10611d65b7c693f48e7222c0bf54b5df8467d3f99003611afa1fd8","RepoDigests":[],"RepoTags":["docker.io/hello-world:latest"],"Size":0,"VirtualSize":910}
+][root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# ps -ef|grep docker
+root       3873      1  0 05:17 ?        00:00:00 /usr/bin/docker -d --selinux-enabled --registry-mirror=http://b22d3f91.m.daocloud.io -H tcp://0.0.0.0:8888 -H unix:///var/run/docker.sock
+root       3992   2775  0 05:19 pts/0    00:00:00 grep --color=auto docker
+[root@localhost ~]# 
+```
+
 ##创建镜像
 ```
 post  application/json
