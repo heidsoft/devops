@@ -766,3 +766,173 @@ http://192.168.16.14:8888/v1/images/create?fromImage=hello-world&tag=latest
 http://docs.docker.com/reference/api/remote_api_client_libraries/
 http://17173ops.com/2014/10/13/docker%E5%9F%BA%E7%A1%80%E4%B8%8E%E9%AB%98%E7%BA%A7.shtml
 ```
+
+##compose安装
+```
+(官方链接)[！http://docs.docker.com/compose/install/]
+```
+```
+Compose可以让用户在集群中部署分布式应用。简单的说，Docker Compose属于一个“应用层”的服务，
+用户可以定义哪个容器组运行哪个应用，它支持动态改变应用，并在需要时扩展。
+使用Compose的第一步是使用YAML文件来定义容器应用的状态：
+
+containers:
+web:
+ build: .
+ command: python app.py
+ ports:
+ - "5000:5000"
+ volumes:
+ - .:/code
+ links:
+ - redis
+ environment:
+ - PYTHONUNBUFFERED=1
+redis:
+ image: redis:latest
+ command: redis-server --appendonly yes
+ 
+上面的YAML文件定义了两个容器应用，第一个容器运行Python应用，
+并通过当前目录的Dockerfile文件构建。第二个容器是从DockerHub注册中心的Redis官方仓库中构建。
+links指令用来定义依赖，意思是Python应用依赖于Redis应用。
+定义完成后，通过下面的命令来启动应用：docker-compose up
+```
+
+```
+curl -L https://github.com/docker/compose/releases/download/1.3.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
+pip install -U docker-compose==1.3.2
+```
+
+#容器存储问题
+
+```
+1、容器间的链接：
+
+运行一个容器，给它一个名称，例如：
+
+
+docker run -d -p 0.0.0.0:4455:22 -p 0.0.0.0:8080:80 --name one centos6-ssh
+再运行另一个容器
+
+
+docker run -d -p 0.0.0.0:4456:22 -p 0.0.0.0:8088:80 --link /one:two centos6-ssh2 env
+说明：
+
+/one:two 
+
+one是第一个容器的名称，two是第二个容器的名称，
+
+env是打印出来 第二个容器的环境变量
+
+这样两容器就建立起一个网络通道，one和two容器所开放的端口也就是Dockerfile文件中定义开放的端口就可以连通了，
+
+在宿主机上使用iptables命令来查看，例如：
+
+iptables -L -n
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     tcp  --  172.17.1.28          172.17.1.29         tcp spt:3306 
+ACCEPT     tcp  --  172.17.1.29          172.17.1.28         tcp dpt:3306 
+ACCEPT     tcp  --  172.17.1.28          172.17.1.29         tcp spt:22 
+ACCEPT     tcp  --  172.17.1.29          172.17.1.28         tcp dpt:22
+从这里看到两个容器间端口可以互相的访问了，
+
+说明：
+
+这里的端口是以one这个容器所开放的端口，如one开放22，3306，而two容器只开放了22，在two上也会放3306给one，反之就不行了。--link是以连接容器开放的端口为准的。
+
+2、Docker 容器下数据卷的理解
+
+一个数据卷就是经过特殊设计的,在一个或多个容器中通过UFS文件系统提供的一些特性 
+
+实现数据持久化或共享.
+
+数据卷可以在容器之间共享和重复利用
+
+可以对数据卷里的内容直接进行修改
+
+对镜像的更新不会改变数据卷的内容
+
+卷会一直持续到没有容器使用他们
+
+2.1、添加一个数据卷
+
+可以使用带有 -v 参数的 docker run 命令给容器添加一个数据卷.
+
+docker run -d -p 0.0.0.0:4445:22 --name data -v /data centos6-ssh
+这个在容器里就会有一个/data的卷
+
+在Dockefile中使用VOLUME指令来创建添加一个或多个数据卷
+
+2.2、挂载宿主文件夹到数据卷
+
+使用-v参数也可以挂载宿主的文件夹到容器里
+
+
+docker run -d -p 0.0.0.0:44455:22 --name data1 -v /src/data:/opt/data centos6-ssh
+这样会把本地的/src/data文件夹挂在容器/opt/data目录
+
+宿主机上的文件夹必须是绝对路径，而且当文件夹不存在时会自动创建
+
+此功能在Dockerfile文件中无法使用
+
+默认情况下Docker以读写权限挂载数据卷,但是我们也可以以只读方式进行挂载
+
+docker run -d -p 0.0.0.0:44455:22 --name data1 -v /src/data:/opt/data:ro centos6-ssh
+还是上面的那个命令，只是我们添加了一个ro选项来制定挂载时文件权限应该是只读的
+
+2.3、创建和挂在一个数据卷容器
+
+如果一些数据需要在容器间共享最好的方式来创建一个数据卷容器，然后从数据卷容器中挂载数据
+
+  1\创建一个带有命名容器来共享数据
+
+
+ docker run -d -v /dbdata --name dbdata centos6-ssh
+  2\在另一个容器中使用--volumes-from标记挂在/dbdata卷
+
+docker run -d --volumes-from dbdata --name db1 centos6-ssh2
+  3\在另一个容器中同时也挂载/dbdata卷
+
+docker run -d --volumes-from dbdata --name db2 centos6-ssh3
+
+
+可以使用多个 -–volumes-from 参数来把多个容器中的多个数据卷放到一起
+
+ 可以挂载通过挂载dbdata容器实现的容器db1和db2来扩展关系链,例如：
+
+docker run -d --name db2 --volumes-from db1 centos6-ssh4
+
+2.4、备份，恢复，迁移数据
+
+使用它们来进行备份,恢复或迁移数据.如下所示,我们使用 
+
+–volumes-from 标记来创建一个挂载了要备份数据卷的容器.
+
+docker run --volumes-from dbdata -v $(pwd):/backup centos6-ssh tar cvf /backup/backup.tar /dbdata
+这里我们创建并登录了一个新容器，挂载了dbdata容器中的数据卷，并把本地的一个目录挂载了/backup下，最后再传一条tar命令来备份dbdata卷到/backup下，当命令执行完成后容器就会停止运行，并保留dbdata的备份，在本地目录下会一个备份的文件
+
+注：新创建的容器中要有tar命令，
+
+得到备份数据就可以恢复或迁移数据了
+```
+#问题
+
+1.如何在Docker容器内外互相拷贝数据?
+
+```
+#从容器内拷贝文件到主机上
+docker cp <containerId>:/file/path/within/container /host/path/target 
+
+#用-v挂载主机数据卷到容器内
+docker run -v /path/to/hostdir:/mnt $container  
+在容器内拷贝  
+cp /mnt/sourcefile /path/to/destfile  
+``` 
+
+2.直接在主机上拷贝到容器物理存储系统
+```
+docker inspect -f '{{.id}}' 9e3671679c8c 
+```
