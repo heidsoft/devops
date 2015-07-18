@@ -805,6 +805,186 @@ chmod +x /usr/local/bin/docker-compose
 pip install -U docker-compose==1.3.2
 ```
 
+
+#基于源码构建私有仓库
+```
+[root@localhost ~]# cd docker-registry/
+[root@localhost docker-registry]# ls
+ADVANCED.md   circle.yml  CONTRIBUTING.md  Dockerfile       FAQ.md       README.md     setup.cfg  tox.ini
+AUTHORS       config      DEBUGGING.md     docker_registry  LICENSE      requirements  setup.py
+CHANGELOG.md  contrib     depends          DRIVERS.md       MANIFEST.in  scripts       tests
+[root@localhost docker-registry]# 
+
+[root@localhost docker-registry]# docker build -t "heidsoft-registry" .
+Sending build context to Docker daemon 
+FATA[0000] Post http:///var/run/docker.sock/v1.18/build?cgroupparent=&cpusetcpus=&cpushares=0&dockerfile=Dockerfile&memory=0&memswap=0&rm=1&t=heidsoft-registry: dial unix /var/run/docker.sock: no such file or directory. Are you trying to connect to a TLS-enabled daemon without TLS? 
+[root@localhost docker-registry]# systemctl start dcoker
+Failed to issue method call: Unit dcoker.service failed to load: No such file or directory.
+[root@localhost docker-registry]# systemctl start docker
+```
+
+```
+成功在本地通过源码构建了镜像仓库，总共经历了12步:
+@....start 
+building 'markupsafe._speedups' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c markupsafe/_speedups.c -o build/temp.linux-x86_64-2.7/markupsafe/_speedups.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/markupsafe/_speedups.o -o build/lib.linux-x86_64-2.7/markupsafe/_speedups.so
+Successfully installed docker-registry backports.lzma blinker Flask gevent gunicorn PyYAML requests M2Crypto sqlalchemy bugsnag Flask-cors newrelic Werkzeug Jinja2 itsdangerous greenlet webob markupsafe
+Cleaning up...
+ ---> bb135fe1c419
+Removing intermediate container 5561b2fef818
+Step 8 : RUN patch  $(python -c 'import boto; import os; print os.path.dirname(boto.__file__)')/connection.py  < /docker-registry/contrib/boto_header_patch.diff
+ ---> Running in bc90ae3350bb
+patching file /usr/local/lib/python2.7/dist-packages/boto/connection.py
+ ---> c4fc4bf464b2
+Removing intermediate container bc90ae3350bb
+Step 9 : ENV DOCKER_REGISTRY_CONFIG /docker-registry/config/config_sample.yml
+ ---> Running in fc182d9daed0
+ ---> 9b16c0a3aaf8
+Removing intermediate container fc182d9daed0
+Step 10 : ENV SETTINGS_FLAVOR dev
+ ---> Running in ebae054b90fb
+ ---> 1b4a1e134805
+Removing intermediate container ebae054b90fb
+Step 11 : EXPOSE 5000
+ ---> Running in 648f41896bbf
+ ---> c3736b5cf3ab
+Removing intermediate container 648f41896bbf
+Step 12 : CMD docker-registry
+ ---> Running in 3af3b4d0c90c
+ ---> 80aa76e58d06
+Removing intermediate container 3af3b4d0c90c
+Successfully built 80aa76e58d06
+@...end
+
+进入到源码目录的config目录
+# cp config/config_sample.yml /opt/data/registry/config.yml
+# vi /opt/data/registry/config.yml
+#这里可以设置本地存储
+* SETTINGS_FLAVOR=dev，local 
+* STORAGE_PATH:/tmp/registry等
+
+```
+error:
+docker run -d -v /opt/data/registry:/tmp/registry -p 5000:5000 -e DOCKER_REGISTRY_CONFIG=/tmp/config.yml heidsoft-registry
+
+ok:
+后台运行
+docker run  -d --privileged -e SETTINGS_FLAVOR=dev -e STORAGE_PATH=/opt/registry -v /db/docker-images:/opt/registry -p 5000:5000 heidsoft-registry 
+有console运行
+docker run  -i -t --privileged -e SETTINGS_FLAVOR=dev -e STORAGE_PATH=/opt/registry -v /db/docker-images:/opt/registry -p 5000:5000 heidsoft-registry /bin/bash
+
+但不加--privileged 启动容器时 push镜像到仓库会报权限错误
+将已有镜像重新标记为一个新的镜像，名称是liubin-registry
+docker tag 80aa76e58d06 heidsoft.registry:5000/liubin-registry
+docker push heidsoft.registry:5000/liubin-registry 
+
+从私服上搜索存在哪些可用镜像
+curl -X GET http://heidsoft.registry:5000/v1/search
+docker tag 80aa76e58d06 heidsoft.registry:5000/liubin-registry
+
+加入认证环境
+wget  http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+rpm -ivh nginx-release-centos-7-0.el7.ngx.noarch.rpm 
+yum install nginx
+wget -c soft.vpser.net/lnmp/ext/htpasswd.sh
+创建两个登录用户
+[root@heidsoft ~]# ./htpasswd.sh -c /etc/nginx/docker-registry.htpasswd heidsoft
+=====================================
+# A tool like htpasswd for Nginx    #
+#-----------------------------------#
+# Author:Licess http://www.lnmp.org #
+=====================================
+Please input UserName:heidsoft
+===========================
+UserName was: heidsoft
+===========================
+Please input the Password:heidsoft
+===========================
+Password was: heidsoft
+===========================
+Please input Auth filename:heidsoft
+===========================
+Auth File: /usr/local/nginx/conf/heidsoft
+===========================
+
+[root@heidsoft ~]#  ./htpasswd.sh -c /etc/nginx/docker-registry.htpasswd liubin
+=====================================
+# A tool like htpasswd for Nginx    #
+#-----------------------------------#
+# Author:Licess http://www.lnmp.org #
+=====================================
+Please input UserName:liubin
+===========================
+UserName was: liubin
+===========================
+Please input the Password:liubin
+===========================
+Password was: liubin
+===========================
+Please input Auth filename:liubin
+===========================
+Auth File: /usr/local/nginx/conf/liubin
+===========================
+
+Press any key to Creat...or Press Ctrl+c to cancel
+Create Auth file......
+./htpasswd.sh: line 64: /usr/local/nginx/conf/liubin.conf: No such file or directory
+Create Auth file successful,auth file path:/usr/local/nginx/conf/liubin.conf.
+[root@heidsoft ~]# 
+
+nginx 错误日志
+
+```
+curl http://liubin:liubin@heidsoft.registry:8080/v1/search
+2015/07/18 06:58:24 [crit] 35545#0: *1 connect() to 127.0.0.1:5000 failed (13: Permission denied) while connecting to upstream, client: 192.168.1.6, server: heidsoft.registry, request: "GET /v1/search HTTP/1.1", upstream: "http://127.0.0.1:5000/v1/search", host: "heidsoft.registry:8080"
+2015/07/18 06:58:24 [crit] 35545#0: *1 connect() to [::1]:5000 failed (13: Permission denied) while connecting to upstream, client: 192.168.1.6, server: heidsoft.registry, request: "GET /v1/search HTTP/1.1", upstream: "http://[::1]:5000/v1/search", host: "heidsoft.registry:8080"
+```
+
+临时关闭selinux后能根据认证文件请求到
+```
+setenforce 0
+curl http://liubin:liubin@heidsoft.registry:8080/v1/search
+```
+
+```
+docker启动失败
+
+[root@heidsoft log]# tailf messages 
+Jul 18 07:17:06 localhost docker: time="2015-07-18T07:17:06-04:00" level=info msg="-job acceptconnections() = OK (0)"
+Jul 18 07:17:06 localhost docker: time="2015-07-18T07:17:06-04:00" level=info msg="Daemon has completed initialization"
+Jul 18 07:17:06 localhost systemd: Started Docker Application Container Engine.
+Jul 18 07:18:03 localhost systemd: Starting Docker Storage Setup...
+Jul 18 07:18:03 localhost docker-storage-setup: Metadata volume docker-poolmeta already exists. Not creating a new one.
+Jul 18 07:18:03 localhost docker-storage-setup: Internal error: Unable to create new logical volume with no extents.
+Jul 18 07:18:03 localhost systemd: docker-storage-setup.service: main process exited, code=exited, status=5/NOTINSSTALLED
+Jul 18 07:18:03 localhost systemd: Failed to start Docker Storage Setup.
+Jul 18 07:18:03 localhost systemd: Unit docker-storage-setup.service entered failed state.
+Jul 18 07:18:03 localhost systemd: Started Docker Application Container Engine.
+
+去掉--storage-opt dm.no_warn_on_loop_devices=true  参数启动成功，奇怪了
+```
+
+```
+2015/07/18 07:22:37 [crit] 36084#0: *4060 open() "/etc/nginx/docker-registry.htpasswd.conf" failed (24: Too many open files), client: 192.168.1.6, server: heidsoft.registry, request: "GET /v1/users/ HTTP/1.0", host: "heidsoft.registry:8080"
+ulimit -n 30000
+
+```
+
+
+
+
+
+
+
+
+
+
+```
+
+
+
+
 #容器存储问题
 
 ```
