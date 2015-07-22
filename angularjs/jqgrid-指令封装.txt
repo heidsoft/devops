@@ -1,0 +1,123 @@
+angular.module('data-grid', ['ng']).directive('ngJqgrid', function ($window) {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: {
+            config: '=',
+            modeldata: '=',
+            insert: '=?',
+            api: '=?',
+            addnew:"="
+        },
+        link: function (scope, element, attrs) {
+            var table, div;
+            scope.$watch('config', function (value) {
+                element.children().empty();
+                table = angular.element('<table id="' + attrs.gridid + '"></table>');
+                element.append(table);
+                if (attrs.pagerid) {
+                    value.pager = '#' + attrs.pagerid;
+                    var pager = angular.element(value.pager);
+                    if (pager.length == 0) {
+                        div = angular.element('<div id="' + attrs.pagerid + '"></div>');
+                        element.append(div);
+                    }
+                }
+                table.jqGrid(value);
+                //if (scope.addnew == true)
+                //{
+                    table.jqGrid("inlineNav", '#'+attrs.pagerid, { addParams: { position: "last" } });
+                //}
+                // Variadic API – usage:
+                //   view:  <ng-jqgrid … vapi="apicall">
+                //   ctrl:  $scope.apicall('method', 'arg1', …);
+                scope.vapi = function () {
+                    var args = Array.prototype.slice.call(arguments, 0);
+                    return table.jqGrid.apply(table, args);
+                };
+                // allow to insert(), clear(), refresh() the grid from 
+                // outside (e.g. from a controller). Usage:
+                //   view:  <ng-jqgrid … api="gridapi">
+                //   ctrl:  $scope.gridapi.clear();
+                scope.api = {
+                    insert: function (rows) {
+                        if (rows) {
+                            for (var i = 0; i < rows.length; i++) {
+                                scope.modeldata.push(rows[i]);
+                            }
+                            table.jqGrid('setGridParam', { data: scope.modeldata })
+                                 .trigger('reloadGrid');
+                        }
+                    },
+                    clear: function () {
+                        scope.modeldata.length = 0;
+                        table.jqGrid('clearGridData', { data: scope.modeldata })
+                            .trigger('reloadGrid');
+                    },
+                    refresh: function () {
+                        table
+                            .jqGrid('clearGridData')
+                            .jqGrid('setGridParam', { data: scope.modeldata })
+                            .trigger('reloadGrid');
+                    }
+                };
+            });
+            scope.$watch('data', function (value) {
+                table.jqGrid('setGridParam', { data: value })
+                     .trigger('reloadGrid')
+                ;
+            });
+        }
+    };
+})
+
+
+
+-----------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="jqGridApp">
+
+<head>
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+ <link rel="stylesheet" href="ui.jqgrid.css" />
+ <link rel="stylesheet" href="ace.min.css" />
+ <!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"> -->
+  <!-- SPELLS -->
+  <script src="jquery-1.11.1.min.js"></script>
+  <script src="jquery.jqGrid.min.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <script src="ace.min.js"></script>
+  
+  <script src="grid.locale-en.js"></script>
+  <script src="JQGridDirective.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+
+ 
+
+  <div id="main">
+  
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <input type="button" ng-click="loadrecord()" value="Load Data"/>
+	
+	
+    <ng-jqgrid config="config" addnew="true" modeldata="patientdata" gridid="patientgrid" pagerid="patientpager" api="gridapi"></ng-jqgrid>
+       
+  </div>
+  
+  
+  
+</body>
+
+</html>
