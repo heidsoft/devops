@@ -192,6 +192,10 @@ getComponentType()	返回组件类型数组。
 ```
 
 
+##主要类
+```
+DelegatesToInvocationFunction  代表调用功能
+```
 
 
 ##错误
@@ -203,4 +207,30 @@ getComponentType()	返回组件类型数组。
 [ERROR] 
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginResolutionException
+
+
+
+
+
+Docker:version 1.6.2, build ba1f6c3/1.6.2
+库名:jcloud-lab  2.0.0-SNAPSHOT
+功能: 镜像列表list
+错误:
+java.lang.NullPointerException: Null parentId
+	at org.jclouds.docker.domain.AutoValue_ImageSummary.<init>(AutoValue_ImageSummary.java:30)
+	at org.jclouds.docker.domain.ImageSummary.create(ImageSummary.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.google.common.reflect.Invokable$MethodInvokable.invokeInternal(Invokable.java:197)
+	at com.google.common.reflect.Invokable.invoke(Invokable.java:102)
+	at org.jclouds.json.internal.DeserializationConstructorAndReflectiveTypeAdapterFactory$DeserializeIntoParameterizedConstructor.newInstance(DeserializationConstructorAndReflectiveTypeAdapterFactory.java:224)
+	at org.jclouds.json.internal.DeserializationConstructorAndReflectiveTypeAdapterFactory$DeserializeIntoParameterizedConstructor.read(DeserializationConstructorAndReflectiveTypeAdapterFactory.java:204)
+	at org.jclouds.json.internal.NullFilteringTypeAdapterFactories$IterableTypeAdapter.readAndBuild(NullFilteringTypeAdapterFactories.java:90)
+	at org.jclouds.json.internal.NullFilteringTypeAdapterFactories$IterableTypeAdapter.read(NullFilteringTypeAdapterFactories.java:82)
+	at org.jclouds.json.internal.NullFilteringTypeAdapterFactories$IterableTypeAdapter.read(NullFilteringTypeAdapterFactories.java:61)
+
+
+
 ```
