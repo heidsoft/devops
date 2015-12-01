@@ -1,0 +1,107 @@
+heidsoft@heidsoft:~/workspace$ ./test 
+1+2+...+100=4950
+heidsoft@heidsoft:~/workspace$ gdb test
+GNU gdb (Ubuntu 7.7-0ubuntu3.1) 7.7
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from test...done.
+(gdb) exit
+Undefined command: "exit".  Try "help".
+(gdb) exit
+Undefined command: "exit".  Try "help".
+(gdb) quit()
+A syntax error in expression, near `)'.
+(gdb) quit
+heidsoft@heidsoft:~/workspace$ gd
+gdb      gdbtui   gdbus    gdialog  gdisk    
+heidsoft@heidsoft:~/workspace$ gdb -q
+(gdb) file 
+ceph/   Go/     test    test.c  
+(gdb) file test
+Reading symbols from test...done.
+(gdb) file test
+Load new symbol table from "test"? (y or n) y
+Reading symbols from test...done.
+(gdb) list 10
+5		for(i=0; i<n; i++){
+6			sum +=i;
+7		}
+8		
+9		return sum;
+10	}
+11	
+12	int main()
+13	{
+14		int i = 100,result;
+(gdb) list 10
+5		for(i=0; i<n; i++){
+6			sum +=i;
+7		}
+8		
+9		return sum;
+10	}
+11	
+12	int main()
+13	{
+14		int i = 100,result;
+(gdb) list get_sum
+1	#include <stdio.h>
+2	int get_sum(int n)
+3	{
+4		int sum = 0,i;
+5		for(i=0; i<n; i++){
+6			sum +=i;
+7		}
+8		
+9		return sum;
+10	}
+(gdb) list test.c:get_sum
+1	#include <stdio.h>
+2	int get_sum(int n)
+3	{
+4		int sum = 0,i;
+5		for(i=0; i<n; i++){
+6			sum +=i;
+7		}
+8		
+9		return sum;
+10	}
+(gdb) list 4,9
+4		int sum = 0,i;
+5		for(i=0; i<n; i++){
+6			sum +=i;
+7		}
+8		
+9		return sum;
+(gdb) shell ls
+ceph  Go  test	test.c
+(gdb) ls
+Undefined command: "ls".  Try "help".
+(gdb) shell ls
+ceph  Go  test	test.c
+(gdb) shell ls -l
+total 24
+drwxrwxr-x 23 heidsoft heidsoft 4096 11月 17 16:43 ceph
+drwxrwxr-x  6 heidsoft heidsoft 4096 10月 11 02:49 Go
+-rwxrwxr-x  1 heidsoft heidsoft 9800 11月 19 22:05 test
+-rw-rw-r--  1 heidsoft heidsoft  215 11月 19 22:04 test.c
+(gdb) search get_sum
+15		result = get_sum(i);
+(gdb) reverse-search main 
+12	int main()
+(gdb) run
+Starting program: /home/heidsoft/workspace/test 
+1+2+...+100=4950
+[Inferior 1 (process 6225) exited normally]
+(gdb) help list
