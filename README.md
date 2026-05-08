@@ -1,43 +1,34 @@
-# 云计算深入实践
+# devops
 
+> devops 经验总结实践与产品化
 
-## 第一章 内核
-* [内核启动过程](./内核启动过程.md)
-* [内核编译](./内核编译.md)
+## 📂 目录结构
 
-## 第二章 深入体系结构#
-* [北京大学微处理器研究中心](http://mprc.pku.edu.cn/index.htm)
+```
+devops/
+├── _docs/                    # 文档资料（按主题分类）
+│   ├── devops/               # DevOps 核心（Docker/K8s/容器/Spring/鉴权）
+│   ├── architecture/         # 架构设计（SOA/ESB/高可用/服务发现）
+│   ├── cloud/                # 云计算（OpenStack/CloudStack/ZStack/jclouds）
+│   ├── middleware/           # 中间件（RabbitMQ/Haproxy/OpenResty/Apache）
+│   ├── network/              # 网络（SDN/iptables/网络嗅探）
+│   ├── frontend/             # 前端（AngularJS/CSS/DataTables）
+│   ├── linux/                # Linux（libvirt/vagrant/内核）
+│   ├── db/                   # 数据库（哈希表/存储）
+│   └── git/                  # Git 版本控制
+├── _code/                    # 代码
+│   ├── src/                  # 源码（heidsoft.go 等）
+│   └── code-refactoring/     # 重构代码示例
+├── _design-patterns/        # 设计模式
+│   └── 设计模式/             # UML/状态机/职责链等
+└── _archive/                 # 归档（学习资料/图片/废弃内容）
+    ├── _images/              # 图片素材
+    ├── video/                # 视频资料
+    └── weichat/              # 微信相关
+```
 
-## 第三章 计算网络原理
-* [tcp](./tcp.md)
-* [udp](./udp)
-* [ip](./ip)
-* [SDN](./sdn.md)
+## 🔗 相关项目
 
-## 第四章 云计算
-* [CloudStack](./cloudstack.md)
-* [OpenStack](./OpenStack.md)
-* [虚拟化](./虚拟化.md)
-* [Libvirt](./libvirt/libvirt.md)
-* [XenApi](./xen/xenapi.md)
- 
-# 第五章 Web架构
-* [maven](./maven.md)
-* [ESB](./esb.md)
-* [SOA](./soa.md)
+- [cloudmesh.top](https://cloudmesh.top) - 官网
+- [heidsoft/heidsoft-devops](https://github.com/heidsoft/heidsoft-devops) - DevOps 实践
 
-## 第六章 存储
-* [EMC存储讨论社区](https://community.emc.com/docs/DOC-19472)
-
-
-## 第七章 自动化
-* [Chef](https://learnchef.opscode.com/)
-
-
-## 第八章 工作流
-* [纵观jBPM：从jBPM3到jBPM5以及Activiti5](http://www.infoq.com/cn/articles/rh-jbpm5-activiti5)
-
-## 参考资料
-- http://www.csdn.net/article/2014-03-26/2818977-Cloud-BigData-Teradata
-- http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
-- http://books.sonatype.com/mvnex-book/reference/web-sect-creating-project.html
