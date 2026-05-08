@@ -14,8 +14,21 @@
 - 网络与 SDN
 - Git 版本控制与团队协作
 - 设计模式与代码重构
+- **产品设计文档**（智能补货助手 / ClawOps ITSM / AI 合同审核）
 
 大部分内容为工作笔记和学习资料，供同行参考。
+
+---
+
+## 🛍️ 产品文档
+
+> 官网 [cloudmesh.top](https://cloudmesh.top) 与 GitHub 联动，更多产品资料在线浏览
+
+| 产品 | 一句话介绍 | 状态 |
+|------|-----------|------|
+| [**智能补货助手**](_docs/products/smart-replenishment/) | AI 销量预测 + 对话补货，零售小店必备 | 设计完成 |
+| [**ClawOps ITSM**](_docs/products/clawops/) | 企业级运维平台，多租户+插件化 | 路线图进行中 |
+| [**AI 合同审核 MVP**](_docs/products/ai-contract-review/) | 上传合同→3分钟出报告，¥9.9起 | MVP 完成 |
 
 ---
 
@@ -32,20 +45,22 @@ devops/
 │   ├── frontend/                  # 前端（AngularJS/CSS/DataTables）
 │   ├── linux/                     # Linux（libvirt/vagrant/内核）
 │   ├── db/                        # 数据库（哈希表/存储）
-│   └── git/                       # Git 版本控制
+│   ├── git/                       # Git 版本控制
+│   └── products/                 # 🆕 产品设计文档
+│       ├── smart-replenishment/   # 智能补货助手
+│       ├── clawops/               # ClawOps ITSM
+│       └── ai-contract-review/    # AI 合同审核 MVP
 ├── _code/                         # 💻 代码
-│   ├── src/                       # Go 源码（heidsoft.go）
-│   └── code-refactoring/          # 重构代码示例
-├── _design-patterns/              # 🎨 设计模式
+│   ├── src/                       # Go 源码
+│   └── code-refactoring/         # 重构代码示例
+├── _design-patterns/             # 🎨 设计模式
 │   └── 设计模式/                   # UML/状态机/职责链
-└── _archive/                       # 📦 归档（学习资料/图片/废弃内容）
+└── _archive/                      # 📦 归档（学习资料/图片/废弃内容）
 ```
 
 ---
 
 ## 📚 快速索引
-
-点击分类名称直接进入对应目录的 README：
 
 ### [_docs/devops/](_docs/devops/) — 容器化 · K8s · Spring · 鉴权
 
@@ -56,9 +71,9 @@ devops/
 - [pod.md](_docs/devops/pod.md) — K8s Pod 生命周期与钩子
 - [docker-cluster.md](_docs/devops/docker-cluster.md) — Docker 主流集群对比
 - [OAuth开发与集成.md](_docs/devops/OAuth开发与集成.md) — OAuth 踩坑 NoSuchMethodError
+- [AI-DevOps/](_docs/devops/AI-DevOps/) — AI-DevOps 智能运维
 - [docker/](_docs/devops/docker/) — Docker PDF 教程 20+ 篇
 - [k8s/](_docs/devops/k8s/) — Kubernetes PDF 资料
-- [AI-DevOps/](_docs/devops/AI-DevOps/) — AI-DevOps 智能运维
 
 ---
 
@@ -78,7 +93,6 @@ devops/
 
 - [cloudstack.md](_docs/cloud/cloudstack.md) — CloudStack 4.3 研究 + API 调用日志
 - [CloudStack全局参数.md](_docs/cloud/CloudStack全局参数.md) — 305 个配置参数
-- [jclouds架构分析.md](_docs/cloud/jclouds架构分析.md) — 多云工具包定位分析
 - [zstack/](_docs/cloud/zstack/) — ZStack 架构白皮书 7 篇
 - [jclouds/](_docs/cloud/jclouds/) — jclouds API 测试截图
 
@@ -119,9 +133,9 @@ devops/
 
 > libvirt / vagrant / 内核，含命令速查
 
-- [vagrant使用.md](_docs/linux/vagrant使用.md) — vagrant 命令速查（box/init/up/halt/reload/destroy）
-- [内核启动过程.md](_docs/linux/内核启动过程.md) — start_kernel() → trap_init() → init_IRQ() → rest_init()
-- [内核编译.md](_docs/linux/内核编译.md) — make config / menuconfig / defconfig / oldconfig
+- [vagrant使用.md](_docs/linux/vagrant使用.md) — vagrant 命令速查
+- [内核启动过程.md](_docs/linux/内核启动过程.md) — start_kernel() → rest_init()
+- [内核编译.md](_docs/linux/内核编译.md) — make config / menuconfig / defconfig
 - [libvirt/](_docs/linux/libvirt/) — libvirt 下载安装与对象模型
 
 ---
@@ -130,7 +144,7 @@ devops/
 
 > 哈希表算法 / 存储测试
 
-- [storage/从头到尾彻底解析哈希表算法.md](_docs/db/storage/从头到尾彻底解析哈希表算法.md) — **⭐ 原创** 哈希表算法从入门到精通
+- [storage/从头到尾彻底解析哈希表算法.md](_docs/db/storage/从头到尾彻底解析哈希表算法.md) — ⭐ 原创 哈希表算法详解
 - [存储测试.md](_docs/db/存储测试.md) — CloudStack 存储池创建 API 测试
 
 ---
@@ -139,8 +153,18 @@ devops/
 
 > 工具使用 / 远程分支管理
 
-- [工具使用.md](_docs/git/工具使用.md) — maven→gradle 转换、Eclipse 工程、Git 远程分支操作
+- [工具使用.md](_docs/git/工具使用.md) — maven→gradle 转换、Git 远程分支操作
 - [git/](_docs/git/git/) — Git 操作参考 PDF
+
+---
+
+### [_docs/products/](_docs/products/) — 🆕 产品设计文档
+
+| 产品 | 目录 | 说明 |
+|------|------|------|
+| 智能补货助手 | [smart-replenishment/](_docs/products/smart-replenishment/) | 市场调研/竞品分析/产品定义/技术方案 |
+| ClawOps ITSM | [clawops/](_docs/products/clawops/) | 架构设计/告警中心/商业化/路线图 |
+| AI 合同审核 MVP | [ai-contract-review/](_docs/products/ai-contract-review/) | MVP 方案/目标用户/定价 |
 
 ---
 
@@ -149,7 +173,7 @@ devops/
 - [heidsoft.go](_code/src/src/heidsoft.go) — Go 源码
 - [heidsoft_test.go](_code/src/src/heidsoft_test.go) — Go 测试
 - [重构.md](_code/code-refactoring/重构.md) — 重构箴言 12 条
-- [重构模式图解](_code/code-refactoring/) — 12 张重构模式图片（Extract Method/Class/Pull Up 等）
+- [重构模式图解](_code/code-refactoring/) — 12 张重构模式图片
 
 ---
 
@@ -158,7 +182,6 @@ devops/
 - [UML图中类之间的关系.pdf](_design-patterns/设计模式/UML图中类之间的关系.pdf) — UML 类 6 种关系
 - [state模式.pdf](_design-patterns/设计模式/state模式.pdf) — 状态模式
 - [职责链模式.pdf](_design-patterns/设计模式/职责链模式（Chain%20of%20Responsibility）的Java实现.pdf) — 职责链 Java 实现
-- [link.txt](_design-patterns/设计模式/link.txt) — 参考链接
 
 ---
 
@@ -169,22 +192,18 @@ devops/
 | 目录 | 内容 |
 |------|------|
 | [_archive/android.md](_archive/android.md) | Android 笔记 |
-| [_archive/software工程.md](_archive/软件工程.md) | 软件工程 |
-| [_archive/wordpress/](_archive/wordpress/) | WordPress 笔记 |
-| [_archive/video/](_archive/video/) | 视频资料 |
 | [_archive/weichat/](_archive/weichat/) | 微信二维码素材 |
 | [_archive/树莓派/](_archive/树莓派/) | 树莓派 PDF |
-| [_archive/跨域分析/](_archive/跨域分析/) | 跨域分析 PDF 合集（OAuth2/Bearer Token） |
-| [_archive/_images/](_archive/_images/) | 所有图片素材（30+ 张） |
+| [_archive/跨域分析/](_archive/跨域分析/) | 跨域分析 PDF 合集 |
+| [_archive/_images/](_archive/_images/) | 所有图片素材 30+ 张 |
 | [_archive/*.pdf](_archive/) | 外部学习资料 PDF |
 
 ---
 
 ## 🔗 相关项目
 
-- [heidsoft/heids](https://github.com/heidsoft/heids) - 个人主页
-- [heidsoft/heidsoft-devops](https://github.com/heidsoft/heidsoft-devops) - DevOps 实践
-- [cloudmesh.top](https://cloudmesh.top) - 官网
+- [cloudmesh.top](https://cloudmesh.top) — 官网
+- [heidsoft/heids](https://github.com/heidsoft/heids) — 个人主页
 
 ---
 
