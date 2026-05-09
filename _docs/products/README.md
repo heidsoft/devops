@@ -45,7 +45,7 @@
 
 - [cloudmesh.top](https://cloudmesh.top) — 官网
 - [heidsoft/devops](https://github.com/heidsoft/devops) — 技术文档库
-- [heidsoft/heids](https://github.com/heidsoft/heids) — 个人主页
+- [heidsoft/heidsoft](https://github.com/heidsoft/heidsoft) — 个人主页
 
 ---
 

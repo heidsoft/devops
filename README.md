@@ -203,7 +203,7 @@ devops/
 ## 🔗 相关项目
 
 - [cloudmesh.top](https://cloudmesh.top) — 官网
-- [heidsoft/heids](https://github.com/heidsoft/heids) — 个人主页
+- [heidsoft/heidsoft](https://github.com/heidsoft/heidsoft) — 个人主页
 
 ---
 
